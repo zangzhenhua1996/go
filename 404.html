@@ -3,35 +3,39 @@
 
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
+        <meta name="description" content="go语言的学习笔记">
       
       
       
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+        <meta name="author" content="臧珍华">
       
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.language" content="en">
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
       
         <meta name="lang:search.pipeline.stopwords" content="True">
       
         <meta name="lang:search.pipeline.trimmer" content="True">
       
-        <meta name="lang:search.result.none" content="No matching documents">
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
       
-        <meta name="lang:search.result.one" content="1 matching document">
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
       
-        <meta name="lang:search.result.other" content="# matching documents">
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
       
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
-      <link rel="shortcut icon" href="/assets/images/favicon.png">
+      <link rel="shortcut icon" href="/go/assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
     
     
@@ -40,12 +44,18 @@
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="/go/assets/stylesheets/application.30686662.css">
       
+        <link rel="stylesheet" href="/go/assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
     
-      <script src="/assets/javascripts/modernizr.74668098.js"></script>
+      <script src="/go/assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -54,7 +64,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="/go/assets/fonts/material-icons.css">
     
     
     
@@ -63,11 +73,15 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
         
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -80,7 +94,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/." title="臧珍华的博客" class="md-header-nav__button md-logo">
+        <a href="https://zangzhenhua1996.github.io/go/" title="臧珍华的博客" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -111,7 +125,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -121,7 +135,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="result">
           <div class="md-search-result__meta">
-            Type to start searching
+            键入以开始搜索
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -132,6 +146,28 @@
         
       </div>
       
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/zangzhenhua1996/go/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    I love AnFei
+  </div>
+</a>
+          </div>
+        </div>
+      
     </div>
   </nav>
 </header>
@@ -140,6 +176,52 @@
       
         
       
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="/go/." class="md-tabs__link md-tabs__link--active">
+        介绍
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="/go/第一章go语言开发环境配置/001 go语言开发环境配置/" class="md-tabs__link">
+          安装
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="/go/第二章go语言基本语法结构/002 go语言第一个例子/" class="md-tabs__link">
+          基础语法
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
       
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
@@ -150,13 +232,33 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="/." title="臧珍华的博客" class="md-nav__button md-logo">
+    <a href="https://zangzhenhua1996.github.io/go/" title="臧珍华的博客" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
     臧珍华的博客
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/zangzhenhua1996/go/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    I love AnFei
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -166,7 +268,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/." title="介绍" class="md-nav__link">
+    <a href="/go/." title="介绍" class="md-nav__link">
       介绍
     </a>
   </li>
@@ -197,7 +299,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/第一章go语言开发环境配置/001 go语言开发环境配置/" title="本地环境搭建" class="md-nav__link">
+    <a href="/go/第一章go语言开发环境配置/001 go语言开发环境配置/" title="本地环境搭建" class="md-nav__link">
       本地环境搭建
     </a>
   </li>
@@ -233,7 +335,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/第二章go语言基本语法结构/002 go语言第一个例子/" title="第一个例子" class="md-nav__link">
+    <a href="/go/第二章go语言基本语法结构/002 go语言第一个例子/" title="第一个例子" class="md-nav__link">
       第一个例子
     </a>
   </li>
@@ -245,7 +347,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/第二章go语言基本语法结构/003 Go 语言结构/" title="Go 语言结构" class="md-nav__link">
+    <a href="/go/第二章go语言基本语法结构/003 Go 语言结构/" title="Go 语言结构" class="md-nav__link">
       Go 语言结构
     </a>
   </li>
@@ -257,8 +359,20 @@
 
 
   <li class="md-nav__item">
-    <a href="/第二章go语言基本语法结构/paragraph.md" title="段落" class="md-nav__link">
-      段落
+    <a href="/go/第二章go语言基本语法结构/004 go 变量定义/" title="go 变量定义" class="md-nav__link">
+      go 变量定义
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="/go/第二章go语言基本语法结构/005 go 内建变量类型/" title="go 内建变量类型" class="md-nav__link">
+      go 内建变量类型
     </a>
   </li>
 
@@ -311,9 +425,26 @@
       
     </div>
     
-      <script src="/assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="/go/assets/javascripts/application.ac79c3b0.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/"}})</script>
+        
+        
+          
+          <script src="/go/assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="/go/assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="/go/assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"/go/"}})</script>
       
     
   </body>
