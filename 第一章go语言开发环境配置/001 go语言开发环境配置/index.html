@@ -501,23 +501,21 @@
                   <h1>本地环境搭建</h1>
                 
                 <h2 id="ubuntugoliteide">ubuntu系统安装Go和liteide及环境配置<a class="headerlink" href="#ubuntugoliteide" title="Permanent link">&para;</a></h2>
-<p>一、通过apt-get安装</p>
+<p>一、通过apt-get安装  </p>
 <ol>
-<li>安装
-   <code>sudo apt-get install golang</code></li>
+<li>安装<br />
+<code>sudo apt-get install golang</code></li>
+<li>设置GOPATH变量 <br />
+    GOPATH是扩展库的目录，Go先搜索标准库目录，然后搜索GOPATH库目录，所有的非标准库都放在GOPATH下。以GOPATH为“/home/zzh/gopath”目录为例子：
+<img alt="image.png" src="../001 go语言开发环境配置.image/14555448-02ce3d2a88ac5da4.png" /></li>
 </ol>
-<p>2.设置GOPATH变量</p>
-<p>GOPATH是扩展库的目录，Go先搜索标准库目录，然后搜索GOPATH库目录，所有的非标准库都放在GOPATH下。以GOPATH为“/home/zzh/gopath”目录为例子：
-<img alt="image.png" src="../001 go语言开发环境配置.image/14555448-02ce3d2a88ac5da4.png" /></p>
-<p>(1)把export GOPATH=/home/zzh/gopath
- 加入到~/.bashrc文件的最后。</p>
-<p>(2)source ~/.bashrc 重新加载配置
+<p>(1) 把export GOPATH=/home/zzh/gopath  加入到~/.bashrc文件的最后。<br />
+(2）source ~/.bashrc 重新加载配置<br />
 <img alt="image.png" src="../001 go语言开发环境配置.image/14555448-bef082ffa4b2ed81.png" /></p>
 <p>这样就加好了GOPATH。注意：apt-get命令安装只能安装go1.6版本现在很多开源项目都用上了1.7以上建议手动安装更高版本。</p>
-<p>二. 压缩包安装
-安装配置Golang</p>
+<p>二. 压缩包安装配置Golang</p>
 <ul>
-<li>可以从<a href="http://golangtc.com/download">Golang中国</a>这里下载，下载好后使用<code>sudo tar -xvzf ~/Downloads/go*.linux-amd64.tar.gz -C /usr/local/</code> 命令将其解压到<code>/usr/local/</code>位置，然后配置环境变量。</li>
+<li>可以从<a href="http://golangtc.com/download">Golang中国</a>这里下载，下载好后使用<code>sudo tar -xvzf ~/Downloads/go*.linux-amd64.tar.gz -C /usr/local/</code>命令将其解压到<code>/usr/local/</code>位置，然后配置环境变量。</li>
 <li>
 <p>使用命令<code>vim ~/.bashrc</code>打开.bashrc文件，然后在最后追加下面内容：</p>
 <blockquote>
