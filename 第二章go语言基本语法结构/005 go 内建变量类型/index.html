@@ -418,6 +418,26 @@
     其他数字类型
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    复数及欧拉公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    强制类型转换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -480,6 +500,26 @@
   <a href="#_3" class="md-nav__link">
     其他数字类型
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    复数及欧拉公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    强制类型转换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -635,6 +675,48 @@
 </tr>
 </tbody>
 </table>
+<h3 id="_4">复数及欧拉公式<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="../005 go 内建变量类型.image/14555448-1c0d55c109d30cd4.png" /></p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="c1">//可以自动导包,一开始用的时候不用先进行导包,后面用到了会自动导包,ide的好处</span>
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&quot;fmt&quot;</span>
+    <span class="s">&quot;math&quot;</span>
+    <span class="s">&quot;math/cmplx&quot;</span>
+<span class="p">)</span>
+
+<span class="c1">//复数求模</span>
+<span class="kd">func</span> <span class="nx">euler</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">c</span> <span class="o">:=</span> <span class="mi">3</span> <span class="o">+</span> <span class="m">4i</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">cmplx</span><span class="p">.</span><span class="nx">Abs</span><span class="p">(</span><span class="nx">c</span><span class="p">))</span>
+    <span class="c1">//5</span>
+<span class="p">}</span>
+<span class="c1">// 求一下欧拉公式</span>
+<span class="kd">func</span> <span class="nx">euler1</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">v</span><span class="p">=</span><span class="nx">cmplx</span><span class="p">.</span><span class="nx">Pow</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">E</span><span class="p">,</span><span class="m">1i</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">Pi</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>  <span class="c1">//使用的是pow幂函数求指数</span>
+    <span class="kd">var</span> <span class="nx">e</span> <span class="p">=</span> <span class="nx">cmplx</span><span class="p">.</span><span class="nx">Exp</span><span class="p">(</span><span class="m">1i</span><span class="o">*</span><span class="nx">math</span><span class="p">.</span><span class="nx">Pi</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>  <span class="c1">//直接使用exp指数函数</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">v</span><span class="p">,</span><span class="nx">e</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%.3f&quot;</span><span class="p">,</span><span class="nx">v</span><span class="p">)</span>  <span class="c1">//使用Printf函数进行字符串的格式化</span>
+    <span class="c1">//(0+1.2246467991473515e-16i) (0+1.2246467991473515e-16i)</span>
+    <span class="c1">//(0.000+0.000i)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">euler</span><span class="p">()</span>
+    <span class="nx">euler1</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+
+<blockquote>
+<p>这里使用了Printf 函数进行字符输出格式化,fmt中每个函数有不同的功能
+fmt.Printf("%.3f",v)</p>
+</blockquote>
+<h3 id="_5">强制类型转换<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>go语言中没有隐式的类型转换</p>
+</blockquote>
+<p><img alt="image.png" src="../005 go 内建变量类型.image/14555448-8ae58423154fa7d6.png" /></p>
                 
                   
                 
