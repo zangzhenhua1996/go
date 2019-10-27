@@ -1,0 +1,1774 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>001 网络udp - 臧珍华的博客</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#31" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="臧珍华的博客" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              臧珍华的博客
+            </span>
+            <span class="md-header-nav__topic">
+              
+                001 网络udp
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="臧珍华的博客" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    臧珍华的博客
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Welcome to MkDocs" class="md-nav__link">
+      Welcome to MkDocs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        001 网络udp
+      </label>
+    
+    <a href="./" title="001 网络udp" class="md-nav__link md-nav__link--active">
+      001 网络udp
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1网络通信概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146" class="md-nav__link">
+    1. 什么是网络
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单机游戏（不能和远在他乡的朋友一起玩）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246" class="md-nav__link">
+    2. 使用网络的目的
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    小总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32ip" class="md-nav__link">
+    3.2ip地址
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146_1" class="md-nav__link">
+    1. 什么是地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-ip" class="md-nav__link">
+    2. ip地址的作用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip19216811" class="md-nav__link">
+    ip地址：用来在网络中标记一台电脑，比如192.168.1.1；在本地局域网上是唯一的。
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#346-ip" class="md-nav__link">
+    3. ip地址的分类（了解）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-aip" class="md-nav__link">
+    3.1 A类IP地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-bip" class="md-nav__link">
+    3.2 B类IP地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-cip" class="md-nav__link">
+    3.3 C类IP地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-d" class="md-nav__link">
+    3.4 D类地址用于多点广播
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-eip" class="md-nav__link">
+    3.5 E类IP地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-ip" class="md-nav__link">
+    3.6 私有ip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    3.7 注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33linuxping-ifconfig" class="md-nav__link">
+    3.3Linux命令(ping, ifconfig)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ifconfig" class="md-nav__link">
+    查看或配置网卡信息：ifconfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ping" class="md-nav__link">
+    测试远程主机连通性：ping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4端口
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146_2" class="md-nav__link">
+    1. 什么是端口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246_1" class="md-nav__link">
+    2. 端口号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#346" class="md-nav__link">
+    3. 端口是怎样分配的
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-well-known-ports" class="md-nav__link">
+    3.1 知名端口（Well Known Ports）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-dynamic-ports" class="md-nav__link">
+    3.2 动态端口（Dynamic Ports）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 怎样查看端口 ？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#446" class="md-nav__link">
+    4. 小总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35socket" class="md-nav__link">
+    3.5socket简介
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146_3" class="md-nav__link">
+    1. 不同电脑上的进程之间如何通信
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    注意：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-socket" class="md-nav__link">
+    2. 什么是socket
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-socket" class="md-nav__link">
+    3. 创建socket
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    说明：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36udp-" class="md-nav__link">
+    3.6udp网络程序-发送、接收数据
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146-udp-" class="md-nav__link">
+    1. udp网络程序-发送数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-udp-" class="md-nav__link">
+    2. udp网络程序-发送、接收数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37python3" class="md-nav__link">
+    3.7python3编码转换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udp" class="md-nav__link">
+    udp绑定信息
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146-udp-_1" class="md-nav__link">
+    1. udp网络程序-端口问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-udp" class="md-nav__link">
+    2. udp绑定信息
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    &lt;1&gt;. 绑定信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    &lt;2&gt;. 绑定示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    运行结果：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    &lt;3&gt;. 总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    3.9网络通信过程(简单版)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310udp" class="md-nav__link">
+    3.10应用：udp聊天器
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    要求
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../002-网络tcp/" title="002 网络tcp" class="md-nav__link">
+      002 网络tcp
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../003-9--http协议、web服务器-并发服务器1/" title="9.1. http协议" class="md-nav__link">
+      9.1. http协议
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../004--10--web服务器-并发服务器2/" title="004 10 web服务器 并发服务器2" class="md-nav__link">
+      004  10  web服务器 并发服务器2
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../005--11-网络通信过程/" title="005 11 网络通信过程" class="md-nav__link">
+      005  11 网络通信过程
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../006 18. WSGI、mini-web框架/" title="多进程的面向对象的web服务器" class="md-nav__link">
+      多进程的面向对象的web服务器
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../007 19. 闭包、装饰器/" title="007 19. 闭包、装饰器" class="md-nav__link">
+      007 19. 闭包、装饰器
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../008-12--python提高-1/" title="008 12 python提高 1" class="md-nav__link">
+      008 12  python提高 1
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../009-13--python提高-2/" title="009 13 python提高 2" class="md-nav__link">
+      009 13  python提高 2
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../010 网络知识补充/" title="010 网络知识补充" class="md-nav__link">
+      010 网络知识补充
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1网络通信概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146" class="md-nav__link">
+    1. 什么是网络
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    单机游戏（不能和远在他乡的朋友一起玩）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246" class="md-nav__link">
+    2. 使用网络的目的
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    小总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32ip" class="md-nav__link">
+    3.2ip地址
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146_1" class="md-nav__link">
+    1. 什么是地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-ip" class="md-nav__link">
+    2. ip地址的作用
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip19216811" class="md-nav__link">
+    ip地址：用来在网络中标记一台电脑，比如192.168.1.1；在本地局域网上是唯一的。
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#346-ip" class="md-nav__link">
+    3. ip地址的分类（了解）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-aip" class="md-nav__link">
+    3.1 A类IP地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-bip" class="md-nav__link">
+    3.2 B类IP地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-cip" class="md-nav__link">
+    3.3 C类IP地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-d" class="md-nav__link">
+    3.4 D类地址用于多点广播
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-eip" class="md-nav__link">
+    3.5 E类IP地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-ip" class="md-nav__link">
+    3.6 私有ip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    3.7 注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33linuxping-ifconfig" class="md-nav__link">
+    3.3Linux命令(ping, ifconfig)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ifconfig" class="md-nav__link">
+    查看或配置网卡信息：ifconfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ping" class="md-nav__link">
+    测试远程主机连通性：ping
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4端口
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146_2" class="md-nav__link">
+    1. 什么是端口
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246_1" class="md-nav__link">
+    2. 端口号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#346" class="md-nav__link">
+    3. 端口是怎样分配的
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-well-known-ports" class="md-nav__link">
+    3.1 知名端口（Well Known Ports）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-dynamic-ports" class="md-nav__link">
+    3.2 动态端口（Dynamic Ports）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3 怎样查看端口 ？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#446" class="md-nav__link">
+    4. 小总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35socket" class="md-nav__link">
+    3.5socket简介
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146_3" class="md-nav__link">
+    1. 不同电脑上的进程之间如何通信
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    注意：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-socket" class="md-nav__link">
+    2. 什么是socket
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-socket" class="md-nav__link">
+    3. 创建socket
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    说明：
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36udp-" class="md-nav__link">
+    3.6udp网络程序-发送、接收数据
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146-udp-" class="md-nav__link">
+    1. udp网络程序-发送数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-udp-" class="md-nav__link">
+    2. udp网络程序-发送、接收数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37python3" class="md-nav__link">
+    3.7python3编码转换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udp" class="md-nav__link">
+    udp绑定信息
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#146-udp-_1" class="md-nav__link">
+    1. udp网络程序-端口问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#246-udp" class="md-nav__link">
+    2. udp绑定信息
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    &lt;1&gt;. 绑定信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    &lt;2&gt;. 绑定示例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    运行结果：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    &lt;3&gt;. 总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    3.9网络通信过程(简单版)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310udp" class="md-nav__link">
+    3.10应用：udp聊天器
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    要求
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>001 网络udp</h1>
+                
+                <h2 id="31">3.1网络通信概述<a class="headerlink" href="#31" title="Permanent link">&para;</a></h2>
+<h3 id="146">1. 什么是网络<a class="headerlink" href="#146" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-86909f75b1e6dfa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-f7f11e01143f3df3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-0ebce1dea79c5811.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h4 id="_1">说明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>网络就是一种辅助双方或者多方能够连接在一起的工具</li>
+<li>如果没有网络可想<code>单机</code>的世界是多么的孤单</li>
+</ul>
+<h4 id="_2">单机游戏（不能和远在他乡的朋友一起玩）<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-7e187fc0beaed5d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-c6188d791dea4d24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-f39eb80e724f9d0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h3 id="246">2. 使用网络的目的<a class="headerlink" href="#246" title="Permanent link">&para;</a></h3>
+<p>就是为了联通多方然后进行通信用的，即把数据从一方传递给另外一方</p>
+<p>前面的学习编写的程序都是单机的，即不能和其他电脑上的程序进行通信</p>
+<p>为了让在不同的电脑上运行的软件，之间能够互相传递数据，就需要借助网络的功能</p>
+<h4 id="_3">小总结<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>使用网络能够把多方链接在一起，然后可以进行数据传递</li>
+<li>所谓的网络编程就是，让在不同的电脑上的软件能够进行数据传递，即进程之间的通信
+<img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-04ea111330628ce1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></li>
+</ul>
+<h2 id="32ip">3.2ip地址<a class="headerlink" href="#32ip" title="Permanent link">&para;</a></h2>
+<h3 id="146_1">1. 什么是地址<a class="headerlink" href="#146_1" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-cddcbc9d6d272a62.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-b343096f99449e99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" />
+<img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-bb9048e04e5eefea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p>地址就是用来标记地点的</p>
+<h3 id="246-ip">2. ip地址的作用<a class="headerlink" href="#246-ip" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-f35dcf840ad5ea3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h4 id="ip19216811">ip地址：用来在网络中标记一台电脑，比如192.168.1.1；在本地局域网上是唯一的。<a class="headerlink" href="#ip19216811" title="Permanent link">&para;</a></h4>
+<h3 id="346-ip">3. ip地址的分类（了解）<a class="headerlink" href="#346-ip" title="Permanent link">&para;</a></h3>
+<p>每一个IP地址包括两部分：网络地址和主机地址</p>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-0a831a27601e04de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h4 id="31-aip">3.1 A类IP地址<a class="headerlink" href="#31-aip" title="Permanent link">&para;</a></h4>
+<p>一个A类IP地址由1字节的网络地址和3字节主机地址组成，网络地址的最高位必须是“0”，</p>
+<p>地址范围1.0.0.1-126.255.255.254</p>
+<p>二进制表示为：00000001 00000000 00000000 00000001 - 01111110 11111111 11111111 11111110</p>
+<p>可用的A类网络有126个，每个网络能容纳1677214个主机</p>
+<h4 id="32-bip">3.2 B类IP地址<a class="headerlink" href="#32-bip" title="Permanent link">&para;</a></h4>
+<p>一个B类IP地址由2个字节的网络地址和2个字节的主机地址组成，网络地址的最高位必须是“10”，</p>
+<p>地址范围128.1.0.1-191.255.255.254</p>
+<p>二进制表示为：10000000 00000001 00000000 00000001 - 10111111 11111111 11111111 11111110</p>
+<p>可用的B类网络有16384个，每个网络能容纳65534主机</p>
+<h4 id="33-cip">3.3 C类IP地址<a class="headerlink" href="#33-cip" title="Permanent link">&para;</a></h4>
+<p>一个C类IP地址由3字节的网络地址和1字节的主机地址组成，网络地址的最高位必须是“110”</p>
+<p>范围192.0.1.1-223.255.255.254</p>
+<p>二进制表示为: 11000000 00000000 00000001 00000001 - 11011111 11111111 11111110 11111110</p>
+<p>C类网络可达2097152个，每个网络能容纳254个主机</p>
+<h4 id="34-d">3.4 D类地址用于多点广播<a class="headerlink" href="#34-d" title="Permanent link">&para;</a></h4>
+<p>D类IP地址第一个字节以“1110”开始，它是一个专门保留的地址。</p>
+<p>它并不指向特定的网络，目前这一类地址被用在多点广播（Multicast）中</p>
+<p>多点广播地址用来一次寻址一组计算机 s 地址范围224.0.0.1-239.255.255.254</p>
+<h4 id="35-eip">3.5 E类IP地址<a class="headerlink" href="#35-eip" title="Permanent link">&para;</a></h4>
+<p>以“1111”开始，为将来使用保留</p>
+<p>E类地址保留，仅作实验和开发用</p>
+<h4 id="36-ip">3.6 私有ip<a class="headerlink" href="#36-ip" title="Permanent link">&para;</a></h4>
+<p>在这么多网络IP中，国际规定有一部分IP地址是用于我们的局域网使用，也就</p>
+<p>是属于私网IP，不在公网中使用的，它们的范围是：</p>
+<div class="codehilite"><pre><span></span>10.0.0.0～10.255.255.255
+
+172.16.0.0～172.31.255.255
+
+192.168.0.0～192.168.255.255
+</pre></div>
+
+<h4 id="37">3.7 注意<a class="headerlink" href="#37" title="Permanent link">&para;</a></h4>
+<p>IP地址127．0．0．1~127．255．255．255用于回路测试，</p>
+<p>如：127.0.0.1可以代表本机IP地址，用<code>http://127.0.0.1</code>就可以测试本机中配置的Web服务器。</p>
+<h2 id="33linuxping-ifconfig">3.3Linux命令(ping, ifconfig)<a class="headerlink" href="#33linuxping-ifconfig" title="Permanent link">&para;</a></h2>
+<h3 id="ifconfig">查看或配置网卡信息：ifconfig<a class="headerlink" href="#ifconfig" title="Permanent link">&para;</a></h3>
+<p>如果，我们只是敲：ifconfig，它会显示所有网卡的信息：
+<img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-2e017c19e4fb47f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-a82307673ba73a96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h3 id="ping">测试远程主机连通性：ping<a class="headerlink" href="#ping" title="Permanent link">&para;</a></h3>
+<p>通常用ping来检测网络是否正常
+<img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-ff64b24cf9c9e206.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h2 id="34">3.4端口<a class="headerlink" href="#34" title="Permanent link">&para;</a></h2>
+<h3 id="146_2">1. 什么是端口<a class="headerlink" href="#146_2" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-503b7a7eefb3110b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p>端口就好一个房子的门，是出入这间房子的必经之路。
+<img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-f4788ec627301ea5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p>如果一个程序需要收发网络数据，那么就需要有这样的端口</p>
+<p>在linux系统中，端口可以有65536（2的16次方）个之多！</p>
+<p>既然有这么多，操作系统为了统一管理，所以进行了编号，这就是<code>端口号</code></p>
+<h3 id="246_1">2. 端口号<a class="headerlink" href="#246_1" title="Permanent link">&para;</a></h3>
+<p>端口是通过端口号来标记的，端口号只有整数，范围是从0到65535</p>
+<p>注意：端口数不一样的*nix系统不一样，还可以手动修改</p>
+<h3 id="346">3. 端口是怎样分配的<a class="headerlink" href="#346" title="Permanent link">&para;</a></h3>
+<p>端口号不是随意使用的，而是按照一定的规定进行分配。</p>
+<p>端口的分类标准有好几种，我们这里不做详细讲解，只介绍一下知名端口和动态端口</p>
+<h4 id="31-well-known-ports">3.1 知名端口（Well Known Ports）<a class="headerlink" href="#31-well-known-ports" title="Permanent link">&para;</a></h4>
+<p>知名端口是众所周知的端口号，范围从0到1023</p>
+<div class="codehilite"><pre><span></span>80端口分配给HTTP服务
+21端口分配给FTP服务
+</pre></div>
+
+<p>可以理解为，一些常用的功能使用的号码是估计的，好比 电话号码110、10086、10010一样
+<img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-10e34895a9f68dee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p>一般情况下，如果一个程序需要使用知名端口的需要有root权限</p>
+<h4 id="32-dynamic-ports">3.2 动态端口（Dynamic Ports）<a class="headerlink" href="#32-dynamic-ports" title="Permanent link">&para;</a></h4>
+<p>动态端口的范围是从1024到65535</p>
+<p>之所以称为动态端口，是因为它一般不固定分配某种服务，而是动态分配。</p>
+<p>动态分配是指当一个系统程序或应用程序程序需要网络通信时，它向主机申请一个端口，主机从可用的端口号中分配一个供它使用。</p>
+<p>当这个程序关闭时，同时也就释放了所占用的端口号</p>
+<h4 id="33">3.3 怎样查看端口 ？<a class="headerlink" href="#33" title="Permanent link">&para;</a></h4>
+<ul>
+<li>用“netstat －an”查看端口状态</li>
+<li>lsof -i [tcp/udp]:2425</li>
+</ul>
+<h3 id="446">4. 小总结<a class="headerlink" href="#446" title="Permanent link">&para;</a></h3>
+<p>端口有什么用呢 ？ 我们知道，一台拥有IP地址的主机可以提供许多服务，比如HTTP（万维网服务）、FTP（文件传输）、SMTP（电子邮件）等，这些服务完全可以通过1个IP地址来实现。那么，主机是怎样区分不同的网络服务呢？显然不能只靠IP地址，因为IP地址与网络服务的关系是一对多的关系。实际上是通过“IP地址+端口号”来区分不同的服务的。 需要注意的是，端口并不是一一对应的。比如你的电脑作为客户机访问一台WWW服务器时，WWW服务器使用“80”端口与你的电脑通信，但你的电脑则可能使用“3457”这样的端口。</p>
+<h2 id="35socket">3.5socket简介<a class="headerlink" href="#35socket" title="Permanent link">&para;</a></h2>
+<h3 id="146_3">1. 不同电脑上的进程之间如何通信<a class="headerlink" href="#146_3" title="Permanent link">&para;</a></h3>
+<p>首要解决的问题是如何唯一标识一个进程，否则通信无从谈起！</p>
+<p>在1台电脑上可以通过进程号（PID）来唯一标识一个进程，但是在网络中这是行不通的。</p>
+<p>其实TCP/IP协议族已经帮我们解决了这个问题，网络层的“ip地址”可以唯一标识网络中的主机，而传输层的“协议+端口”可以唯一标识主机中的应用进程（进程）。</p>
+<p>这样利用ip地址，协议，端口就可以标识网络的进程了，网络中的进程通信就可以利用这个标志与其它进程进行交互</p>
+<h5 id="_4">注意：<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<blockquote>
+<ul>
+<li>所谓<code>进程</code>指的是：运行的程序以及运行时用到的资源这个整体称之为进程（在讲解多任务编程时进行详细讲解）</li>
+<li>所谓<code>进程间通信</code>指的是：运行的程序之间的数据共享</li>
+<li>后面课程中会详细说到，像网络层等知识，不要着急</li>
+</ul>
+</blockquote>
+<h3 id="246-socket">2. 什么是socket<a class="headerlink" href="#246-socket" title="Permanent link">&para;</a></h3>
+<p>socket(简称 <code>套接字</code>) 是进程间通信的一种方式，它与其他进程间通信的一个主要不同是：</p>
+<p>它能实现不同主机间的进程间通信，我们网络上各种各样的服务大多都是基于 Socket 来完成通信的</p>
+<p>例如我们每天浏览网页、QQ 聊天、收发 email 等等
+<img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-f9bc82a51f8ba830.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" />
+<img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-5cdae24fe74df2ad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" />
+<img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-8db419198203882b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h3 id="3-socket">3. 创建socket<a class="headerlink" href="#3-socket" title="Permanent link">&para;</a></h3>
+<p>在 Python 中 使用socket 模块的函数 socket 就可以完成：</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
+<span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">AddressFamily</span><span class="p">,</span> <span class="n">Type</span><span class="p">)</span>
+</pre></div>
+
+<h4 id="_5">说明：<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>函数 socket.socket 创建一个 socket，该函数带有两个参数：</p>
+<ul>
+<li>Address Family：可以选择 AF_INET（用于 Internet 进程间通信） 或者 AF_UNIX（用于同一台机器进程间通信）,实际工作中常用AF_INET</li>
+<li>Type：套接字类型，可以是 SOCK_STREAM（流式套接字，主要用于 TCP 协议）或者 SOCK_DGRAM（数据报套接字，主要用于 UDP 协议）</li>
+</ul>
+<p>创建一个tcp socket（tcp套接字）</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="c1"># 创建tcp的套接字</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+
+<span class="c1"># ...这里是使用套接字的功能（省略）...</span>
+
+<span class="c1"># 不用的时候，关闭套接字</span>
+<span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+<p>创建一个udp socket（udp套接字）</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="c1"># 创建udp的套接字</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
+
+<span class="c1"># ...这里是使用套接字的功能（省略）...</span>
+
+<span class="c1"># 不用的时候，关闭套接字</span>
+<span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+<h5 id="_6">说明<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<ul>
+<li>套接字使用流程 与 文件的使用流程很类似<ol>
+<li>创建套接字</li>
+<li>使用套接字收/发数据</li>
+<li>关闭套接字</li>
+</ol>
+</li>
+</ul>
+<h2 id="36udp-">3.6udp网络程序-发送、接收数据<a class="headerlink" href="#36udp-" title="Permanent link">&para;</a></h2>
+<h3 id="146-udp-">1. udp网络程序-发送数据<a class="headerlink" href="#146-udp-" title="Permanent link">&para;</a></h3>
+<p>创建一个基于udp的网络程序流程很简单，具体步骤如下：</p>
+<ol>
+<li>创建客户端套接字</li>
+<li>发送/接收数据</li>
+<li>关闭套接字</li>
+</ol>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-1513f99aeb885a7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p>代码如下：</p>
+<div class="codehilite"><pre><span></span><span class="c1">#coding=utf-8</span>
+
+<span class="kn">from</span> <span class="nn">socket</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># 1\. 创建udp套接字</span>
+<span class="n">udp_socket</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_DGRAM</span><span class="p">)</span>
+
+<span class="c1"># 2\. 准备接收方的地址</span>
+<span class="c1"># &#39;192.168.1.103&#39;表示目的ip地址</span>
+<span class="c1"># 8080表示目的端口</span>
+<span class="n">dest_addr</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;192.168.1.103&#39;</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>  <span class="c1"># 注意 是元组，ip是字符串，端口是数字</span>
+
+<span class="c1"># 3\. 从键盘获取数据</span>
+<span class="n">send_data</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入要发送的数据:&quot;</span><span class="p">)</span>
+
+<span class="c1"># 4\. 发送数据到指定的电脑上的指定程序中</span>
+<span class="n">udp_socket</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="n">send_data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">dest_addr</span><span class="p">)</span>
+
+<span class="c1"># 5\. 关闭套接字</span>
+<span class="n">udp_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+<p>运行现象：</p>
+<p>在Ubuntu中运行脚本：</p>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-b6949ad5d249681b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p>在windows中运行“网络调试助手”：</p>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-7bb28c877612f77a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h3 id="246-udp-">2. udp网络程序-发送、接收数据<a class="headerlink" href="#246-udp-" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1">#coding=utf-8</span>
+
+<span class="kn">from</span> <span class="nn">socket</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># 1\. 创建udp套接字</span>
+<span class="n">udp_socket</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_DGRAM</span><span class="p">)</span>
+
+<span class="c1"># 2\. 准备接收方的地址</span>
+<span class="n">dest_addr</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;192.168.236.129&#39;</span><span class="p">,</span> <span class="mi">8080</span><span class="p">)</span>
+
+<span class="c1"># 3\. 从键盘获取数据</span>
+<span class="n">send_data</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入要发送的数据:&quot;</span><span class="p">)</span>
+
+<span class="c1"># 4\. 发送数据到指定的电脑上</span>
+<span class="n">udp_socket</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="n">send_data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">dest_addr</span><span class="p">)</span>
+
+<span class="c1"># 5\. 等待接收对方发送的数据</span>
+<span class="n">recv_data</span> <span class="o">=</span> <span class="n">udp_socket</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>  <span class="c1"># 1024表示本次接收的最大字节数</span>
+
+<span class="c1"># 6\. 显示对方发送的数据</span>
+<span class="c1"># 接收到的数据recv_data是一个元组</span>
+<span class="c1"># 第1个元素是对方发送的数据</span>
+<span class="c1"># 第2个元素是对方的ip和端口</span>
+<span class="k">print</span><span class="p">(</span><span class="n">recv_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;gbk&#39;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">recv_data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># 7\. 关闭套接字</span>
+<span class="n">udp_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+<p>python脚本：
+<img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-fe8e6ee4eb76c73a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p>网络调试助手截图：</p>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-136b274674f84ad1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h2 id="37python3">3.7python3编码转换<a class="headerlink" href="#37python3" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="nb">str</span><span class="o">-&gt;</span><span class="nb">bytes</span><span class="p">:</span><span class="n">encode编码</span>
+<span class="nb">bytes</span><span class="o">-&gt;</span><span class="nb">str</span><span class="p">:</span><span class="n">decode解码</span>
+</pre></div>
+
+<p>字符串通过编码成为字节码，字节码通过解码成为字符串。</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;我是文本&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">text</span>
+<span class="s1">&#39;我是文本&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="err">我是文本</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">bytesText</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">bytesText</span>
+<span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xe6\x88\x91\xe6\x98\xaf\xe6\x96\x87\xe6\x9c\xac</span><span class="s1">&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">bytesText</span><span class="p">)</span>
+<span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xe6\x88\x91\xe6\x98\xaf\xe6\x96\x87\xe6\x9c\xac</span><span class="s1">&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">bytesText</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">bytes</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">textDecode</span> <span class="o">=</span> <span class="n">bytesText</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">textDecode</span>
+<span class="s1">&#39;我是文本&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">textDecode</span><span class="p">)</span>
+<span class="err">我是文本</span>
+</pre></div>
+
+<p>其中decode()与encode()方法可以接受参数，其声明分别为:</p>
+<div class="codehilite"><pre><span></span><span class="nb">bytes</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;strict&quot;</span><span class="p">)</span>
+<span class="nb">str</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;strict&quot;</span><span class="p">)</span>
+</pre></div>
+
+<p>其中的encoding是指在解码编码过程中使用的编码(此处指“编码方案”是名词)，errors是指错误的处理方案。</p>
+<p>详细的可以参照官方文档：</p>
+<ul>
+<li><a href="https://docs.python.org/3/library/stdtypes.html?highlight=decode#str.encode">str.encode()</a></li>
+<li><a href="https://docs.python.org/3/library/stdtypes.html?highlight=decode#bytes.decode">bytes.decode()</a></li>
+</ul>
+<h2 id="udp">udp绑定信息<a class="headerlink" href="#udp" title="Permanent link">&para;</a></h2>
+<h3 id="146-udp-_1">1. udp网络程序-端口问题<a class="headerlink" href="#146-udp-_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>会变的端口号</li>
+</ul>
+<p>重新运行多次脚本，然后在“网络调试助手”中，看到的现象如下：
+<img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-6791fc527af4bd25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<p>说明：</p>
+<ul>
+<li>每重新运行一次网络程序，上图中红圈中的数字，不一样的原因在于，这个数字标识这个网络程序，当重新运行时，如果没有确定到底用哪个，系统默认会随机分配</li>
+<li>记住一点：这个网络程序在运行的过程中，这个就唯一标识这个程序，所以如果其他电脑上的网络程序如果想要向此程序发送数据，那么就需要向这个数字（即端口）标识的程序发送即可</li>
+</ul>
+<h3 id="246-udp">2. udp绑定信息<a class="headerlink" href="#246-udp" title="Permanent link">&para;</a></h3>
+<h4 id="1">&lt;1&gt;. 绑定信息<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
+<p>一般情况下，在一台电脑上运行的网络程序有很多，为了不与其他的网络程序占用同一个端口号，往往在编程中，udp的端口号一般不绑定</p>
+<p>但是如果需要做成一个服务器端的程序的话，是需要绑定的，想想看这又是为什么呢？</p>
+<p>如果报警电话每天都在变，想必世界就会乱了，所以一般服务性的程序，往往需要一个固定的端口号，这就是所谓的端口绑定</p>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-917601cd6223ad70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h4 id="2">&lt;2&gt;. 绑定示例<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span>#coding=utf-8
+
+from socket import *
+
+# 1\. 创建套接字
+udp_socket = socket(AF_INET, SOCK_DGRAM)
+
+# 2\. 绑定本地的相关信息，如果一个网络程序不绑定，则系统会随机分配
+local_addr = (&#39;&#39;, 7788) #  ip地址和端口号，ip一般不用写，表示本机的任何一个ip
+udp_socket.bind(local_addr)
+
+# 3\. 等待接收对方发送的数据
+recv_data = udp_socket.recvfrom(1024) #  1024表示本次接收的最大字节数
+
+# 4\. 显示接收到的数据
+print(recv_data[0].decode(&#39;gbk&#39;))
+
+# 5\. 关闭套接字
+udp_socket.close()
+</pre></div>
+
+<h4 id="_7">运行结果：<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-376d3796d6f91863.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h4 id="3">&lt;3&gt;. 总结<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>一个udp网络程序，可以不绑定，此时操作系统会随机进行分配一个端口，如果重新运行此程序端口可能会发生变化</li>
+<li>一个udp网络程序，也可以绑定信息（ip地址，端口号），如果绑定成功，那么操作系统用这个端口号来进行区别收到的网络数据是否是此进程的</li>
+</ul>
+<h2 id="39">3.9网络通信过程(简单版)<a class="headerlink" href="#39" title="Permanent link">&para;</a></h2>
+<p><img alt="image.png" src="https://upload-images.jianshu.io/upload_images/14555448-b396a3b67ed40b72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" /></p>
+<h3 id="_8">说明<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>网络通信过程中，之所需要ip、port等，就是为了能够将一个复杂的通信过程进行任务划分，从而保证数据准确无误的传递</li>
+</ul>
+<h2 id="310udp">3.10应用：udp聊天器<a class="headerlink" href="#310udp" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>说明
+在一个电脑中编写1个程序，有2个功能
+* 1.获取键盘数据，并将其发送给对方
+* 2.接收数据并显示
+并且功能数据进行选择以上的2个功能调用</p>
+</blockquote>
+<h4 id="_9">要求<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>实现上述程序
+参考代码:
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">socket</span>
+
+
+<span class="k">def</span> <span class="nf">send_msg</span><span class="p">(</span><span class="n">udp_socket</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;获取键盘数据，并将其发送给对方&quot;&quot;&quot;</span>
+    <span class="c1"># 1. 从键盘输入数据</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">请输入要发送的数据:&quot;</span><span class="p">)</span>
+    <span class="c1"># 2. 输入对方的ip地址</span>
+    <span class="n">dest_ip</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">请输入对方的ip地址:&quot;</span><span class="p">)</span>
+    <span class="c1"># 3. 输入对方的port</span>
+    <span class="n">dest_port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">请输入对方的port:&quot;</span><span class="p">))</span>
+    <span class="c1"># 4. 发送数据</span>
+    <span class="n">udp_socket</span><span class="o">.</span><span class="n">sendto</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),</span> <span class="p">(</span><span class="n">dest_ip</span><span class="p">,</span> <span class="n">dest_port</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">recv_msg</span><span class="p">(</span><span class="n">udp_socket</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;接收数据并显示&quot;&quot;&quot;</span>
+    <span class="c1"># 1. 接收数据</span>
+    <span class="n">recv_msg</span> <span class="o">=</span> <span class="n">udp_socket</span><span class="o">.</span><span class="n">recvfrom</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+    <span class="c1"># 2. 解码</span>
+    <span class="n">recv_ip</span> <span class="o">=</span> <span class="n">recv_msg</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">recv_msg</span> <span class="o">=</span> <span class="n">recv_msg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+    <span class="c1"># 3. 显示接收到的数据</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&gt;&gt;&gt;</span><span class="si">%s</span><span class="s2">:</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">recv_ip</span><span class="p">),</span> <span class="n">recv_msg</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># 1. 创建套接字</span>
+    <span class="n">udp_socket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_DGRAM</span><span class="p">)</span>
+    <span class="c1"># 2. 绑定本地信息</span>
+    <span class="n">udp_socket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">7890</span><span class="p">))</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="c1"># 3. 选择功能</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">30</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;1:发送消息&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;2:接收消息&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">30</span><span class="p">)</span>
+        <span class="n">op_num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入要操作的功能序号:&quot;</span><span class="p">)</span>
+
+        <span class="c1"># 4. 根据选择调用相应的函数</span>
+        <span class="k">if</span> <span class="n">op_num</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
+            <span class="n">send_msg</span><span class="p">(</span><span class="n">udp_socket</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">op_num</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+            <span class="n">recv_msg</span><span class="p">(</span><span class="n">udp_socket</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;输入有误，请重新输入...&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+想一想
+以上的程序如果选择了接收数据功能，并且此时没有数据，程序会堵塞在这，那么怎样才能让这个程序收发数据一起进行呢？别着急，学习完多任务知识之后就解决了O(∩_∩)O...</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="Welcome to MkDocs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Welcome to MkDocs
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../002-网络tcp/" title="002 网络tcp" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                002 网络tcp
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
