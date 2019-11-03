@@ -1,0 +1,1336 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="go语言的学习笔记">
+      
+      
+        <link rel="canonical" href="https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/008 go语言运算符/">
+      
+      
+        <meta name="author" content="臧珍华">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>go语言运算符 - 臧珍华的博客</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://zangzhenhua1996.github.io/go/" title="臧珍华的博客" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              臧珍华的博客
+            </span>
+            <span class="md-header-nav__topic">
+              
+                go语言运算符
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://www.jianshu.com/u/21b46dcb7c44" title="前往 Github 仓库" class="md-source" data-md-source="">
+  
+  <div class="md-source__repository">
+    I love AnFei
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        介绍
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../第一章go语言开发环境配置/001 go语言开发环境配置/" class="md-tabs__link">
+          安装
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../002 go语言第一个例子/" class="md-tabs__link md-tabs__link--active">
+          基础语法
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://zangzhenhua1996.github.io/go/" title="臧珍华的博客" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    臧珍华的博客
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://www.jianshu.com/u/21b46dcb7c44" title="前往 Github 仓库" class="md-source" data-md-source="">
+  
+  <div class="md-source__repository">
+    I love AnFei
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="介绍" class="md-nav__link">
+      介绍
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      安装
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        安装
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第一章go语言开发环境配置/001 go语言开发环境配置/" title="本地环境搭建" class="md-nav__link">
+      本地环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      基础语法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        基础语法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../002 go语言第一个例子/" title="第一个例子" class="md-nav__link">
+      第一个例子
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../003 go语言结构/" title="go语言结构" class="md-nav__link">
+      go语言结构
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../004 go语言基础语法/" title="go语言基础语法" class="md-nav__link">
+      go语言基础语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../005 go变量定义/" title="go变量定义" class="md-nav__link">
+      go变量定义
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../006 go内建变量类型/" title="go内建变量类型" class="md-nav__link">
+      go内建变量类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../007 go常量与枚举/" title="go常量与枚举" class="md-nav__link">
+      go常量与枚举
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        go语言运算符
+      </label>
+    
+    <a href="./" title="go语言运算符" class="md-nav__link md-nav__link--active">
+      go语言运算符
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    算术运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    关系运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    逻辑运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    位运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    赋值运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    其他运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    运算符优先级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    笔记
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../009 go语言条件语句/" title="go语言条件语句" class="md-nav__link">
+      go语言条件语句
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    算术运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    关系运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    逻辑运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    位运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    赋值运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    其他运算符
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    运算符优先级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    笔记
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">常用的运算符<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>运算符用于在程序运行时执行数学或逻辑运算。</p>
+<p>Go 语言内置的运算符有：</p>
+<ul>
+<li>算术运算符</li>
+<li>关系运算符</li>
+<li>逻辑运算符</li>
+<li>位运算符</li>
+<li>赋值运算符</li>
+<li>其他运算符</li>
+</ul>
+<h2 id="_2">算术运算符<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>下表列出了所有Go语言的算术运算符。假定 A 值为 10，B 值为 20。</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">+</td>
+<td align="left">相加</td>
+<td align="left">A + B 输出结果 30</td>
+</tr>
+<tr>
+<td align="left">-</td>
+<td align="left">相减</td>
+<td align="left">A - B 输出结果 -10</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">相乘</td>
+<td align="left">A * B 输出结果 200</td>
+</tr>
+<tr>
+<td align="left">/</td>
+<td align="left">相除</td>
+<td align="left">B / A 输出结果 2</td>
+</tr>
+<tr>
+<td align="left">%</td>
+<td align="left">求余</td>
+<td align="left">B % A 输出结果 0</td>
+</tr>
+<tr>
+<td align="left">++</td>
+<td align="left">自增</td>
+<td align="left">A++ 输出结果 11</td>
+</tr>
+<tr>
+<td align="left">--</td>
+<td align="left">自减</td>
+<td align="left">A-- 输出结果 9</td>
+</tr>
+</tbody>
+</table>
+<p>以下实例演示了各个算术运算符的用法：</p>
+<h2 id="_3">实例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">21</span>
+   <span class="kd">var</span> <span class="nx">b</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">10</span>
+   <span class="kd">var</span> <span class="nx">c</span> <span class="kt">int</span>
+
+   <span class="nx">c</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第一行 - c 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+   <span class="nx">c</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第二行 - c 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+   <span class="nx">c</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第三行 - c 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+   <span class="nx">c</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">/</span> <span class="nx">b</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第四行 - c 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+   <span class="nx">c</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">%</span> <span class="nx">b</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第五行 - c 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+   <span class="nx">a</span><span class="o">++</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第六行 - a 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span> <span class="p">)</span>
+   <span class="nx">a</span><span class="p">=</span><span class="mi">21</span>   <span class="c1">// 为了方便测试，a 这里重新赋值为 21</span>
+   <span class="nx">a</span><span class="o">--</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第七行 - a 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span> <span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>以上实例运行结果： </p>
+<div class="codehilite"><pre><span></span><span class="nx">第一行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">31</span>
+<span class="nx">第二行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">11</span>
+<span class="nx">第三行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">210</span>
+<span class="nx">第四行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">2</span>
+<span class="nx">第五行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">1</span>
+<span class="nx">第六行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">的值为</span> <span class="mi">22</span>
+<span class="nx">第七行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">的值为</span> <span class="mi">20</span>
+</pre></div>
+
+<h2 id="_4">关系运算符<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>下表列出了所有Go语言的关系运算符。假定 A 值为 10，B 值为 20。</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">==</td>
+<td align="left">检查两个值是否相等，如果相等返回 True 否则返回 False。</td>
+<td align="left">(A == B) 为 False</td>
+</tr>
+<tr>
+<td align="left">!=</td>
+<td align="left">检查两个值是否不相等，如果不相等返回 True 否则返回 False。</td>
+<td align="left">(A != B) 为 True</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">检查左边值是否大于右边值，如果是返回 True 否则返回 False。</td>
+<td align="left">(A &gt; B) 为 False</td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="left">检查左边值是否小于右边值，如果是返回 True 否则返回 False。</td>
+<td align="left">(A &lt; B) 为 True</td>
+</tr>
+<tr>
+<td align="left">&gt;=</td>
+<td align="left">检查左边值是否大于等于右边值，如果是返回 True 否则返回 False。</td>
+<td align="left">(A &gt;= B) 为 False</td>
+</tr>
+<tr>
+<td align="left">&lt;=</td>
+<td align="left">检查左边值是否小于等于右边值，如果是返回 True 否则返回 False。</td>
+<td align="left">(A &lt;= B) 为 True</td>
+</tr>
+</tbody>
+</table>
+<p>以下实例演示了关系运算符的用法：</p>
+<h2 id="_5">实例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">21</span>
+   <span class="kd">var</span> <span class="nx">b</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">10</span>
+
+   <span class="k">if</span><span class="p">(</span> <span class="nx">a</span> <span class="o">==</span> <span class="nx">b</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第一行 - a 等于 b\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第一行 - a 不等于 b\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="p">&lt;</span> <span class="nx">b</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第二行 - a 小于 b\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第二行 - a 不小于 b\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span> 
+
+   <span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="p">&gt;</span> <span class="nx">b</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第三行 - a 大于 b\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第三行 - a 不大于 b\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span>
+   <span class="cm">/* Lets change value of a and b */</span>
+   <span class="nx">a</span> <span class="p">=</span> <span class="mi">5</span>
+   <span class="nx">b</span> <span class="p">=</span> <span class="mi">20</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">&lt;=</span> <span class="nx">b</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第四行 - a 小于等于 b\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="nx">b</span> <span class="o">&gt;=</span> <span class="nx">a</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第五行 - b 大于等于 a\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>结果</p>
+<div class="codehilite"><pre><span></span><span class="nx">第一行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">不等于</span> <span class="nx">b</span>
+<span class="nx">第二行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">不小于</span> <span class="nx">b</span>
+<span class="nx">第三行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">大于</span> <span class="nx">b</span>
+<span class="nx">第四行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">小于等于</span> <span class="nx">b</span>
+<span class="nx">第五行</span> <span class="o">-</span> <span class="nx">b</span> <span class="nx">大于等于</span> <span class="nx">a</span>
+</pre></div>
+
+<h2 id="_6">逻辑运算符<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>下表列出了所有Go语言的逻辑运算符。假定 A 值为 True，B 值为 False。</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">&amp;&amp;</td>
+<td align="left">逻辑 AND 运算符。 如果两边的操作数都是 True，则条件 True，否则为 False。</td>
+<td align="left">(A &amp;&amp; B) 为 False</td>
+</tr>
+<tr>
+<td align="left">||</td>
+<td align="left">逻辑 OR 运算符。 如果两边的操作数有一个 True，则条件 True，否则为 False。</td>
+<td align="left">(A || B) 为 True</td>
+</tr>
+<tr>
+<td align="left">!</td>
+<td align="left">逻辑 NOT 运算符。 如果条件为 True，则逻辑 NOT 条件 False，否则为 True。</td>
+<td align="left">!(A &amp;&amp; B) 为 True</td>
+</tr>
+</tbody>
+</table>
+<p>以下实例演示了逻辑运算符的用法：</p>
+<h2 id="_7">实例<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">bool</span> <span class="p">=</span> <span class="kc">true</span>
+   <span class="kd">var</span> <span class="nx">b</span> <span class="kt">bool</span> <span class="p">=</span> <span class="kc">false</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">&amp;&amp;</span> <span class="nx">b</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第一行 - 条件为 true\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">||</span> <span class="nx">b</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第二行 - 条件为 true\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span>
+   <span class="cm">/* 修改 a 和 b 的值 */</span>
+   <span class="nx">a</span> <span class="p">=</span> <span class="kc">false</span>
+   <span class="nx">b</span> <span class="p">=</span> <span class="kc">true</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="nx">a</span> <span class="o">&amp;&amp;</span> <span class="nx">b</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第三行 - 条件为 true\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第三行 - 条件为 false\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span>
+   <span class="k">if</span> <span class="p">(</span> <span class="p">!(</span><span class="nx">a</span> <span class="o">&amp;&amp;</span> <span class="nx">b</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第四行 - 条件为 true\n&quot;</span> <span class="p">)</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>结果</p>
+<div class="codehilite"><pre><span></span><span class="nx">第二行</span> <span class="o">-</span> <span class="nx">条件为</span> <span class="kc">true</span>
+<span class="nx">第三行</span> <span class="o">-</span> <span class="nx">条件为</span> <span class="kc">false</span>
+<span class="nx">第四行</span> <span class="o">-</span> <span class="nx">条件为</span> <span class="kc">true</span>
+</pre></div>
+
+<h2 id="_8">位运算符<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>位运算符对整数在内存中的二进制位进行操作。</p>
+<p>下表列出了位运算符 &amp;, |, 和 ^ 的计算：</p>
+<table>
+<thead>
+<tr>
+<th align="left">p</th>
+<th align="left">q</th>
+<th align="left">p &amp; q</th>
+<th align="left">p | q</th>
+<th align="left">p ^ q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>假定 A = 60; B = 13; 其二进制数转换为：</p>
+<div class="codehilite"><pre><span></span><span class="nx">A</span> <span class="p">=</span> <span class="mo">0011</span> <span class="mi">1100</span>
+
+<span class="nx">B</span> <span class="p">=</span> <span class="mo">0000</span> <span class="mi">1101</span>
+
+<span class="o">-----------------</span>
+
+<span class="nx">A</span><span class="o">&amp;</span><span class="nx">B</span> <span class="p">=</span> <span class="mo">0000</span> <span class="mi">1100</span>
+
+<span class="nx">A</span><span class="p">|</span><span class="nx">B</span> <span class="p">=</span> <span class="mo">0011</span> <span class="mi">1101</span>
+
+<span class="nx">A</span><span class="p">^</span><span class="nx">B</span> <span class="p">=</span> <span class="mo">0011</span> <span class="mo">0001</span>
+</pre></div>
+
+<p>Go 语言支持的位运算符如下表所示。假定 A 为60，B 为13：</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">按位与运算符"&amp;"是双目运算符。 其功能是参与运算的两数各对应的二进位相与。</td>
+<td align="left">(A &amp; B) 结果为 12, 二进制为 0000 1100</td>
+</tr>
+<tr>
+<td align="left">|</td>
+<td align="left">按位或运算符"|"是双目运算符。 其功能是参与运算的两数各对应的二进位相或</td>
+<td align="left">(A | B) 结果为 61, 二进制为 0011 1101</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">按位异或运算符"^"是双目运算符。 其功能是参与运算的两数各对应的二进位相异或，当两对应的二进位相异时，结果为1。</td>
+<td align="left">(A ^ B) 结果为 49, 二进制为 0011 0001</td>
+</tr>
+<tr>
+<td align="left">&lt;&lt;</td>
+<td align="left">左移运算符"&lt;&lt;"是双目运算符。左移n位就是乘以2的n次方。 其功能把"&lt;&lt;"左边的运算数的各二进位全部左移若干位，由"&lt;&lt;"右边的数指定移动的位数，高位丢弃，低位补0。</td>
+<td align="left">A &lt;&lt; 2 结果为 240 ，二进制为 1111 0000</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt;</td>
+<td align="left">右移运算符"&gt;&gt;"是双目运算符。右移n位就是除以2的n次方。 其功能是把"&gt;&gt;"左边的运算数的各二进位全部右移若干位，"&gt;&gt;"右边的数指定移动的位数。</td>
+<td align="left">A &gt;&gt; 2 结果为 15 ，二进制为 0000 1111</td>
+</tr>
+</tbody>
+</table>
+<p>以下实例演示了位运算符的用法：</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">uint</span> <span class="p">=</span> <span class="mi">60</span>      <span class="cm">/* 60 = 0011 1100 */</span>  
+   <span class="kd">var</span> <span class="nx">b</span> <span class="kt">uint</span> <span class="p">=</span> <span class="mi">13</span>      <span class="cm">/* 13 = 0000 1101 */</span>
+   <span class="kd">var</span> <span class="nx">c</span> <span class="kt">uint</span> <span class="p">=</span> <span class="mi">0</span>          
+
+   <span class="nx">c</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">&amp;</span> <span class="nx">b</span>       <span class="cm">/* 12 = 0000 1100 */</span> 
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第一行 - c 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="p">=</span> <span class="nx">a</span> <span class="p">|</span> <span class="nx">b</span>       <span class="cm">/* 61 = 0011 1101 */</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第二行 - c 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="p">=</span> <span class="nx">a</span> <span class="p">^</span> <span class="nx">b</span>       <span class="cm">/* 49 = 0011 0001 */</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第三行 - c 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>     <span class="cm">/* 240 = 1111 0000 */</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第四行 - c 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span>     <span class="cm">/* 15 = 0000 1111 */</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第五行 - c 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>结果</p>
+<div class="codehilite"><pre><span></span><span class="nx">第一行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">12</span>
+<span class="nx">第二行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">61</span>
+<span class="nx">第三行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">49</span>
+<span class="nx">第四行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">240</span>
+<span class="nx">第五行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">15</span>
+</pre></div>
+
+<h2 id="_9">赋值运算符<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>下表列出了所有Go语言的赋值运算符。</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">=</td>
+<td align="left">简单的赋值运算符，将一个表达式的值赋给一个左值</td>
+<td align="left">C = A + B 将 A + B 表达式结果赋值给 C</td>
+</tr>
+<tr>
+<td align="left">+=</td>
+<td align="left">相加后再赋值</td>
+<td align="left">C += A 等于 C = C + A</td>
+</tr>
+<tr>
+<td align="left">-=</td>
+<td align="left">相减后再赋值</td>
+<td align="left">C -= A 等于 C = C - A</td>
+</tr>
+<tr>
+<td align="left">*=</td>
+<td align="left">相乘后再赋值</td>
+<td align="left">C *= A 等于 C = C * A</td>
+</tr>
+<tr>
+<td align="left">/=</td>
+<td align="left">相除后再赋值</td>
+<td align="left">C /= A 等于 C = C / A</td>
+</tr>
+<tr>
+<td align="left">%=</td>
+<td align="left">求余后再赋值</td>
+<td align="left">C %= A 等于 C = C % A</td>
+</tr>
+<tr>
+<td align="left">&lt;&lt;=</td>
+<td align="left">左移后赋值</td>
+<td align="left">C &lt;&lt;= 2 等于 C = C &lt;&lt; 2</td>
+</tr>
+<tr>
+<td align="left">&gt;&gt;=</td>
+<td align="left">右移后赋值</td>
+<td align="left">C &gt;&gt;= 2 等于 C = C &gt;&gt; 2</td>
+</tr>
+<tr>
+<td align="left">&amp;=</td>
+<td align="left">按位与后赋值</td>
+<td align="left">C &amp;= 2 等于 C = C &amp; 2</td>
+</tr>
+<tr>
+<td align="left">^=</td>
+<td align="left">按位异或后赋值</td>
+<td align="left">C ^= 2 等于 C = C ^ 2</td>
+</tr>
+<tr>
+<td align="left">|=</td>
+<td align="left">按位或后赋值</td>
+<td align="left">C |= 2 等于 C = C | 2</td>
+</tr>
+</tbody>
+</table>
+<p>以下实例演示了赋值运算符的用法：</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">21</span>
+   <span class="kd">var</span> <span class="nx">c</span> <span class="kt">int</span>
+
+   <span class="nx">c</span> <span class="p">=</span>  <span class="nx">a</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 1 行 - =  运算符实例，c 值为 = %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="o">+=</span>  <span class="nx">a</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 2 行 - += 运算符实例，c 值为 = %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="o">-=</span>  <span class="nx">a</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 3 行 - -= 运算符实例，c 值为 = %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="o">*=</span>  <span class="nx">a</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 4 行 - *= 运算符实例，c 值为 = %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="o">/=</span>  <span class="nx">a</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 5 行 - /= 运算符实例，c 值为 = %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span>  <span class="p">=</span> <span class="mi">200</span><span class="p">;</span> 
+
+   <span class="nx">c</span> <span class="o">&lt;&lt;=</span>  <span class="mi">2</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 6行  - &lt;&lt;= 运算符实例，c 值为 = %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="o">&gt;&gt;=</span>  <span class="mi">2</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 7 行 - &gt;&gt;= 运算符实例，c 值为 = %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="o">&amp;=</span>  <span class="mi">2</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 8 行 - &amp;= 运算符实例，c 值为 = %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="p">^=</span>  <span class="mi">2</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 9 行 - ^= 运算符实例，c 值为 = %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+   <span class="nx">c</span> <span class="o">|=</span>  <span class="mi">2</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 10 行 - |= 运算符实例，c 值为 = %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
+
+<span class="p">}</span>
+</pre></div>
+
+<p>结果</p>
+<div class="codehilite"><pre><span></span><span class="nx">第</span> <span class="mi">1</span> <span class="nx">行</span> <span class="o">-</span> <span class="p">=</span>  <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">21</span>
+<span class="nx">第</span> <span class="mi">2</span> <span class="nx">行</span> <span class="o">-</span> <span class="o">+=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">42</span>
+<span class="nx">第</span> <span class="mi">3</span> <span class="nx">行</span> <span class="o">-</span> <span class="o">-=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">21</span>
+<span class="nx">第</span> <span class="mi">4</span> <span class="nx">行</span> <span class="o">-</span> <span class="o">*=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">441</span>
+<span class="nx">第</span> <span class="mi">5</span> <span class="nx">行</span> <span class="o">-</span> <span class="o">/=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">21</span>
+<span class="nx">第</span> <span class="mi">6</span><span class="nx">行</span>  <span class="o">-</span> <span class="o">&lt;&lt;=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">800</span>
+<span class="nx">第</span> <span class="mi">7</span> <span class="nx">行</span> <span class="o">-</span> <span class="o">&gt;&gt;=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">200</span>
+<span class="nx">第</span> <span class="mi">8</span> <span class="nx">行</span> <span class="o">-</span> <span class="o">&amp;=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">0</span>
+<span class="nx">第</span> <span class="mi">9</span> <span class="nx">行</span> <span class="o">-</span> <span class="p">^=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">2</span>
+<span class="nx">第</span> <span class="mi">10</span> <span class="nx">行</span> <span class="o">-</span> <span class="o">|=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">2</span>
+</pre></div>
+
+<h2 id="_10">其他运算符<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>下表列出了Go语言的其他运算符。</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">返回变量存储地址</td>
+<td align="left">&a; 将给出变量的实际地址。</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">指针变量。</td>
+<td align="left">*a; 是一个指针变量</td>
+</tr>
+</tbody>
+</table>
+<p>以下实例演示了其他运算符的用法：</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">4</span>
+   <span class="kd">var</span> <span class="nx">b</span> <span class="kt">int32</span>
+   <span class="kd">var</span> <span class="nx">c</span> <span class="kt">float32</span>
+   <span class="kd">var</span> <span class="nx">ptr</span> <span class="o">*</span><span class="kt">int</span>
+
+   <span class="cm">/* 运算符实例 */</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 1 行 - a 变量类型为 = %T\n&quot;</span><span class="p">,</span> <span class="nx">a</span> <span class="p">);</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 2 行 - b 变量类型为 = %T\n&quot;</span><span class="p">,</span> <span class="nx">b</span> <span class="p">);</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 3 行 - c 变量类型为 = %T\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">);</span>
+
+   <span class="cm">/*  &amp; 和 * 运算符实例 */</span>
+   <span class="nx">ptr</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">a</span>     <span class="cm">/* &#39;ptr&#39; 包含了 &#39;a&#39; 变量的地址 */</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;a 的值为  %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">);</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;*ptr 为 %d\n&quot;</span><span class="p">,</span> <span class="o">*</span><span class="nx">ptr</span><span class="p">);</span>  <span class="c1">//*ptr指向这个地址变量值</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>结果</p>
+<div class="codehilite"><pre><span></span><span class="nx">第</span> <span class="mi">1</span> <span class="nx">行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">变量类型为</span> <span class="p">=</span> <span class="kt">int</span>
+<span class="nx">第</span> <span class="mi">2</span> <span class="nx">行</span> <span class="o">-</span> <span class="nx">b</span> <span class="nx">变量类型为</span> <span class="p">=</span> <span class="kt">int32</span>
+<span class="nx">第</span> <span class="mi">3</span> <span class="nx">行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">变量类型为</span> <span class="p">=</span> <span class="kt">float32</span>
+<span class="nx">a</span> <span class="nx">的值为</span>  <span class="mi">4</span>
+<span class="o">*</span><span class="nx">ptr</span> <span class="nx">为</span> <span class="mi">4</span>
+</pre></div>
+
+<h2 id="_11">运算符优先级<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>有些运算符拥有较高的优先级，二元运算符的运算方向均是从左至右。下表列出了所有运算符以及它们的优先级，由上至下代表优先级由高到低：</p>
+<table>
+<thead>
+<tr>
+<th align="left">优先级</th>
+<th align="left">运算符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">5</td>
+<td align="left">* / % &lt;&lt; &gt;&gt; &amp; &amp;^</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">+ - | ^</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">== != &lt; &lt;= &gt; &gt;=</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">&amp;&amp;</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">||</td>
+</tr>
+</tbody>
+</table>
+<p>当然，你可以通过使用括号来临时提升某个表达式的整体运算优先级。</p>
+<p>以上实例运行结果：</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">20</span>
+   <span class="kd">var</span> <span class="nx">b</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">10</span>
+   <span class="kd">var</span> <span class="nx">c</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">15</span>
+   <span class="kd">var</span> <span class="nx">d</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">5</span>
+   <span class="kd">var</span> <span class="nx">e</span> <span class="kt">int</span><span class="p">;</span>
+
+   <span class="nx">e</span> <span class="p">=</span> <span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="o">*</span> <span class="nx">c</span> <span class="o">/</span> <span class="nx">d</span><span class="p">;</span>      <span class="c1">// ( 30 * 15 ) / 5</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;(a + b) * c / d 的值为 : %d\n&quot;</span><span class="p">,</span>  <span class="nx">e</span> <span class="p">);</span>
+
+   <span class="nx">e</span> <span class="p">=</span> <span class="p">((</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="o">*</span> <span class="nx">c</span><span class="p">)</span> <span class="o">/</span> <span class="nx">d</span><span class="p">;</span>    <span class="c1">// (30 * 15 ) / 5</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;((a + b) * c) / d 的值为  : %d\n&quot;</span> <span class="p">,</span>  <span class="nx">e</span> <span class="p">);</span>
+
+   <span class="nx">e</span> <span class="p">=</span> <span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nx">c</span> <span class="o">/</span> <span class="nx">d</span><span class="p">);</span>   <span class="c1">// (30) * (15/5)</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;(a + b) * (c / d) 的值为  : %d\n&quot;</span><span class="p">,</span>  <span class="nx">e</span> <span class="p">);</span>
+
+   <span class="nx">e</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">+</span> <span class="p">(</span><span class="nx">b</span> <span class="o">*</span> <span class="nx">c</span><span class="p">)</span> <span class="o">/</span> <span class="nx">d</span><span class="p">;</span>     <span class="c1">//  20 + (150/5)</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;a + (b * c) / d 的值为  : %d\n&quot;</span> <span class="p">,</span>  <span class="nx">e</span> <span class="p">);</span>  
+<span class="p">}</span>
+</pre></div>
+
+<p>以上实例运行结果： </p>
+<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="o">*</span> <span class="nx">c</span> <span class="o">/</span> <span class="nx">d</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">90</span>
+<span class="p">((</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="o">*</span> <span class="nx">c</span><span class="p">)</span> <span class="o">/</span> <span class="nx">d</span> <span class="nx">的值为</span>  <span class="p">:</span> <span class="mi">90</span>
+<span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nx">c</span> <span class="o">/</span> <span class="nx">d</span><span class="p">)</span> <span class="nx">的值为</span>  <span class="p">:</span> <span class="mi">90</span>
+<span class="nx">a</span> <span class="o">+</span> <span class="p">(</span><span class="nx">b</span> <span class="o">*</span> <span class="nx">c</span><span class="p">)</span> <span class="o">/</span> <span class="nx">d</span> <span class="nx">的值为</span>  <span class="p">:</span> <span class="mi">50</span>
+</pre></div>
+
+<h2 id="_12">笔记<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>指针变量 <code>*</code> 和地址值 <code>&amp;</code> 的区别：指针变量保存的是一个地址值，会分配独立的内存来存储一个整型数字。当变量前面有 <code>*</code> 标识时，才等同于 <code>&amp;</code> 的用法，否则会直接输出一个整型数字 </p>
+<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">4</span>
+   <span class="kd">var</span> <span class="nx">ptr</span> <span class="o">*</span><span class="kt">int</span>
+   <span class="nx">ptr</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">a</span>
+   <span class="nb">println</span><span class="p">(</span><span class="s">&quot;a的值为&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">);</span>    <span class="c1">// 4</span>
+   <span class="nb">println</span><span class="p">(</span><span class="s">&quot;*ptr为&quot;</span><span class="p">,</span> <span class="o">*</span><span class="nx">ptr</span><span class="p">);</span>  <span class="c1">// 4   变量值</span>
+   <span class="nb">println</span><span class="p">(</span><span class="s">&quot;ptr为&quot;</span><span class="p">,</span> <span class="nx">ptr</span><span class="p">);</span>    <span class="c1">// 824633794744    地址值</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Go 的自增，自减只能作为表达式使用，而不能用于赋值语句。 </p>
+<div class="codehilite"><pre><span></span><span class="nx">a</span><span class="o">++</span> <span class="c1">// 这是允许的，类似 a = a + 1,结果与 a++ 相同</span>
+<span class="nx">a</span><span class="o">--</span> <span class="c1">//与 a++ 相似</span>
+<span class="nx">a</span> <span class="p">=</span> <span class="nx">a</span><span class="o">++</span> <span class="c1">// 这是不允许的，会出现变异错误 syntax error: unexpected ++ at end of statement</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+    <hr>
+    <!--<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>-->
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,946 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="go语言的学习笔记">
+      
+      
+        <link rel="canonical" href="https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/005 go变量定义/">
+      
+      
+        <meta name="author" content="臧珍华">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>go变量定义 - 臧珍华的博客</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#go" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://zangzhenhua1996.github.io/go/" title="臧珍华的博客" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              臧珍华的博客
+            </span>
+            <span class="md-header-nav__topic">
+              
+                go变量定义
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://www.jianshu.com/u/21b46dcb7c44" title="前往 Github 仓库" class="md-source" data-md-source="">
+  
+  <div class="md-source__repository">
+    I love AnFei
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        介绍
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../第一章go语言开发环境配置/001 go语言开发环境配置/" class="md-tabs__link">
+          安装
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../002 go语言第一个例子/" class="md-tabs__link md-tabs__link--active">
+          基础语法
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://zangzhenhua1996.github.io/go/" title="臧珍华的博客" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    臧珍华的博客
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://www.jianshu.com/u/21b46dcb7c44" title="前往 Github 仓库" class="md-source" data-md-source="">
+  
+  <div class="md-source__repository">
+    I love AnFei
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="介绍" class="md-nav__link">
+      介绍
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      安装
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        安装
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第一章go语言开发环境配置/001 go语言开发环境配置/" title="本地环境搭建" class="md-nav__link">
+      本地环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      基础语法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        基础语法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../002 go语言第一个例子/" title="第一个例子" class="md-nav__link">
+      第一个例子
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../003 go语言结构/" title="go语言结构" class="md-nav__link">
+      go语言结构
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../004 go语言基础语法/" title="go语言基础语法" class="md-nav__link">
+      go语言基础语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        go变量定义
+      </label>
+    
+    <a href="./" title="go变量定义" class="md-nav__link md-nav__link--active">
+      go变量定义
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    变量声明
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../006 go内建变量类型/" title="go内建变量类型" class="md-nav__link">
+      go内建变量类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../007 go常量与枚举/" title="go常量与枚举" class="md-nav__link">
+      go常量与枚举
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../008 go语言运算符/" title="go语言运算符" class="md-nav__link">
+      go语言运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../009 go语言条件语句/" title="go语言条件语句" class="md-nav__link">
+      go语言条件语句
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    变量声明
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h2 id="go">Go 语言变量<a class="headerlink" href="#go" title="Permanent link">&para;</a></h2>
+<p>变量来源于数学，是计算机语言中能储存计算结果或能表示值抽象概念。</p>
+<p>变量可以通过变量名访问。</p>
+<p>Go 语言变量名由字母、数字、下划线组成，其中首个字符不能为数字。</p>
+<p>声明变量的一般形式是使用 <code>var</code> 关键字：</p>
+<h3 id="_1">变量声明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>第一种，指定变量类型，如果没有初始化，则变量默认为零值。</p>
+<blockquote>
+<p>零值就是变量没有做初始化时系统默认设置的值。
+数值类型（包括complex64/128）为 0
+布尔类型为 false
+字符串为 ""（空字符串）</p>
+</blockquote>
+<p>第二种，根据值自行判定变量类型。</p>
+<p>第三种，省略 var, 注意 <code>:=</code>左侧如果没有声明新的变量，就产生编译错误，格式</p>
+<h2 id="_2">代码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>  <span class="c1">//包名</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>  <span class="c1">//导入打印的包</span>
+
+<span class="c1">//不赋初值的变量声明,都是有默认值的</span>
+<span class="kd">func</span> <span class="nx">variableZeroValue</span><span class="p">()</span> <span class="p">{</span>  <span class="c1">//注意这一行的左花括号必须在这里</span>
+    <span class="kd">var</span>  <span class="nx">a</span>  <span class="kt">int</span>   <span class="c1">//声明变量a是int型,其实更加符合阅读</span>
+    <span class="kd">var</span>  <span class="nx">s</span>  <span class="kt">string</span>  <span class="c1">//在go语言中变量都是有定义的如果你给值那么整数就默认是0,字符串默认是空</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">s</span><span class="p">)</span>  <span class="c1">//使用这个Println并不会打印这个空的字符串</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%d %q\n&quot;</span><span class="p">,</span><span class="nx">a</span><span class="p">,</span><span class="nx">s</span><span class="p">)</span> <span class="c1">//使用格式化字符串打印这个不能显示的空字符串,这里使用的是Printf函数,并且呢使用的是%q进行格式化,会显示双引号</span>
+<span class="p">}</span>
+
+<span class="c1">//赋初值的变量声明</span>
+<span class="kd">func</span> <span class="nx">variableInitialValue</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span><span class="p">,</span><span class="nx">b</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">3</span><span class="p">,</span><span class="mi">4</span> <span class="c1">//go语言定义的变量必须用</span>
+    <span class="kd">var</span> <span class="nx">s</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&quot;abc&quot;</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">s</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// 变量类型的自动推理,类似于js似的</span>
+<span class="kd">func</span> <span class="nx">variableTypeDeduction</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span><span class="p">,</span><span class="nx">b</span> <span class="p">=</span> <span class="mi">3</span><span class="p">,</span><span class="mi">4</span>
+    <span class="kd">var</span> <span class="nx">s</span> <span class="p">=</span> <span class="s">&quot;abc&quot;</span>
+    <span class="kd">var</span> <span class="nx">c</span><span class="p">,</span><span class="nx">d</span> <span class="p">=</span> <span class="kc">true</span><span class="p">,</span><span class="mi">12</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">s</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">d</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// 使用 := 更加简略的声明变量</span>
+<span class="kd">func</span> <span class="nx">variableshorter</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">s</span> <span class="o">:=</span> <span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="kc">true</span><span class="p">,</span><span class="s">&quot;def&quot;</span>  <span class="c1">//第一次出现的时候使用:=进行定义</span>
+    <span class="nx">b</span><span class="p">=</span><span class="mi">5</span>  <span class="c1">//重新赋值的时候就不能使用:= 了,一般我们定义变量都是使用 := 最佳的简洁</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span><span class="p">,</span><span class="nx">s</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//函数外的变量,作用域是包内,没有全局作用域之说,但是声明定义了就要使用</span>
+<span class="kd">var</span> <span class="nx">aa</span> <span class="p">=</span><span class="mi">3</span>
+<span class="kd">var</span> <span class="nx">ss</span> <span class="p">=</span><span class="s">&quot;kkk&quot;</span>
+<span class="c1">//bb:=true  在函数外是不能使用:=进行声明变量的</span>
+<span class="c1">// 也可以使用下面的方式进行包内变量的定义</span>
+<span class="kd">var</span> <span class="p">(</span>
+    <span class="nx">bb</span> <span class="p">=</span> <span class="mi">6</span>
+    <span class="nx">cc</span> <span class="p">=</span><span class="kc">true</span>
+<span class="p">)</span>
+
+<span class="c1">//主程序的入口</span>
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//打印</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">)</span>
+    <span class="nx">variableZeroValue</span><span class="p">()</span>
+    <span class="nx">variableInitialValue</span><span class="p">()</span>
+    <span class="nx">variableTypeDeduction</span><span class="p">()</span>
+    <span class="nx">variableshorter</span><span class="p">()</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">aa</span><span class="p">,</span><span class="nx">bb</span><span class="p">,</span><span class="nx">cc</span><span class="p">,</span><span class="nx">ss</span><span class="p">)</span>
+<span class="c1">//输出结果</span>
+    <span class="cm">/*</span>
+<span class="cm">    hello world</span>
+<span class="cm">    0</span>
+<span class="cm">    0 &quot;&quot;</span>
+<span class="cm">    3 4 abc</span>
+<span class="cm">    3 4 abc true 12</span>
+<span class="cm">    3 5 true def</span>
+<span class="cm">    3 6 true kkk</span>
+<span class="cm">    */</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2 id="_3">总结<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><img alt="image.png" src="../005 go变量定义.image/14555448-62da6d91d59e8eec.png" />
+<img alt="image.png" src="../005 go变量定义.image/14555448-a55c37f8f71107f2.png" />
+<img alt="image.png" src="../005 go变量定义.image/14555448-2425e1d497f5d575.png" /></p>
+<p>菜鸟教程:<a href="https://www.runoob.com/go/go-variables.html">https://www.runoob.com/go/go-variables.html</a></p>
+<h1 id="go_1">Go 语言变量<a class="headerlink" href="#go_1" title="Permanent link">&para;</a></h1>
+<p>变量来源于数学，是计算机语言中能储存计算结果或能表示值抽象概念。</p>
+<p>变量可以通过变量名访问。</p>
+<p>Go 语言变量名由字母、数字、下划线组成，其中首个字符不能为数字。</p>
+<p>声明变量的一般形式是使用 var 关键字：</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">identifier</span> <span class="kd">type</span>
+</pre></div>
+
+<p>可以一次声明多个变量：</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">identifier1</span><span class="p">,</span> <span class="nx">identifier2</span> <span class="kd">type</span>
+</pre></div>
+
+<h2 id="_4">实例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&quot;Runoob&quot;</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+
+    <span class="kd">var</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>以上实例输出结果为：</p>
+<div class="codehilite"><pre><span></span><span class="nx">Runoob</span>
+<span class="mi">1</span> <span class="mi">2</span>
+</pre></div>
+
+<h3 id="_5">变量声明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><strong>第一种，指定变量类型，如果没有初始化，则变量默认为零值</strong>。</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">v_name</span> <span class="nx">v_type</span>
+<span class="nx">v_name</span> <span class="p">=</span> <span class="nx">value</span>
+</pre></div>
+
+<p>零值就是变量没有做初始化时系统默认设置的值。</p>
+<h2 id="_6">实例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="c1">// 声明一个变量并初始化</span>
+    <span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="s">&quot;RUNOOB&quot;</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+
+    <span class="c1">// 没有初始化就为零值</span>
+    <span class="kd">var</span> <span class="nx">b</span> <span class="kt">int</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+
+    <span class="c1">// bool 零值为 false</span>
+    <span class="kd">var</span> <span class="nx">c</span> <span class="kt">bool</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>以上实例执行结果为：</p>
+<div class="codehilite"><pre><span></span><span class="nx">RUNOOB</span>
+<span class="mi">0</span>
+<span class="kc">false</span>
+</pre></div>
+
+<ul>
+<li>
+<p>数值类型（包括complex64/128）为 <strong>0</strong></p>
+</li>
+<li>
+<p>布尔类型为 <strong>false</strong></p>
+</li>
+<li>
+<p>字符串为 <strong>""</strong>（空字符串）</p>
+</li>
+<li>
+<p>以下几种类型为 <strong>nil</strong>：</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">*</span><span class="kt">int</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="p">[]</span><span class="kt">int</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span> <span class="kt">int</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="kd">chan</span> <span class="kt">int</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="kd">func</span><span class="p">(</span><span class="kt">string</span><span class="p">)</span> <span class="kt">int</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="kt">error</span> <span class="c1">// error 是接口</span>
+</pre></div>
+
+</li>
+</ul>
+<h2 id="_7">实例<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">i</span> <span class="kt">int</span>
+    <span class="kd">var</span> <span class="nx">f</span> <span class="kt">float64</span>
+    <span class="kd">var</span> <span class="nx">b</span> <span class="kt">bool</span>
+    <span class="kd">var</span> <span class="nx">s</span> <span class="kt">string</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%v %v %v %q\n&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">s</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>输出结果是：</p>
+<div class="codehilite"><pre><span></span><span class="mi">0</span> <span class="mi">0</span> <span class="kc">false</span> <span class="s">&quot;&quot;</span>
+</pre></div>
+
+<p><strong>第二种，根据值自行判定变量类型。</strong></p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">v_name</span> <span class="p">=</span> <span class="nx">value</span>
+</pre></div>
+
+<h2 id="_8">实例<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">d</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>输出结果是：</p>
+<div class="codehilite"><pre><span></span><span class="kc">true</span>
+</pre></div>
+
+<p><strong>第三种，省略 var, 注意 *<em>:=*</em> 左侧如果没有声明新的变量，就产生编译错误，格式：</strong></p>
+<div class="codehilite"><pre><span></span><span class="nx">v_name</span> <span class="o">:=</span> <span class="nx">value</span>
+</pre></div>
+
+<p>例如：</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">intVal</span> <span class="kt">int</span> 
+
+<span class="nx">intVal</span> <span class="o">:=</span><span class="mi">1</span> <span class="c1">// 这时候会产生编译错误</span>
+
+<span class="nx">intVal</span><span class="p">,</span><span class="nx">intVal1</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span> <span class="c1">// 此时不会产生编译错误，因为有声明新的变量，因为 := 是一个声明语句</span>
+</pre></div>
+
+<p>可以将<code>var f string = "Runoob" 简写为 f := "Runoob"：</code></p>
+<h2 id="_9">实例<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">f</span> <span class="o">:=</span> <span class="s">&quot;Runoob&quot;</span> <span class="c1">// var f string = &quot;Runoob&quot;</span>
+
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>输出结果是：</p>
+<div class="codehilite"><pre><span></span><span class="nx">Runoob</span>
+</pre></div>
+
+<h3 id="_10">多变量声明<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="c1">//类型相同多个变量, 非全局变量</span>
+<span class="kd">var</span> <span class="nx">vname1</span><span class="p">,</span> <span class="nx">vname2</span><span class="p">,</span> <span class="nx">vname3</span> <span class="kd">type</span>
+<span class="nx">vname1</span><span class="p">,</span> <span class="nx">vname2</span><span class="p">,</span> <span class="nx">vname3</span> <span class="p">=</span> <span class="nx">v1</span><span class="p">,</span> <span class="nx">v2</span><span class="p">,</span> <span class="nx">v3</span>
+
+<span class="kd">var</span> <span class="nx">vname1</span><span class="p">,</span> <span class="nx">vname2</span><span class="p">,</span> <span class="nx">vname3</span> <span class="p">=</span> <span class="nx">v1</span><span class="p">,</span> <span class="nx">v2</span><span class="p">,</span> <span class="nx">v3</span> <span class="c1">// 和 python 很像,不需要显示声明类型，自动推断</span>
+
+<span class="nx">vname1</span><span class="p">,</span> <span class="nx">vname2</span><span class="p">,</span> <span class="nx">vname3</span> <span class="o">:=</span> <span class="nx">v1</span><span class="p">,</span> <span class="nx">v2</span><span class="p">,</span> <span class="nx">v3</span> <span class="c1">// 出现在 := 左侧的变量不应该是已经被声明过的，否则会导致编译错误</span>
+
+
+<span class="c1">// 这种因式分解关键字的写法一般用于声明全局变量</span>
+<span class="kd">var</span> <span class="p">(</span>
+    <span class="nx">vname1</span> <span class="nx">v_type1</span>
+    <span class="nx">vname2</span> <span class="nx">v_type2</span>
+<span class="p">)</span>
+</pre></div>
+
+<h2 id="_11">实例<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kd">var</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">int</span>
+<span class="kd">var</span> <span class="p">(</span>  <span class="c1">// 这种因式分解关键字的写法一般用于声明全局变量</span>
+    <span class="nx">a</span> <span class="kt">int</span>
+    <span class="nx">b</span> <span class="kt">bool</span>
+<span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+<span class="kd">var</span> <span class="nx">e</span><span class="p">,</span> <span class="nx">f</span> <span class="p">=</span> <span class="mi">123</span><span class="p">,</span> <span class="s">&quot;hello&quot;</span>
+
+<span class="c1">//这种不带声明格式的只能在函数体中出现</span>
+<span class="c1">//g, h := 123, &quot;hello&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">(){</span>
+    <span class="nx">g</span><span class="p">,</span> <span class="nx">h</span> <span class="o">:=</span> <span class="mi">123</span><span class="p">,</span> <span class="s">&quot;hello&quot;</span>
+    <span class="nb">println</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">e</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">g</span><span class="p">,</span> <span class="nx">h</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>以上实例执行结果为：</p>
+<div class="codehilite"><pre><span></span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="kc">false</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">123</span> <span class="nx">hello</span> <span class="mi">123</span> <span class="nx">hello</span>
+</pre></div>
+
+<hr />
+<h2 id="_12">值类型和引用类型<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>所有像<code>int、float、bool 和 string</code>这些基本类型都属于值类型，使用这些类型的变量直接指向存在内存中的值：</p>
+<p><img alt="image.png" src="../005 go变量定义.image/14555448-6a073793ad9ecdfa.png" /></p>
+<p>当使用等号<code>=</code> 将一个变量的值赋值给另一个变量时，如：<code>j = i</code>，实际上是在内存中将<code>i</code>的值进行了拷贝：</p>
+<p><img alt="image.png" src="../005 go变量定义.image/14555448-53741b3598dd268d.png" /></p>
+<p>你可以通过 <code>&amp;i</code>来获取变量<code>i</code>的内存地址，例如：<code>0xf840000040</code>（每次的地址都可能不一样）。值类型的变量的值存储在栈中。</p>
+<p>内存地址会根据机器的不同而有所不同，甚至相同的程序在不同的机器上执行后也会有不同的内存地址。因为每台机器可能有不同的存储器布局，并且位置分配也可能不同。</p>
+<p>更复杂的数据通常会需要使用多个字，这些数据一般使用引用类型保存。</p>
+<p>一个引用类型的变量<code>r1</code>存储的是 <code>r1</code> 的值所在的内存地址（数字），或内存地址中第一个字所在的位置。</p>
+<p><img alt="image.png" src="../005 go变量定义.image/14555448-cf75b6527700d54a.png" /></p>
+<p>这个内存地址为称之为指针，这个指针实际上也被存在另外的某一个字中。</p>
+<p>同一个引用类型的指针指向的多个字可以是在连续的内存地址中（内存布局是连续的），这也是计算效率最高的一种存储形式；也可以将这些字分散存放在内存中，每个字都指示了下一个字所在的内存地址。</p>
+<p>当使用赋值语句 <code>r2 = r1</code> 时，只有引用（地址）被复制。</p>
+<p>如果<code>r1</code>的值被改变了，那么这个值的所有引用都会指向被修改后的内容，在这个例子中，<code>r2</code>也会受到影响。</p>
+<hr />
+<h2 id="_13">简短形式，使用 := 赋值操作符<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p>我们知道可以在变量的初始化时省略变量的类型而由系统自动推断，声明语句写上<code>var</code> 关键字其实是显得有些多余了，因此我们可以将它们简写为 <code>a := 50</code> 或 <code>b := false</code>。</p>
+<p>a 和 b 的类型<code>（int 和 bool）</code>将由编译器自动推断。</p>
+<p>这是使用变量的首选形式，但是它只能被用在函数体内，而不可以用于全局变量的声明与赋值。使用操作符<code>:=</code>可以高效地创建一个新的变量，称之为初始化声明。</p>
+<h3 id="_14">注意事项<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>如果在相同的代码块中，我们不可以再次对于相同名称的变量使用初始化声明，例如：<code>a := 20</code> 就是不被允许的，编译器会提示错误 <code>no new variables on left side of :=</code>，但是<code>a = 20</code> 是可以的，因为这是给相同的变量赋予一个新的值。</p>
+<p>如果你在定义变量 <code>a</code> 之前使用它，则会得到编译错误<code>undefined: a</code>。</p>
+<p>如果你声明了一个局部变量却没有在相同的代码块中使用它，同样会得到编译错误，例如下面这个例子当中的变量 a：</p>
+<h2 id="_15">实例<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&quot;abc&quot;</span>
+   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;hello, world&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>尝试编译这段代码将得到错误 <strong>a declared and not used</strong>。</p>
+<p>此外，单纯地给 a 赋值也是不够的，这个值必须被使用，所以使用</p>
+<div class="codehilite"><pre><span></span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;hello, world&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
+</pre></div>
+
+<p>会移除错误。</p>
+<p>但是全局变量是允许声明但不使用。 同一类型的多个变量可以声明在同一行，如：</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="kt">int</span>
+</pre></div>
+
+<p>多变量可以在同一行进行赋值，如：</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span>
+<span class="kd">var</span> <span class="nx">c</span> <span class="kt">string</span>
+<span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="p">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">&quot;abc&quot;</span>
+</pre></div>
+
+<p>上面这行假设了变量 a，b 和 c 都已经被声明，否则的话应该这样使用：</p>
+<div class="codehilite"><pre><span></span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="o">:=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">&quot;abc&quot;</span>
+</pre></div>
+
+<p>右边的这些值以相同的顺序赋值给左边的变量，所以 a 的值是 5， b 的值是 7，c 的值是 "abc"。</p>
+<p>这被称为 并行 或 同时 赋值。</p>
+<p>如果你想要交换两个变量的值，则可以简单地使用 <strong>a, b = b, a</strong>，两个变量的类型必须是相同。</p>
+<p>空白标识符 _ 也被用于抛弃值，如值 5 在：<code>_, b = 5, 7</code>中被抛弃。</p>
+<p><code>_</code>实际上是一个只写变量，你不能得到它的值。这样做是因为 Go 语言中你必须使用所有被声明的变量，但有时你并不需要使用从一个函数得到的所有返回值。</p>
+<p>并行赋值也被用于当一个函数返回多个返回值时，比如这里的 <code>val</code> 和错误 <code>err</code>是通过调用 <code>Func1</code>函数同时得到：<code>val, err = Func1(var1)</code>。</p>
+<h3 id="_16">笔记<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p><strong>交换两个变量</strong></p>
+<p><img alt="image.png" src="../005 go变量定义.image/14555448-62f76454e858df1a.png" /></p>
+<h3 id="_17">匿名变量<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p><code>_</code>（下划线）是个特殊的变量名，任何赋予它的值都会被丢弃：</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有一个main包</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+<span class="c1">//go函数可以返回多个值</span>
+<span class="kd">func</span> <span class="nx">test</span><span class="p">()</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//_匿名变量，丢弃数据不处理, _匿名变量配合函数返回值使用，才有优势</span>
+    <span class="nx">i</span><span class="p">,</span><span class="nx">j</span> <span class="o">:=</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span>
+    <span class="kd">var</span> <span class="nx">tmp</span> <span class="kt">int</span>
+    <span class="nx">tmp</span><span class="p">,</span> <span class="nx">_</span> <span class="p">=</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;tmp = &quot;</span><span class="p">,</span> <span class="nx">tmp</span><span class="p">)</span>
+
+    <span class="kd">var</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">e</span> <span class="kt">int</span>
+    <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">e</span> <span class="p">=</span> <span class="nx">test</span><span class="p">()</span> <span class="c1">//return 1, 2, 3</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;c = %d, d = %d, e = %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span>
+
+    <span class="nx">_</span><span class="p">,</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">e</span> <span class="p">=</span> <span class="nx">test</span><span class="p">()</span> <span class="c1">//return 1, 2, 3</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;d = %d, e = %d\n&quot;</span><span class="p">,</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span>
+
+<span class="p">}</span>
+</pre></div>
+
+<p>输出结果</p>
+<div class="codehilite"><pre><span></span><span class="nx">tmp</span> <span class="p">=</span>  <span class="mi">10</span>
+<span class="nx">c</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">d</span> <span class="p">=</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">e</span> <span class="p">=</span> <span class="mi">3</span>
+<span class="nx">d</span> <span class="p">=</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">e</span> <span class="p">=</span> <span class="mi">3</span>
+</pre></div>
+
+<p><strong>空白标识符在函数返回值时的使用：</strong> </p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">_</span><span class="p">,</span><span class="nx">numb</span><span class="p">,</span><span class="nx">strs</span> <span class="o">:=</span> <span class="nx">numbers</span><span class="p">()</span> <span class="c1">//只获取函数返回值的后两个</span>
+  <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">numb</span><span class="p">,</span><span class="nx">strs</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//一个可以返回多个值的函数</span>
+<span class="kd">func</span> <span class="nx">numbers</span><span class="p">()(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">string</span><span class="p">){</span>
+  <span class="nx">a</span> <span class="p">,</span> <span class="nx">b</span> <span class="p">,</span> <span class="nx">c</span> <span class="o">:=</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">2</span> <span class="p">,</span> <span class="s">&quot;str&quot;</span>
+  <span class="k">return</span> <span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><strong>输出结果：</strong></p>
+<div class="codehilite"><pre><span></span><span class="mi">2</span> <span class="nx">str</span>
+</pre></div>
+
+<p>注意</p>
+<p><img alt="image.png" src="../005 go变量定义.image/14555448-202bc78e65943d55.png" /></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+    <hr>
+    <!--<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>-->
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
