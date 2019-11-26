@@ -1,0 +1,1557 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="go语言的学习笔记">
+      
+      
+        <link rel="canonical" href="https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/010 go语言循环语句/">
+      
+      
+        <meta name="author" content="臧珍华">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>go语言循环语句 - 臧珍华的博客</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#go" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://zangzhenhua1996.github.io/go/" title="臧珍华的博客" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              臧珍华的博客
+            </span>
+            <span class="md-header-nav__topic">
+              
+                go语言循环语句
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://www.jianshu.com/u/21b46dcb7c44" title="前往 Github 仓库" class="md-source" data-md-source="">
+  
+  <div class="md-source__repository">
+    I love AnFei
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        介绍
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../第一章go语言开发环境配置/001 go语言开发环境配置/" class="md-tabs__link">
+          安装
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../002 go语言第一个例子/" class="md-tabs__link md-tabs__link--active">
+          基础语法
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../第三章go语言工程管理/013 go语言工作区/" class="md-tabs__link">
+          工程管理
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://zangzhenhua1996.github.io/go/" title="臧珍华的博客" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    臧珍华的博客
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://www.jianshu.com/u/21b46dcb7c44" title="前往 Github 仓库" class="md-source" data-md-source="">
+  
+  <div class="md-source__repository">
+    I love AnFei
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="介绍" class="md-nav__link">
+      介绍
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      安装
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        安装
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第一章go语言开发环境配置/001 go语言开发环境配置/" title="本地环境搭建" class="md-nav__link">
+      本地环境搭建
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      基础语法
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        基础语法
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../002 go语言第一个例子/" title="第一个例子" class="md-nav__link">
+      第一个例子
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../003 go语言结构/" title="go语言结构" class="md-nav__link">
+      go语言结构
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../004 go语言基础语法/" title="go语言基础语法" class="md-nav__link">
+      go语言基础语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../005 go变量定义/" title="go变量定义" class="md-nav__link">
+      go变量定义
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../006 go内建变量类型/" title="go内建变量类型" class="md-nav__link">
+      go内建变量类型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../007 go常量与枚举/" title="go常量与枚举" class="md-nav__link">
+      go常量与枚举
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../008 go语言运算符/" title="go语言运算符" class="md-nav__link">
+      go语言运算符
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../009 go语言条件语句/" title="go语言条件语句" class="md-nav__link">
+      go语言条件语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        go语言循环语句
+      </label>
+    
+    <a href="./" title="go语言循环语句" class="md-nav__link md-nav__link--active">
+      go语言循环语句
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    循环控制语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    无限循环
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-for" class="md-nav__link">
+    Go 语言 for 循环
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go_1" class="md-nav__link">
+    Go 语言循环嵌套
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    笔记
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-break" class="md-nav__link">
+    Go 语言 break 语句
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-continue" class="md-nav__link">
+    Go 语言 continue 语句
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-goto" class="md-nav__link">
+    Go 语言 goto 语句
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    笔记
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    range 语句(后面用的会很多)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../011 go语言函数/" title="go语言函数" class="md-nav__link">
+      go语言函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../012 go语言变量作用域/" title="go语言变量作用域" class="md-nav__link">
+      go语言变量作用域
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      工程管理
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        工程管理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第三章go语言工程管理/013 go语言工作区/" title="工作区" class="md-nav__link">
+      工作区
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第三章go语言工程管理/014 go语言的包/" title="包" class="md-nav__link">
+      包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第三章go语言工程管理/015 go语言工程配置编译/" title="工程配置编译" class="md-nav__link">
+      工程配置编译
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    循环控制语句
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    无限循环
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-for" class="md-nav__link">
+    Go 语言 for 循环
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go_1" class="md-nav__link">
+    Go 语言循环嵌套
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    笔记
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-break" class="md-nav__link">
+    Go 语言 break 语句
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-continue" class="md-nav__link">
+    Go 语言 continue 语句
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-goto" class="md-nav__link">
+    Go 语言 goto 语句
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    注意
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    笔记
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    range 语句(后面用的会很多)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    实例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="go">Go 语言循环语句<a class="headerlink" href="#go" title="Permanent link">&para;</a></h1>
+<p>在不少实际问题中有许多具有规律性的重复操作，因此在程序中就需要重复执行某些语句。</p>
+<p>以下为大多编程语言循环程序的流程图：</p>
+<p><img alt="img" src="../010 go语言循环语句.image/loop_architecture.jpg" /></p>
+<p>Go 语言提供了以下几种类型循环处理语句：</p>
+<table>
+<thead>
+<tr>
+<th align="left">循环类型</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">for 循环</td>
+<td align="left">重复执行语句块</td>
+</tr>
+<tr>
+<td align="left">循环嵌套</td>
+<td align="left">在 for 循环中嵌套一个或多个 for 循环</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_1">循环控制语句<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>循环控制语句可以控制循环体内语句的执行过程。</p>
+<p>GO 语言支持以下几种循环控制语句：</p>
+<table>
+<thead>
+<tr>
+<th align="left">控制语句</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">break 语句</td>
+<td align="left">经常用于中断当前 for 循环或跳出 switch 语句</td>
+</tr>
+<tr>
+<td align="left">continue 语句</td>
+<td align="left">跳过当前循环的剩余语句，然后继续进行下一轮循环。</td>
+</tr>
+<tr>
+<td align="left">goto 语句</td>
+<td align="left">将控制转移到被标记的语句。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_2">无限循环<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>如果循环中条件语句永远不为 false 则会进行无限循环，我们可以通过 for 循环语句中只设置一个条件表达式来执行无限循环：</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="kc">true</span>  <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;这是无限循环。\n&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2 id="go-for">Go 语言 for 循环<a class="headerlink" href="#go-for" title="Permanent link">&para;</a></h2>
+<p>for循环是一个循环控制结构，可以执行指定次数的循环。</p>
+<h3 id="_3">语法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>Go语言的For循环有3中形式，只有其中的一种使用分号。</p>
+<p>和 C 语言的 for 一样：</p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">init</span><span class="p">;</span> <span class="nx">condition</span><span class="p">;</span> <span class="nx">post</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+<p>和 C 的 while 一样：</p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">condition</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+<p>和 C 的 for(;;) 一样：</p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>init： 一般为赋值表达式，给控制变量赋初值；</li>
+<li>condition： 关系表达式或逻辑表达式，循环控制条件；</li>
+<li>post： 一般为赋值表达式，给控制变量增量或减量。</li>
+</ul>
+<p>for语句执行过程如下：</p>
+<ul>
+<li>①先对表达式1赋初值；</li>
+<li>②判别赋值表达式 <strong>init</strong> 是否满足给定条件，若其值为真，满足循环条件，则执行循环体内语句，然后执行 <strong>post</strong>，进入第二次循环，再判别 <strong>condition</strong>；否则判断 <strong>condition</strong> 的值为假，不满足条件，就终止**for**循环，执行循环体外语句。</li>
+</ul>
+<p>for 循环的 <code>range</code>格式可以对 <code>slice、map、数组、字符串</code>等进行迭代循环。格式如下：</p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">value</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">oldMap</span> <span class="p">{</span>
+    <span class="nx">newMap</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="p">=</span> <span class="nx">value</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>for语句语法流程如下图所示：</p>
+<p><img alt="img" src="../010 go语言循环语句.image/go_for_loop.jpg" /></p>
+<h3 id="_4">实例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+   <span class="kd">var</span> <span class="nx">b</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">15</span>
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span>
+
+   <span class="nx">numbers</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>   <span class="c1">//数组,没有进行赋值的地方就是0</span>
+
+   <span class="cm">/* for 循环 */</span>
+   <span class="k">for</span> <span class="nx">a</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">a</span> <span class="p">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">a</span><span class="o">++</span> <span class="p">{</span>  <span class="c1">//这里的a进行了重新定义,只在当前的循环块起作用</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;a 的值为: %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
+   <span class="p">}</span>
+
+   <span class="k">for</span> <span class="nx">a</span> <span class="p">&lt;</span> <span class="nx">b</span> <span class="p">{</span>  <span class="c1">//a的默认值是0别忘了</span>
+      <span class="nx">a</span><span class="o">++</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;a 的值为: %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
+   <span class="p">}</span>
+
+   <span class="k">for</span> <span class="nx">i</span><span class="p">,</span><span class="nx">x</span><span class="o">:=</span> <span class="k">range</span> <span class="nx">numbers</span> <span class="p">{</span>  <span class="c1">//类似于这个python的enumerate</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第 %d 位 x 的值 = %d\n&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span><span class="nx">x</span><span class="p">)</span>
+   <span class="p">}</span>   
+<span class="p">}</span>
+</pre></div>
+
+<p>以上实例运行输出结果为:</p>
+<div class="codehilite"><pre><span></span>a 的值为: 0
+a 的值为: 1
+a 的值为: 2
+a 的值为: 3
+a 的值为: 4
+a 的值为: 5
+a 的值为: 6
+a 的值为: 7
+a 的值为: 8
+a 的值为: 9
+a 的值为: 1
+a 的值为: 2
+a 的值为: 3
+a 的值为: 4
+a 的值为: 5
+a 的值为: 6
+a 的值为: 7
+a 的值为: 8
+a 的值为: 9
+a 的值为: 10
+a 的值为: 11
+a 的值为: 12
+a 的值为: 13
+a 的值为: 14
+a 的值为: 15
+第 0 位 x 的值 = 1
+第 1 位 x 的值 = 2
+第 2 位 x 的值 = 3
+第 3 位 x 的值 = 5
+第 4 位 x 的值 = 0
+第 5 位 x 的值 = 0
+</pre></div>
+
+<h2 id="go_1">Go 语言循环嵌套<a class="headerlink" href="#go_1" title="Permanent link">&para;</a></h2>
+<p>Go 语言允许用户在循环内使用循环。接下来我们将为大家介绍嵌套循环的使用。</p>
+<h3 id="_5">语法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>以下为 Go 语言嵌套循环的格式：</p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">[</span><span class="nx">condition</span> <span class="p">|</span>  <span class="p">(</span> <span class="nx">init</span><span class="p">;</span> <span class="nx">condition</span><span class="p">;</span> <span class="nx">increment</span> <span class="p">)</span> <span class="p">|</span> <span class="nx">Range</span><span class="p">]</span>  <span class="c1">// |是或者的意思</span>
+<span class="p">{</span>
+   <span class="k">for</span> <span class="p">[</span><span class="nx">condition</span> <span class="p">|</span>  <span class="p">(</span> <span class="nx">init</span><span class="p">;</span> <span class="nx">condition</span><span class="p">;</span> <span class="nx">increment</span> <span class="p">)</span> <span class="p">|</span> <span class="nx">Range</span><span class="p">]</span>
+   <span class="p">{</span>
+      <span class="nx">statement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>  <span class="c1">//statement执行语句</span>
+   <span class="p">}</span>
+   <span class="nx">statement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="_6">实例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>以下实例使用循环嵌套来输出 2 到 100 间的素数：</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="cm">/* 定义局部变量 */</span>
+   <span class="kd">var</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span>
+
+   <span class="k">for</span> <span class="nx">i</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span> <span class="c1">//中间用;分开其实是表示三句话</span>
+      <span class="k">for</span> <span class="nx">j</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="nx">i</span><span class="o">/</span><span class="nx">j</span><span class="p">);</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+         <span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="o">%</span><span class="nx">j</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span> <span class="c1">// 如果发现因子，则不是素数</span>
+         <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">j</span> <span class="p">&gt;</span> <span class="p">(</span><span class="nx">i</span><span class="o">/</span><span class="nx">j</span><span class="p">))</span> <span class="p">{</span>
+         <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%d  是素数\n&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="p">);</span>
+      <span class="p">}</span>
+   <span class="p">}</span>  
+<span class="p">}</span>
+</pre></div>
+
+<p>以上实例运行输出结果为:</p>
+<div class="codehilite"><pre><span></span>2  是素数
+3  是素数
+5  是素数
+7  是素数
+11  是素数
+13  是素数
+17  是素数
+19  是素数
+23  是素数
+29  是素数
+31  是素数
+37  是素数
+41  是素数
+43  是素数
+47  是素数
+53  是素数
+59  是素数
+61  是素数
+67  是素数
+71  是素数
+73  是素数
+79  是素数
+83  是素数
+89  是素数
+97  是素数
+</pre></div>
+
+<h3 id="_7">笔记<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>九九乘法表： </p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> 
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="nx">m</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">m</span> <span class="p">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">m</span><span class="o">++</span> <span class="p">{</span>
+    <span class="cm">/*    fmt.Printf(&quot;第%d次：\n&quot;,m) */</span>
+        <span class="k">for</span> <span class="nx">n</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">n</span> <span class="o">&lt;=</span> <span class="nx">m</span><span class="p">;</span> <span class="nx">n</span><span class="o">++</span> <span class="p">{</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%dx%d=%d &quot;</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">m</span><span class="p">,</span><span class="nx">m</span><span class="o">*</span><span class="nx">n</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2 id="go-break">Go 语言 break 语句<a class="headerlink" href="#go-break" title="Permanent link">&para;</a></h2>
+<p>Go 语言中 break 语句用于以下两方面：</p>
+<ol>
+<li>用于循环语句中跳出循环，并开始执行循环之后的语句。</li>
+<li>break 在 switch（开关语句）中在执行一条case后跳出语句的作用。</li>
+</ol>
+<h3 id="_8">语法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>break 语法格式如下：</p>
+<div class="codehilite"><pre><span></span><span class="k">break</span><span class="p">;</span>
+</pre></div>
+
+<p><img alt="image.png" src="../010 go语言循环语句.image/14555448-6a1516a785471f18.png" /></p>
+<h3 id="_9">实例<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>在变量 a 大于 15 的时候跳出循环：</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="cm">/* 定义局部变量 */</span>
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">10</span>
+
+   <span class="cm">/* for 循环 */</span>
+   <span class="k">for</span> <span class="nx">a</span> <span class="p">&lt;</span> <span class="mi">20</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;a 的值为 : %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">);</span>
+      <span class="nx">a</span><span class="o">++</span><span class="p">;</span>
+      <span class="k">if</span> <span class="nx">a</span> <span class="p">&gt;</span> <span class="mi">15</span> <span class="p">{</span>
+         <span class="cm">/* 使用 break 语句跳出循环 */</span>
+         <span class="k">break</span><span class="p">;</span>
+      <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>以上实例执行结果为： </p>
+<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">10</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">11</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">12</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">13</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">14</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">15</span>
+</pre></div>
+
+<h2 id="go-continue">Go 语言 continue 语句<a class="headerlink" href="#go-continue" title="Permanent link">&para;</a></h2>
+<p>Go 语言的 continue 语句 有点像 break 语句。但是 continue 不是跳出循环，而是跳过当前循环执行下一次循环语句。</p>
+<p>for 循环中，执行 continue 语句会触发for增量语句的执行。</p>
+<h3 id="_10">语法<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>continue 语法格式如下：</p>
+<div class="codehilite"><pre><span></span><span class="k">continue</span><span class="p">;</span>
+</pre></div>
+
+<p>continue 语句流程图如下：</p>
+<p><img alt="image.png" src="../010 go语言循环语句.image/14555448-c75f961426080e88.png" /></p>
+<h3 id="_11">实例<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>在变量 a 等于 15 的时候跳过本次循环执行下一次循环：</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="cm">/* 定义局部变量 */</span>
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">10</span>
+
+   <span class="cm">/* for 循环 */</span>
+   <span class="k">for</span> <span class="nx">a</span> <span class="p">&lt;</span> <span class="mi">20</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="nx">a</span> <span class="o">==</span> <span class="mi">15</span> <span class="p">{</span>
+         <span class="cm">/* 跳过此次循环 */</span>
+         <span class="nx">a</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+         <span class="k">continue</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;a 的值为 : %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">);</span>
+      <span class="nx">a</span><span class="o">++</span><span class="p">;</span>     
+   <span class="p">}</span>  
+<span class="p">}</span>
+</pre></div>
+
+<p>以上实例执行结果为： </p>
+<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">10</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">11</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">12</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">13</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">14</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">16</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">17</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">18</span>
+<span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">19</span>
+</pre></div>
+
+<h3 id="_12">注意<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>注意：break可⽤于for、switch、select，⽽continue仅能⽤于for循环。</p>
+</blockquote>
+<h2 id="go-goto">Go 语言 goto 语句<a class="headerlink" href="#go-goto" title="Permanent link">&para;</a></h2>
+<p>Go 语言的 goto 语句可以无条件地转移到过程中指定的行。</p>
+<p>goto 语句通常与条件语句配合使用。可用来实现条件转移， 构成循环，跳出循环体等功能。</p>
+<p><code>但是，在结构化程序设计中一般不主张使用 goto 语句， 以免造成程序流程的混乱，使理解和调试程序都产生困难。</code></p>
+<h3 id="_13">注意<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>用goto跳转到必须在<code>当前函数</code>内定义的标签  </p>
+</blockquote>
+<h3 id="_14">语法<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>goto 语法格式如下：</p>
+<div class="codehilite"><pre><span></span><span class="k">goto</span> <span class="nx">label</span><span class="p">;</span>
+<span class="p">..</span>
+<span class="p">.</span>
+<span class="nx">label</span><span class="p">:</span> <span class="nx">statement</span><span class="p">;</span>
+</pre></div>
+
+<p>goto 语句流程图如下：</p>
+<p><img alt="image.png" src="../010 go语言循环语句.image/14555448-098f16016cca02e9.png" /></p>
+<h3 id="_15">实例<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>在变量 a 等于 15 的时候跳过本次循环并回到循环的开始语句 LOOP 处：</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="cm">/* 定义局部变量 */</span>
+   <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">10</span>
+
+   <span class="cm">/* 循环 */</span>
+   <span class="nx">LOOP</span><span class="p">:</span> <span class="k">for</span> <span class="nx">a</span> <span class="p">&lt;</span> <span class="mi">20</span> <span class="p">{</span>  <span class="c1">//LOOP其实是定义了个名字</span>
+      <span class="k">if</span> <span class="nx">a</span> <span class="o">==</span> <span class="mi">15</span> <span class="p">{</span>
+         <span class="cm">/* 跳过迭代 */</span>
+         <span class="nx">a</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">+</span> <span class="mi">1</span>
+         <span class="k">goto</span> <span class="nx">LOOP</span>
+      <span class="p">}</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;a的值为 : %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
+      <span class="nx">a</span><span class="o">++</span>     
+   <span class="p">}</span>  
+<span class="p">}</span>
+</pre></div>
+
+<p>以上实例执行结果为：</p>
+<div class="codehilite"><pre><span></span><span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">10</span>
+<span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">11</span>
+<span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">12</span>
+<span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">13</span>
+<span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">14</span>
+<span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">16</span>
+<span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">17</span>
+<span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">18</span>
+<span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">19</span>
+</pre></div>
+
+<h3 id="_16">实例<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有一个main包</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="c1">//break //break is not in a loop, switch, or select</span>
+    <span class="c1">//continue//continue is not in a loop</span>
+
+    <span class="c1">//goto可以用在任何地方，但是不能夸函数使用</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;11111111111111&quot;</span><span class="p">)</span>
+
+    <span class="k">goto</span> <span class="nx">End</span> <span class="c1">//goto是关键字， End是用户起的名字， 他叫标签</span>
+
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;222222222222222&quot;</span><span class="p">)</span>
+
+<span class="nx">End</span><span class="p">:</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;3333333333333&quot;</span><span class="p">)</span>
+
+<span class="p">}</span>
+</pre></div>
+
+<p>执行结果</p>
+<div class="codehilite"><pre><span></span><span class="mi">11111111111111</span>
+<span class="mi">3333333333333</span>
+</pre></div>
+
+<h3 id="_17">笔记<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>打印九九乘法表: </p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> 
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//print9x()</span>
+    <span class="nx">gotoTag</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="c1">//嵌套for循环打印九九乘法表</span>
+<span class="kd">func</span> <span class="nx">print9x</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="nx">m</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">m</span> <span class="p">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">m</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="nx">n</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">n</span> <span class="o">&lt;=</span> <span class="nx">m</span><span class="p">;</span> <span class="nx">n</span><span class="o">++</span> <span class="p">{</span>
+      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%dx%d=%d &quot;</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">m</span><span class="p">,</span><span class="nx">m</span><span class="o">*</span><span class="nx">n</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//for循环配合goto打印九九乘法表</span>
+<span class="kd">func</span> <span class="nx">gotoTag</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="nx">m</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">m</span> <span class="p">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">m</span><span class="o">++</span> <span class="p">{</span>
+    <span class="nx">n</span> <span class="o">:=</span> <span class="mi">1</span>
+    <span class="nx">LOOP</span><span class="p">:</span> <span class="k">if</span> <span class="nx">n</span> <span class="o">&lt;=</span> <span class="nx">m</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%dx%d=%d &quot;</span><span class="p">,</span><span class="nx">n</span><span class="p">,</span><span class="nx">m</span><span class="p">,</span><span class="nx">m</span><span class="o">*</span><span class="nx">n</span><span class="p">)</span>
+        <span class="nx">n</span><span class="o">++</span>
+        <span class="k">goto</span> <span class="nx">LOOP</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nx">n</span><span class="o">++</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2 id="range">range 语句(后面用的会很多)<a class="headerlink" href="#range" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>关键字 range 会返回两个值，第一个返回值是元素的数组下标，第二个返回值是元素的值：</p>
+</blockquote>
+<h3 id="_18">实例<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有一个main包</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="nx">str</span> <span class="o">:=</span> <span class="s">&quot;abc&quot;</span>
+
+    <span class="c1">//通过for打印每个字符</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;str[%d]=%c\n&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">str</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+    <span class="p">}</span>
+
+    <span class="c1">//迭代打印每个元素，默认返回2个值: 一个是元素的位置，一个是元素本身</span>
+    <span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">data</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">str</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;str[%d]=%c\n&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">str</span> <span class="p">{</span> <span class="c1">//第2个返回值，默认丢弃，返回元素的位置(下标)</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;str[%d]=%c\n&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">str</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">str</span> <span class="p">{</span> <span class="c1">//第2个返回值，默认丢弃，返回元素的位置(下标)  //现在这个 _ 的作用就出现了</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;str[%d]=%c\n&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">str</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
+
+<p>执行结果</p>
+<div class="codehilite"><pre><span></span><span class="nx">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]=</span><span class="nx">a</span>
+<span class="nx">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]=</span><span class="nx">b</span>
+<span class="nx">str</span><span class="p">[</span><span class="mi">2</span><span class="p">]=</span><span class="nx">c</span>
+
+<span class="nx">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]=</span><span class="nx">a</span>
+<span class="nx">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]=</span><span class="nx">b</span>
+<span class="nx">str</span><span class="p">[</span><span class="mi">2</span><span class="p">]=</span><span class="nx">c</span>
+
+<span class="nx">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]=</span><span class="nx">a</span>
+<span class="nx">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]=</span><span class="nx">b</span>
+<span class="nx">str</span><span class="p">[</span><span class="mi">2</span><span class="p">]=</span><span class="nx">c</span>
+
+<span class="nx">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]=</span><span class="nx">a</span>
+<span class="nx">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]=</span><span class="nx">b</span>
+<span class="nx">str</span><span class="p">[</span><span class="mi">2</span><span class="p">]=</span><span class="nx">c</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+    <hr>
+    <!--<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>-->
+    </div>
+    
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

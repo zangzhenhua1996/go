@@ -219,6 +219,19 @@
   
 
       
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../第三章go语言工程管理/013 go语言工作区/" class="md-tabs__link">
+          工程管理
+        </a>
+      
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -414,12 +427,18 @@
     字符串连接
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     实例
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -435,18 +454,12 @@
     Go 语言的空格
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     笔记
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -521,6 +534,102 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../010 go语言循环语句/" title="go语言循环语句" class="md-nav__link">
+      go语言循环语句
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../011 go语言函数/" title="go语言函数" class="md-nav__link">
+      go语言函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../012 go语言变量作用域/" title="go语言变量作用域" class="md-nav__link">
+      go语言变量作用域
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      工程管理
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        工程管理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第三章go语言工程管理/013 go语言工作区/" title="工作区" class="md-nav__link">
+      工作区
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第三章go语言工程管理/014 go语言的包/" title="包" class="md-nav__link">
+      包
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第三章go语言工程管理/015 go语言工程配置编译/" title="工程配置编译" class="md-nav__link">
+      工程配置编译
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -579,12 +688,18 @@
     字符串连接
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     实例
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -600,18 +715,12 @@
     Go 语言的空格
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     笔记
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -686,7 +795,7 @@
 <hr />
 <h2 id="_4">字符串连接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>Go 语言的字符串可以通过 <strong>+</strong> 实现：</p>
-<h2 id="_5">实例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="_5">实例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
@@ -811,7 +920,7 @@
 <div class="codehilite"><pre><span></span><span class="nx">fruit</span> <span class="p">=</span> <span class="nx">apples</span> <span class="o">+</span> <span class="nx">oranges</span><span class="p">;</span> 
 </pre></div>
 
-<h3 id="_7">笔记<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h2 id="_7">笔记<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><strong>Go 程序的一般结构: basic_structure.go</strong> </p>
 <div class="codehilite"><pre><span></span><span class="c1">// 当前程序的包名</span>
 <span class="kn">package</span> <span class="nx">main</span>
