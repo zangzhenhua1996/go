@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,12 +57,12 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -239,6 +239,19 @@
       
         <a href="../016 go语言复合类型分类/" class="md-tabs__link md-tabs__link--active">
           复合类型
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../第五章go语言面向对象编程/023 go语言面向对象编程概述/" class="md-tabs__link">
+          面向对象编程
         </a>
       
     </li>
@@ -792,8 +805,28 @@
       
         <li class="md-nav__item">
   <a href="#_14" class="md-nav__link">
-    切片做函数参数
+    切片做函数参数  (底层操作的是地址,引用传递,不像数组会传值)
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    实例
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    猜数字小游戏
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -805,6 +838,102 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../020 go语言复合类型map/" title="map" class="md-nav__link">
+      map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../021 go 语言结构体/" title="结构体" class="md-nav__link">
+      结构体
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../022 go语言范围range/" title="范围range" class="md-nav__link">
+      范围range
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      面向对象编程
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        面向对象编程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/023 go语言面向对象编程概述/" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/024 go语言面向对象匿名组合/" title="匿名组合" class="md-nav__link">
+      匿名组合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/025 go语言面向对象_方法/" title="方法" class="md-nav__link">
+      方法
+    </a>
   </li>
 
         
@@ -990,8 +1119,28 @@
       
         <li class="md-nav__item">
   <a href="#_14" class="md-nav__link">
-    切片做函数参数
+    切片做函数参数  (底层操作的是地址,引用传递,不像数组会传值)
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    实例
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    猜数字小游戏
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1572,9 +1721,153 @@
 <div class="codehilite"><pre><span></span><span class="nx">dst</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">6</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
 
-<h2 id="_14">切片做函数参数<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h2 id="_14">切片做函数参数  (底层操作的是地址,引用传递,不像数组会传值)<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+<span class="kn">import</span> <span class="s">&quot;math/rand&quot;</span>
+<span class="kn">import</span> <span class="s">&quot;time&quot;</span>
+
+<span class="kd">func</span> <span class="nx">InitData</span><span class="p">(</span><span class="nx">s</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//设置种子</span>
+    <span class="nx">rand</span><span class="p">.</span><span class="nx">Seed</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">UnixNano</span><span class="p">())</span>
+
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">s</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">rand</span><span class="p">.</span><span class="nx">Intn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="c1">//100以内的随机数</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//冒泡排序</span>
+<span class="kd">func</span> <span class="nx">BubbleSort</span><span class="p">(</span><span class="nx">s</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">n</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="nx">i</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="nx">s</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="p">&gt;</span> <span class="nx">s</span><span class="p">[</span><span class="nx">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">{</span>
+                <span class="nx">s</span><span class="p">[</span><span class="nx">j</span><span class="p">],</span> <span class="nx">s</span><span class="p">[</span><span class="nx">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="nx">s</span><span class="p">[</span><span class="nx">j</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="nx">s</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">n</span> <span class="o">:=</span> <span class="mi">10</span>
+
+    <span class="c1">//创建一个切片，len为n</span>
+    <span class="nx">s</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
+
+    <span class="nx">InitData</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="c1">//初始化数组</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;排序前： &quot;</span><span class="p">,</span> <span class="nx">s</span><span class="p">)</span>
+
+    <span class="nx">BubbleSort</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="c1">//冒泡排序</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;排序后： &quot;</span><span class="p">,</span> <span class="nx">s</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>执行结果</p>
+<div class="codehilite"><pre><span></span><span class="nx">排序前</span><span class="err">：</span>  <span class="p">[</span><span class="mi">59</span> <span class="mi">71</span> <span class="mi">12</span> <span class="mi">80</span> <span class="mi">44</span> <span class="mi">55</span> <span class="mi">70</span> <span class="mi">57</span> <span class="mi">30</span> <span class="mi">48</span><span class="p">]</span>
+<span class="nx">排序后</span><span class="err">：</span>  <span class="p">[</span><span class="mi">12</span> <span class="mi">30</span> <span class="mi">44</span> <span class="mi">48</span> <span class="mi">55</span> <span class="mi">57</span> <span class="mi">59</span> <span class="mi">70</span> <span class="mi">71</span> <span class="mi">80</span><span class="p">]</span>
+</pre></div>
+
+<h2 id="_15">实例<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<h3 id="_16">猜数字小游戏<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+<span class="kn">import</span> <span class="s">&quot;math/rand&quot;</span>  <span class="c1">//注意导包的方式</span>
+<span class="kn">import</span> <span class="s">&quot;time&quot;</span>
+
+<span class="kd">func</span> <span class="nx">CreatNum</span><span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//传递的变量是指针类型</span>
+    <span class="c1">//设置种子</span>
+    <span class="nx">rand</span><span class="p">.</span><span class="nx">Seed</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Now</span><span class="p">().</span><span class="nx">UnixNano</span><span class="p">())</span> <span class="c1">//设置种子</span>
+
+    <span class="kd">var</span> <span class="nx">num</span> <span class="kt">int</span> <span class="c1">//声明一个num</span>
+    <span class="k">for</span> <span class="p">{</span>  <span class="c1">//这里的for是python中的while,千万别懵了</span>
+        <span class="nx">num</span> <span class="p">=</span> <span class="nx">rand</span><span class="p">.</span><span class="nx">Intn</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span> <span class="c1">//一定是4位数</span>
+        <span class="k">if</span> <span class="nx">num</span> <span class="o">&gt;=</span> <span class="mi">1000</span> <span class="p">{</span>
+            <span class="k">break</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">//fmt.Println(&quot;num = &quot;, num)</span>
+
+    <span class="o">*</span><span class="nx">p</span> <span class="p">=</span> <span class="nx">num</span>  <span class="c1">//p指向的是num的地址</span>
+
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">GetNum</span><span class="p">(</span><span class="nx">s</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">num</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="nx">num</span> <span class="o">/</span> <span class="mi">1000</span>       <span class="c1">//取千位</span>
+    <span class="nx">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="nx">num</span> <span class="o">%</span> <span class="mi">1000</span> <span class="o">/</span> <span class="mi">100</span> <span class="c1">//取百位</span>
+    <span class="nx">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">=</span> <span class="nx">num</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">/</span> <span class="mi">10</span>   <span class="c1">//取百位</span>
+    <span class="nx">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">=</span> <span class="nx">num</span> <span class="o">%</span> <span class="mi">10</span>         <span class="c1">//取个位</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">OnGame</span><span class="p">(</span><span class="nx">randSlice</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">num</span> <span class="kt">int</span>
+    <span class="nx">keySlice</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">{</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;请输入一个4位数：&quot;</span><span class="p">)</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nx">Scan</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">num</span><span class="p">)</span>
+
+            <span class="c1">// 999 &lt; num &lt; 10000</span>
+            <span class="k">if</span> <span class="mi">999</span> <span class="p">&lt;</span> <span class="nx">num</span> <span class="o">&amp;&amp;</span> <span class="nx">num</span> <span class="p">&lt;</span> <span class="mi">10000</span> <span class="p">{</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+
+            <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;请输入的数不符合要求&quot;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="c1">//fmt.Println(&quot;num = &quot;, num)</span>
+        <span class="nx">GetNum</span><span class="p">(</span><span class="nx">keySlice</span><span class="p">,</span> <span class="nx">num</span><span class="p">)</span>
+        <span class="c1">//fmt.Println(&quot;keySlice = &quot;, keySlice)</span>
+
+        <span class="nx">n</span> <span class="o">:=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="nx">keySlice</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">&gt;</span> <span class="nx">randSlice</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">{</span>
+                <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第%d位大了一点\n&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">keySlice</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">&lt;</span> <span class="nx">randSlice</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">{</span>
+                <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第%d位小了一点\n&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第%d位猜对了\n&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+                <span class="nx">n</span><span class="o">++</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="nx">n</span> <span class="o">==</span> <span class="mi">4</span> <span class="p">{</span> <span class="c1">//4位都猜对了</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;全部猜对!!!&quot;</span><span class="p">)</span>
+            <span class="k">break</span> <span class="c1">//跳出循环</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">randNum</span> <span class="kt">int</span>
+
+    <span class="c1">//产生一个4位的随机数</span>
+    <span class="nx">CreatNum</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">randNum</span><span class="p">)</span>
+    <span class="c1">//fmt.Println(&quot;randNum: &quot;, randNum)</span>
+
+    <span class="nx">randSlice</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="c1">//保存这个4位数的每一位</span>
+    <span class="nx">GetNum</span><span class="p">(</span><span class="nx">randSlice</span><span class="p">,</span> <span class="nx">randNum</span><span class="p">)</span>
+    <span class="c1">//fmt.Println(&quot;randSlice = &quot;, randSlice)</span>
+
+    <span class="cm">/*</span>
+<span class="cm">        n1 := 1234 / 1000 //取商</span>
+<span class="cm">        //(1234 % 1000) //取余数，结果为234   234/100取商得到2</span>
+<span class="cm">        n2 := 1234 % 1000 / 100</span>
+<span class="cm">        fmt.Println(&quot;n1 = &quot;, n1)</span>
+<span class="cm">        fmt.Println(&quot;n2 = &quot;, n2)</span>
+<span class="cm">    */</span>
+
+    <span class="nx">OnGame</span><span class="p">(</span><span class="nx">randSlice</span><span class="p">)</span> <span class="c1">//游戏</span>
+
+<span class="p">}</span>
+</pre></div>
                 
                   
+                
                 
               
               
@@ -1587,11 +1880,62 @@
         </div>
       </main>
       
-    <hr>
-    <!--<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>-->
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../018 go语言复合类型数组/" title="数组" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                数组
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../020 go语言复合类型map/" title="map" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                map
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
     </div>
     
-      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
         
         
