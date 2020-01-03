@@ -786,9 +786,90 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     值语义和引用语义
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    方法集
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    类型 *T 方法集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t_1" class="md-nav__link">
+    类型 T 方法集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    匿名字段
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    方法的继承
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    方法的重写
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    表达式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    方法值(就是讲调用的方法保存了一下)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    方法表达式
   </a>
   
 </li>
@@ -876,9 +957,90 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     值语义和引用语义
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    方法集
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    类型 *T 方法集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t_1" class="md-nav__link">
+    类型 T 方法集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    匿名字段
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    方法的继承
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    方法的重写
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    表达式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    方法值(就是讲调用的方法保存了一下)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    方法表达式
   </a>
   
 </li>
@@ -1033,7 +1195,7 @@
 <span class="nx">tmp</span> <span class="p">=</span>  <span class="p">{</span><span class="nx">yoyo</span> <span class="mi">102</span> <span class="mi">22</span><span class="p">}</span>
 </pre></div>
 
-<h3 id="_7">值语义和引用语义<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h2 id="_7">值语义和引用语义<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
@@ -1085,6 +1247,297 @@
 <span class="nx">s1</span> <span class="p">=</span>  <span class="p">{</span><span class="k">go</span> <span class="mi">109</span> <span class="mi">22</span><span class="p">}</span>
 <span class="nx">SetInfoPointer</span> <span class="nx">p</span> <span class="p">=</span> <span class="mh">0x110460d0</span>
 <span class="nx">s1</span> <span class="p">=</span>  <span class="p">{</span><span class="nx">mike</span> <span class="mi">109</span> <span class="mi">18</span><span class="p">}</span>
+</pre></div>
+
+<h2 id="_8">方法集<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>类型的 <strong>方法集</strong> 是指可以被该类型的值调用的 <strong>所有方法的集合</strong> 。</p>
+<p>用实例实例 value 和 pointer 调用方法（含匿名字段）不受⽅法集约束，编译器编总是查找全部方法，并自动转换 receiver 实参。</p>
+<h3 id="t">类型 *T 方法集<a class="headerlink" href="#t" title="Permanent link">&para;</a></h3>
+<p>一个指向自定义类型的**值的指针**，它的方法集由该类型定义的所有方法组成，无论这些方法接受的是一个值还是一个指针。</p>
+<p>如果在指针上调用一个**接受值的方法**，Go语言会聪明地将该指针解引用，并将指针所指的底层值作为方法的接收者。</p>
+<p>类型<code>*T ⽅法集</code>包含全部 <code>receiver T + *T</code>⽅法：</p>
+<div class="codehilite"><pre><span></span><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="kt">string</span>
+    <span class="nx">sex</span>  <span class="kt">byte</span>
+    <span class="nx">age</span>  <span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="c1">//指针作为接收者，引用语义</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoPointer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">(</span><span class="o">*</span><span class="nx">p</span><span class="p">).</span><span class="nx">name</span> <span class="p">=</span> <span class="s">&quot;yoyo&quot;</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">sex</span> <span class="p">=</span> <span class="sc">&#39;f&#39;</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">age</span> <span class="p">=</span> <span class="mi">22</span>
+<span class="p">}</span>
+
+<span class="c1">//值作为接收者，值语义</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoValue</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">name</span> <span class="p">=</span> <span class="s">&quot;xxx&quot;</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">sex</span> <span class="p">=</span> <span class="sc">&#39;m&#39;</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">age</span> <span class="p">=</span> <span class="mi">33</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//p 为指针类型</span>
+    <span class="kd">var</span> <span class="nx">p</span> <span class="o">*</span><span class="nx">Person</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">Person</span><span class="p">{</span><span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="sc">&#39;m&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">}</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">SetInfoPointer</span><span class="p">()</span> <span class="c1">//func (p) SetInfoPointer()  调用指针类型的方法</span>
+
+    <span class="nx">p</span><span class="p">.</span><span class="nx">SetInfoValue</span><span class="p">()</span>    <span class="c1">//func (*p) SetInfoValue()  调用值方法,其实是做了下面的转换</span>
+    <span class="p">(</span><span class="o">*</span><span class="nx">p</span><span class="p">).</span><span class="nx">SetInfoValue</span><span class="p">()</span> <span class="c1">//func (*p) SetInfoValue()  讲指针转换成值,然后调用值方法</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><img alt="image-20200103162855942" src="../025 go语言面向对象_方法.image/image-20200103162855942.png" /></p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="kt">string</span> <span class="c1">//名字</span>
+    <span class="nx">sex</span>  <span class="kt">byte</span>   <span class="c1">//性别, 字符类型</span>
+    <span class="nx">age</span>  <span class="kt">int</span>    <span class="c1">//年龄</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoValue</span><span class="p">()</span> <span class="p">{</span>  <span class="c1">//这里是值变量</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;SetInfoValue&quot;</span><span class="p">)</span>
+<span class="p">}</span>   <span class="c1">//指针非指针都可以进行调用</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoPointer</span><span class="p">()</span> <span class="p">{</span>  <span class="c1">//这里是指针变量</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;SetInfoPointer&quot;</span><span class="p">)</span>
+<span class="p">}</span>  <span class="c1">//指针非指针都可以进行调用</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//结构体变量是一个指针变量，它能够调用哪些方法，这些方法就是一个集合，简称方法集</span>
+    <span class="nx">p</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">Person</span><span class="p">{</span><span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="sc">&#39;m&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">}</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">SetInfoValue</span><span class="p">()</span>  <span class="c1">//不管是不是指针变量都可以调用所有的方法</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">SetInfoPointer</span><span class="p">()</span>  <span class="c1">//func (p *Person) SetInfoPointer()</span>
+    <span class="c1">//(*p).SetInfoPointer() //把(*p)转换层p后再调用，等价于上面</span>
+
+    <span class="c1">//内部做的转换， 先把指针p， 转成*p后再调用</span>
+    <span class="c1">//(*p).SetInfoValue()</span>
+    <span class="c1">//p.SetInfoValue()</span>
+
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="t_1">类型 T 方法集<a class="headerlink" href="#t_1" title="Permanent link">&para;</a></h3>
+<p>一个自定义类型值的方法集则由为该类型定义的接收者类型为值类型的方法组成，<strong>但是不包含那些接收者类型为指针的方法</strong>。</p>
+<p>但这种限制通常并不像这里所说的那样，因为如果我们只有一个值，仍然可以调用一个接收者为指针类型的方法，<strong>这可以借助于Go语言传值的地址能力实现</strong>。</p>
+<div class="codehilite"><pre><span></span><span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="kt">string</span>
+    <span class="nx">sex</span>  <span class="kt">byte</span>
+    <span class="nx">age</span>  <span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="c1">//指针作为接收者，引用语义</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoPointer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">(</span><span class="o">*</span><span class="nx">p</span><span class="p">).</span><span class="nx">name</span> <span class="p">=</span> <span class="s">&quot;yoyo&quot;</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">sex</span> <span class="p">=</span> <span class="sc">&#39;f&#39;</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">age</span> <span class="p">=</span> <span class="mi">22</span>
+<span class="p">}</span>
+
+<span class="c1">//值作为接收者，值语义</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoValue</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">name</span> <span class="p">=</span> <span class="s">&quot;xxx&quot;</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">sex</span> <span class="p">=</span> <span class="sc">&#39;m&#39;</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">age</span> <span class="p">=</span> <span class="mi">33</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//p 为普通值类型</span>
+    <span class="kd">var</span> <span class="nx">p</span> <span class="nx">Person</span> <span class="p">=</span> <span class="nx">Person</span><span class="p">{</span><span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="sc">&#39;m&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">}</span>
+    <span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">).</span><span class="nx">SetInfoPointer</span><span class="p">()</span> <span class="c1">//func (&amp;p) SetInfoPointer()</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">SetInfoPointer</span><span class="p">()</span>    <span class="c1">//func (&amp;p) SetInfoPointer() //内部进行了转换</span>
+
+    <span class="nx">p</span><span class="p">.</span><span class="nx">SetInfoValue</span><span class="p">()</span>      <span class="c1">//func (p) SetInfoValue()</span>
+    <span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">).</span><span class="nx">SetInfoValue</span><span class="p">()</span>   <span class="c1">//func (*&amp;p) SetInfoValue()  //内部进行了转换</span>
+<span class="p">}</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="kt">string</span> <span class="c1">//名字</span>
+    <span class="nx">sex</span>  <span class="kt">byte</span>   <span class="c1">//性别, 字符类型</span>
+    <span class="nx">age</span>  <span class="kt">int</span>    <span class="c1">//年龄</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoValue</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;SetInfoValue&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoPointer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;SetInfoPointer&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">p</span> <span class="o">:=</span> <span class="nx">Person</span><span class="p">{</span><span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="sc">&#39;m&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">}</span>  <span class="c1">//不是指针变量</span>
+    <span class="nx">p</span><span class="p">.</span><span class="nx">SetInfoPointer</span><span class="p">()</span> <span class="c1">//func (p *Person) SetInfoPointer()   //调用指针变量的方法</span>
+    <span class="c1">//内部，先把p, 转为为&amp;p再调用， (&amp;p).SetInfoPointer()</span>
+
+    <span class="nx">p</span><span class="p">.</span><span class="nx">SetInfoValue</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>执行结果</p>
+<div class="codehilite"><pre><span></span><span class="nx">SetInfoPointer</span>
+<span class="nx">SetInfoValue</span>
+</pre></div>
+
+<h2 id="_9">匿名字段<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="_10">方法的继承<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>如果匿名字段实现了一个方法，那么包含这个匿名字段的struct也能调用该方法。</p>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="kt">string</span> <span class="c1">//名字</span>
+    <span class="nx">sex</span>  <span class="kt">byte</span>   <span class="c1">//性别, 字符类型</span>
+    <span class="nx">age</span>  <span class="kt">int</span>    <span class="c1">//年龄</span>
+<span class="p">}</span>
+
+<span class="c1">//Person类型，实现了一个方法</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">tmp</span> <span class="o">*</span><span class="nx">Person</span><span class="p">)</span> <span class="nx">PrintInfo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;name=%s, sex=%c, age=%d\n&quot;</span><span class="p">,</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">sex</span><span class="p">,</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//有个学生，继承Person字段，成员和方法都继承了</span>
+<span class="kd">type</span> <span class="nx">Student</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">Person</span> <span class="c1">//匿名字段</span>
+    <span class="nx">id</span>     <span class="kt">int</span>
+    <span class="nx">addr</span>   <span class="kt">string</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">s</span> <span class="o">:=</span> <span class="nx">Student</span><span class="p">{</span><span class="nx">Person</span><span class="p">{</span><span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="sc">&#39;m&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">},</span> <span class="mi">666</span><span class="p">,</span> <span class="s">&quot;bj&quot;</span><span class="p">}</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">PrintInfo</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>执行结果</p>
+<div class="codehilite"><pre><span></span><span class="nx">name</span><span class="p">=</span><span class="nx">mike</span><span class="p">,</span> <span class="nx">sex</span><span class="p">=</span><span class="nx">m</span><span class="p">,</span> <span class="nx">age</span><span class="p">=</span><span class="mi">18</span>
+</pre></div>
+
+<h3 id="_11">方法的重写<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="kt">string</span> <span class="c1">//名字</span>
+    <span class="nx">sex</span>  <span class="kt">byte</span>   <span class="c1">//性别, 字符类型</span>
+    <span class="nx">age</span>  <span class="kt">int</span>    <span class="c1">//年龄</span>
+<span class="p">}</span>
+
+<span class="c1">//Person类型，实现了一个方法</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">tmp</span> <span class="o">*</span><span class="nx">Person</span><span class="p">)</span> <span class="nx">PrintInfo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;name=%s, sex=%c, age=%d\n&quot;</span><span class="p">,</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">sex</span><span class="p">,</span> <span class="nx">tmp</span><span class="p">.</span><span class="nx">age</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//有个学生，继承Person字段，成员和方法都继承了</span>
+<span class="kd">type</span> <span class="nx">Student</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">Person</span> <span class="c1">//匿名字段</span>
+    <span class="nx">id</span>     <span class="kt">int</span>
+    <span class="nx">addr</span>   <span class="kt">string</span>
+<span class="p">}</span>
+
+<span class="c1">//Student也实现了一个方法，这个方法和Person方法同名，这种方法叫重写</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">tmp</span> <span class="o">*</span><span class="nx">Student</span><span class="p">)</span> <span class="nx">PrintInfo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Student: tmp = &quot;</span><span class="p">,</span> <span class="nx">tmp</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">s</span> <span class="o">:=</span> <span class="nx">Student</span><span class="p">{</span><span class="nx">Person</span><span class="p">{</span><span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="sc">&#39;m&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">},</span> <span class="mi">666</span><span class="p">,</span> <span class="s">&quot;bj&quot;</span><span class="p">}</span>
+    <span class="c1">//就近原则：先找本作用域的方法，找不到再用继承的方法</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">PrintInfo</span><span class="p">()</span> <span class="c1">//到底调用的是Person， 还是Student， 结论是Student</span>
+
+    <span class="c1">//显式调用继承的方法</span>
+    <span class="nx">s</span><span class="p">.</span><span class="nx">Person</span><span class="p">.</span><span class="nx">PrintInfo</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>执行结果</p>
+<div class="codehilite"><pre><span></span><span class="nx">Student</span><span class="p">:</span> <span class="nx">tmp</span> <span class="p">=</span>  <span class="o">&amp;</span><span class="p">{{</span><span class="nx">mike</span> <span class="mi">109</span> <span class="mi">18</span><span class="p">}</span> <span class="mi">666</span> <span class="nx">bj</span><span class="p">}</span>
+<span class="nx">name</span><span class="p">=</span><span class="nx">mike</span><span class="p">,</span> <span class="nx">sex</span><span class="p">=</span><span class="nx">m</span><span class="p">,</span> <span class="nx">age</span><span class="p">=</span><span class="mi">18</span>
+</pre></div>
+
+<h2 id="_12">表达式<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>类似于我们可以对函数进行赋值和传递一样，方法也可以进行赋值和传递。</p>
+<p>根据调用者不同，方法分为两种表现形式：<strong>方法值和方法表达式</strong>。两者都可像普通函数那样赋值和传参，<code>区别在于方法值绑定实例，⽽方法表达式则须显式传参</code>。</p>
+<h3 id="_13">方法值(就是讲调用的方法保存了一下)<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="kt">string</span> <span class="c1">//名字</span>
+    <span class="nx">sex</span>  <span class="kt">byte</span>   <span class="c1">//性别, 字符类型</span>
+    <span class="nx">age</span>  <span class="kt">int</span>    <span class="c1">//年龄</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoValue</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;SetInfoValue: %p, %v\n&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">p</span><span class="p">,</span> <span class="nx">p</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoPointer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;SetInfoPointer: %p, %v\n&quot;</span><span class="p">,</span> <span class="nx">p</span><span class="p">,</span> <span class="nx">p</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">p</span> <span class="o">:=</span> <span class="nx">Person</span><span class="p">{</span><span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="sc">&#39;m&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">}</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;main: %p, %v\n&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">p</span><span class="p">,</span> <span class="nx">p</span><span class="p">)</span>
+
+    <span class="nx">p</span><span class="p">.</span><span class="nx">SetInfoPointer</span><span class="p">()</span> <span class="c1">//传统调用方式</span>
+
+    <span class="c1">//保存方式入口地址</span>
+    <span class="nx">pFunc</span> <span class="o">:=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">SetInfoPointer</span> <span class="c1">//这个就是方法值，调用函数时，无需再传递接收者，隐藏了接收者</span>
+    <span class="nx">pFunc</span><span class="p">()</span>                   <span class="c1">//等价于 p.SetInfoPointer()</span>
+
+    <span class="nx">vFunc</span> <span class="o">:=</span> <span class="nx">p</span><span class="p">.</span><span class="nx">SetInfoValue</span>
+    <span class="nx">vFunc</span><span class="p">()</span> <span class="c1">//等价于 p.SetInfoValue()</span>
+
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="_14">方法表达式<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="kt">string</span> <span class="c1">//名字</span>
+    <span class="nx">sex</span>  <span class="kt">byte</span>   <span class="c1">//性别, 字符类型</span>
+    <span class="nx">age</span>  <span class="kt">int</span>    <span class="c1">//年龄</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoValue</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;SetInfoValue: %p, %v\n&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">p</span><span class="p">,</span> <span class="nx">p</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">p</span> <span class="o">*</span><span class="nx">Person</span><span class="p">)</span> <span class="nx">SetInfoPointer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;SetInfoPointer: %p, %v\n&quot;</span><span class="p">,</span> <span class="nx">p</span><span class="p">,</span> <span class="nx">p</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">p</span> <span class="o">:=</span> <span class="nx">Person</span><span class="p">{</span><span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="sc">&#39;m&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">}</span> <span class="c1">//定义变量</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;main: %p, %v\n&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">p</span><span class="p">,</span> <span class="nx">p</span><span class="p">)</span> <span class="c1">//打印地址以及值</span>
+
+    <span class="c1">//方法值   f := p.SetInfoPointer //隐藏了接收者</span>
+    <span class="c1">//方法表达式,相当于变成一个函数呗</span>
+    <span class="nx">f</span> <span class="o">:=</span> <span class="p">(</span><span class="o">*</span><span class="nx">Person</span><span class="p">).</span><span class="nx">SetInfoPointer</span>   
+    <span class="nx">f</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">p</span><span class="p">)</span> <span class="c1">//显式把接收者传递过去 ====》 p.SetInfoPointer()</span>
+
+    <span class="nx">f2</span> <span class="o">:=</span> <span class="p">(</span><span class="nx">Person</span><span class="p">).</span><span class="nx">SetInfoValue</span>
+    <span class="nx">f2</span><span class="p">(</span><span class="nx">p</span><span class="p">)</span> <span class="c1">//显式把接收者传递过去 ====》 p.SetInfoValue()</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>执行结果:</p>
+<div class="codehilite"><pre><span></span><span class="nx">main</span><span class="p">:</span> <span class="mh">0x110460d0</span><span class="p">,</span> <span class="p">{</span><span class="nx">mike</span> <span class="mi">109</span> <span class="mi">18</span><span class="p">}</span>
+<span class="nx">SetInfoPointer</span><span class="p">:</span> <span class="mh">0x110460d0</span><span class="p">,</span> <span class="o">&amp;</span><span class="p">{</span><span class="nx">mike</span> <span class="mi">109</span> <span class="mi">18</span><span class="p">}</span>
+<span class="nx">SetInfoValue</span><span class="p">:</span> <span class="mh">0x11046110</span><span class="p">,</span> <span class="p">{</span><span class="nx">mike</span> <span class="mi">109</span> <span class="mi">18</span><span class="p">}</span>
 </pre></div>
                 
                   
