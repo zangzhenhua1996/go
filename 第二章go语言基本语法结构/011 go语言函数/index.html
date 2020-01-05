@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -1120,6 +1120,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1541,6 +1553,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>函数定义解析：</p>
 <ul>
 <li>func：函数由 func 开始声明</li>
@@ -1556,6 +1569,7 @@
     <span class="k">return</span> <span class="nx">v1</span><span class="p">,</span> <span class="nx">v2</span> <span class="c1">//返回多个值</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p>函数定义说明：</p>
 <ul>
@@ -1592,6 +1606,7 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <h3 id="_3">有参无返回值:普通参数列表<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须</span>
@@ -1632,6 +1647,7 @@
 
 <span class="p">}</span>
 </pre></div>
+
 
 <h3 id="_4">有参无返回值,不定参数列表<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须</span>
@@ -1683,6 +1699,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span> <span class="p">=</span>  <span class="mi">3</span>
 <span class="nx">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="mi">1</span>
@@ -1693,6 +1710,7 @@
 <span class="nx">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="mi">2</span>
 <span class="nx">args</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">=</span> <span class="mi">3</span>
 </pre></div>
+
 
 <h3 id="_5">不定参数的传递<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须</span>
@@ -1727,12 +1745,14 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">data</span> <span class="p">=</span>  <span class="mi">1</span>
 <span class="nx">data</span> <span class="p">=</span>  <span class="mi">2</span>
 <span class="nx">data</span> <span class="p">=</span>  <span class="mi">3</span>
 <span class="nx">data</span> <span class="p">=</span>  <span class="mi">4</span>
 </pre></div>
+
 
 <h3 id="_6">无参有返回值<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须</span>
@@ -1773,6 +1793,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h3 id="_7">无参有多个返回值<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须</span>
 
@@ -1801,6 +1822,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h3 id="_8">有参有返回值(单个返回值)<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>以下实例为 max() 函数的代码，该函数传入两个整型参数 num1 和 num2，并返回这两个参数的最大值：</p>
 <div class="codehilite"><pre><span></span><span class="cm">/* 函数返回两个数的最大值 */</span>
@@ -1816,6 +1838,7 @@
    <span class="k">return</span> <span class="nx">result</span> 
 <span class="p">}</span>
 </pre></div>
+
 
 <h3 id="_9">有参多个返回值<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>Go 函数可以返回多个值，例如：</p>
@@ -1834,9 +1857,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">Runoob</span> <span class="nx">Google</span>
 </pre></div>
+
 
 <h3 id="_11">匿名变量丢弃返回值<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须</span>
@@ -1865,6 +1890,7 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;a = %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <hr />
 <h2 id="_12">函数调用<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
@@ -1901,9 +1927,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例在 main() 函数中调用 max（）函数，执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">最大值是</span> <span class="p">:</span> <span class="mi">200</span>
 </pre></div>
+
 
 <hr />
 <h3 id="_14">实例<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
@@ -1932,12 +1960,14 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">c</span> <span class="p">=</span>  <span class="mi">1</span>
 <span class="nx">b</span> <span class="p">=</span>  <span class="mi">2</span>
 <span class="nx">a</span> <span class="p">=</span>  <span class="mi">3</span>
 <span class="nx">main</span>
 </pre></div>
+
 
 <h2 id="_15">函数参数<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
 <p>函数如果使用参数，该变量可称为函数的形参。</p>
@@ -1978,6 +2008,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>接下来，让我们使用值传递来调用 swap() 函数：</p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
@@ -2010,12 +2041,14 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以下代码执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">交换前</span> <span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">100</span>
 <span class="nx">交换前</span> <span class="nx">b</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">200</span>
 <span class="nx">交换后</span> <span class="nx">a</span> <span class="nx">的值</span> <span class="p">:</span> <span class="mi">100</span>
 <span class="nx">交换后</span> <span class="nx">b</span> <span class="nx">的值</span> <span class="p">:</span> <span class="mi">200</span>
 </pre></div>
+
 
 <p>程序中使用的是值传递, 所以两个值并没有实现交互，我们可以使用 <code>引用传递</code>来实现交换效果。</p>
 <h4 id="_16">笔记<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
@@ -2026,6 +2059,7 @@
 <span class="c1">// a == 200</span>
 <span class="c1">// b == 100</span>
 </pre></div>
+
 
 <h3 id="go_2">Go 语言函数引用传递值<a class="headerlink" href="#go_2" title="Permanent link">&para;</a></h3>
 <p>引用传递是指在调用函数时将实际参数的地址传递到函数中，那么在函数中对参数所进行的修改，将影响到实际参数。</p>
@@ -2038,6 +2072,7 @@
    <span class="o">*</span><span class="nx">y</span> <span class="p">=</span> <span class="nx">temp</span>    <span class="cm">/* 将 temp 值赋给 y */</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p>以下我们通过使用引用传递来调用 swap() 函数：</p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -2070,12 +2105,14 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上代码执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">交换前</span><span class="err">，</span><span class="nx">a</span> <span class="nx">的值</span> <span class="p">:</span> <span class="mi">100</span>
 <span class="nx">交换前</span><span class="err">，</span><span class="nx">b</span> <span class="nx">的值</span> <span class="p">:</span> <span class="mi">200</span>
 <span class="nx">交换后</span><span class="err">，</span><span class="nx">a</span> <span class="nx">的值</span> <span class="p">:</span> <span class="mi">200</span>
 <span class="nx">交换后</span><span class="err">，</span><span class="nx">b</span> <span class="nx">的值</span> <span class="p">:</span> <span class="mi">100</span>
 </pre></div>
+
 
 <hr />
 <h2 id="_17">递归函数<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
@@ -2104,12 +2141,14 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="p">=</span>  <span class="mi">1</span>
 <span class="nx">a</span> <span class="p">=</span>  <span class="mi">2</span>
 <span class="nx">a</span> <span class="p">=</span>  <span class="mi">3</span>
 <span class="nx">main</span>
 </pre></div>
+
 
 <p><img alt="image-20191107101441890" src="../011 go语言函数.image/image-20191107101441890.png" /></p>
 <h4 id="_19">实现数字的累加<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
@@ -2152,6 +2191,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h2 id="_20">函数类型<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
 <p>在Go语言中，函数也是一种数据类型，我们可以通过type来定义它，它的类型就是所有拥有相同的参数，相同的返回值的一种类型。</p>
 <h3 id="_21">实例<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
@@ -2189,11 +2229,13 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">result</span> <span class="p">=</span>  <span class="mi">2</span>
 <span class="nx">result2</span> <span class="p">=</span>  <span class="mi">30</span>
 <span class="nx">result3</span> <span class="p">=</span>  <span class="mi">5</span>
 </pre></div>
+
 
 <p><img alt="image-20191107193643261" src="../011 go语言函数.image/image-20191107193643261.png" /></p>
 <blockquote>
@@ -2242,10 +2284,12 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">Calc</span>
 <span class="nx">a</span> <span class="p">=</span>  <span class="mi">1</span>
 </pre></div>
+
 
 <p><img alt="image-20191107203348392" src="../011 go语言函数.image/image-20191107203348392.png" /></p>
 <h2 id="_24">函数用法<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
@@ -2294,9 +2338,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上代码执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="mi">3</span>
 </pre></div>
+
 
 <h4 id="_26">笔记<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
 <p>函数作为参数传递，实现回调。 (后面在详细看)</p>
@@ -2323,6 +2369,7 @@
     <span class="k">return</span> <span class="nx">x</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <h3 id="go_4">Go 语言函数闭包及匿名函数<a class="headerlink" href="#go_4" title="Permanent link">&para;</a></h3>
 <p>所谓闭包就是一个函数“捕获”了和它在同一作用域的其它常量和变量。这就意味着当闭包被调用的时候，不管在程序什么地方调用，<code>闭包能够使用这些常量或者变量</code>。它不关心这些捕获了的变量和常量是否已经超出了作用域，<code>所以只有闭包还在使用它，这些变量就还会存在。</code></p>
@@ -2386,6 +2433,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p><strong>闭包函数捕获外部变量的特点</strong>(引用的方式)</p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须</span>
 
@@ -2408,10 +2456,12 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">内部</span><span class="err">：</span><span class="nx">a</span> <span class="p">=</span> <span class="mi">666</span><span class="p">,</span> <span class="nx">str</span> <span class="p">=</span> <span class="k">go</span>
 <span class="nx">外部</span><span class="err">：</span><span class="nx">a</span> <span class="p">=</span> <span class="mi">666</span><span class="p">,</span> <span class="nx">str</span> <span class="p">=</span> <span class="k">go</span>
 </pre></div>
+
 
 <p>闭包简单演示</p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须</span>
@@ -2457,6 +2507,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h4 id="_28">闭包<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
 <p>以下实例中，我们创建了函数 getSequence() ，返回另外一个函数。该函数的目的是在闭包中递增 i 变量，代码如下：</p>
 <h5 id="_29">实例<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h5>
@@ -2488,6 +2539,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上代码执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="mi">1</span>
 <span class="mi">2</span>
@@ -2495,6 +2547,7 @@
 <span class="mi">1</span>
 <span class="mi">2</span>
 </pre></div>
+
 
 <h5 id="_30">笔记<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h5>
 <p>带参数的闭包函数调用: </p>
@@ -2518,11 +2571,13 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="mi">1</span> <span class="mi">3</span>
 <span class="mi">2</span> <span class="mi">3</span>
 <span class="mi">3</span> <span class="mi">3</span>
 </pre></div>
+
 
 <p><img alt="image-20191106215136944" src="../011 go语言函数.image/image-20191106215136944.png" /></p>
 <p>闭包带参数补充: </p>
@@ -2544,11 +2599,13 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="mi">1</span> <span class="mi">3</span> <span class="mi">2</span>
 <span class="mi">2</span> <span class="mi">3</span> <span class="mi">0</span>
 <span class="mi">3</span> <span class="mi">3</span> <span class="mi">4</span>
 </pre></div>
+
 
 <p><img alt="image-20191106215314073" src="../011 go语言函数.image/image-20191106215314073.png" /></p>
 <h3 id="go_5">Go 语言函数方法(后面再说)<a class="headerlink" href="#go_5" title="Permanent link">&para;</a></h3>
@@ -2557,6 +2614,7 @@
    <span class="cm">/* 函数体*/</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p>下面定义一个结构体类型和该类型的一个方法：</p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -2583,9 +2641,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上代码执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">的面积</span> <span class="p">=</span>  <span class="mi">314</span>
 </pre></div>
+
 
 <h4 id="_31">笔记<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
 <p>Go 没有面向对象，而我们知道常见的 Java。</p>
@@ -2606,12 +2666,14 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>在 Go 中则是如下: </p>
 <div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="p">(</span><span class="nx">c</span> <span class="nx">Circle</span><span class="p">)</span> <span class="nx">getArea</span><span class="p">()</span> <span class="kt">float64</span> <span class="p">{</span>
   <span class="c1">//c.radius 即为 Circle 类型对象中的属性</span>
   <span class="k">return</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="nx">c</span><span class="p">.</span><span class="nx">radius</span> <span class="o">*</span> <span class="nx">c</span><span class="p">.</span><span class="nx">radius</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <h2 id="defer">延迟调用defer<a class="headerlink" href="#defer" title="Permanent link">&para;</a></h2>
 <h3 id="defer_1">defer作用<a class="headerlink" href="#defer_1" title="Permanent link">&para;</a></h3>
@@ -2631,10 +2693,12 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">aaaaaaaaaaaaaaa</span>
 <span class="nx">bbbbbbbbbbbbb</span>
 </pre></div>
+
 
 <h3 id="defer_2">多个defer执行顺序<a class="headerlink" href="#defer_2" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -2664,6 +2728,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="mf">8.333333333333334</span>
 <span class="nx">ccccccccccccccc</span>
@@ -2677,6 +2742,7 @@
 <span class="nx">main</span><span class="p">.</span><span class="nx">main</span><span class="p">()</span>
     <span class="nx">J</span><span class="p">:</span><span class="o">/</span><span class="nx">视频教程</span><span class="o">/</span><span class="mi">4</span><span class="err">、</span><span class="mi">2018</span><span class="nx">go语言快速入门</span><span class="o">-</span><span class="nx">黑马</span><span class="o">-</span><span class="mi">20</span><span class="nx">小时快速入门go语言视频</span><span class="o">-</span><span class="mi">8</span><span class="nx">天</span><span class="o">/</span><span class="nx">Day2</span><span class="o">/</span><span class="nx">第02天</span><span class="p">(</span><span class="nx">函数</span><span class="err">、</span><span class="nx">工程管理</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="o">-</span><span class="nx">源代码</span><span class="o">/</span><span class="mi">17</span><span class="nx">_多个defer的执行顺序</span><span class="p">.</span><span class="k">go</span><span class="p">:</span><span class="mi">22</span> <span class="o">+</span><span class="mh">0x1a0</span>
 </pre></div>
+
 
 <p>其中一个函数没有加defer但是执行到它出了问题那么它下面的加了defer的函数也不会在运行</p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须</span>
@@ -2703,6 +2769,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">bbbbbbbbbbbbbb</span>  <span class="c1">//后进的先打印</span>
 <span class="nx">aaaaaaaaaaaaaa</span>
@@ -2716,6 +2783,7 @@
 
 <span class="nx">Process</span> <span class="nx">finished</span> <span class="nx">with</span> <span class="nx">exit</span> <span class="nx">code</span> <span class="mi">2</span>
 </pre></div>
+
 
 <h3 id="defer_3">defer和匿名函数结合使用<a class="headerlink" href="#defer_3" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须</span>
@@ -2753,15 +2821,18 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>第一个main的执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">外部</span><span class="err">：</span><span class="nx">a</span> <span class="p">=</span> <span class="mi">111</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">222</span>
 <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">20</span>  <span class="c1">//后执行并且传参了</span>
 </pre></div>
 
+
 <p>第二个main 执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">外部</span><span class="err">：</span><span class="nx">a</span> <span class="p">=</span> <span class="mi">111</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">222</span>
 <span class="nx">a</span> <span class="p">=</span> <span class="mi">111</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">222</span>  <span class="c1">//未传参,使用外部函数的变量</span>
 </pre></div>
+
 
 <h2 id="_32">获取命令行参数<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须</span>
@@ -2786,6 +2857,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p><img alt="image-20191124201829584" src="../011 go语言函数.image/image-20191124201829584.png" /></p>
                 
@@ -2844,11 +2916,11 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -2877,6 +2949,10 @@
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

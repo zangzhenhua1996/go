@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -950,6 +950,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1269,6 +1281,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h2 id="_3">总结<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><img alt="image.png" src="../005 go变量定义.image/14555448-62da6d91d59e8eec.png" />
 <img alt="image.png" src="../005 go变量定义.image/14555448-a55c37f8f71107f2.png" />
@@ -1282,9 +1295,11 @@
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">identifier</span> <span class="kd">type</span>
 </pre></div>
 
+
 <p>可以一次声明多个变量：</p>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">identifier1</span><span class="p">,</span> <span class="nx">identifier2</span> <span class="kd">type</span>
 </pre></div>
+
 
 <h3 id="_4">实例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -1298,16 +1313,19 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例输出结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">Runoob</span>
 <span class="mi">1</span> <span class="mi">2</span>
 </pre></div>
+
 
 <h3 id="_5">变量声明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="_6">第一种，指定变量类型，如果没有初始化，则变量默认为零值。<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">v_name</span> <span class="nx">v_type</span>
 <span class="nx">v_name</span> <span class="p">=</span> <span class="nx">value</span>
 </pre></div>
+
 
 <p>零值就是变量没有做初始化时系统默认设置的值。</p>
 <h5 id="_7">实例<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
@@ -1329,11 +1347,13 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">RUNOOB</span>
 <span class="mi">0</span>
 <span class="kc">false</span>
 </pre></div>
+
 
 <ul>
 <li>
@@ -1347,14 +1367,13 @@
 </li>
 <li>
 <p>以下几种类型为 <strong>nil</strong>：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">*</span><span class="kt">int</span>
-<span class="kd">var</span> <span class="nx">a</span> <span class="p">[]</span><span class="kt">int</span>
-<span class="kd">var</span> <span class="nx">a</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span> <span class="kt">int</span>
-<span class="kd">var</span> <span class="nx">a</span> <span class="kd">chan</span> <span class="kt">int</span>
-<span class="kd">var</span> <span class="nx">a</span> <span class="kd">func</span><span class="p">(</span><span class="kt">string</span><span class="p">)</span> <span class="kt">int</span>
-<span class="kd">var</span> <span class="nx">a</span> <span class="kt">error</span> <span class="c1">// error 是接口</span>
-</pre></div>
-
+<p><code>go
+var a *int
+var a []int
+var a map[string] int
+var a chan int
+var a func(string) int
+var a error // error 是接口</code></p>
 </li>
 </ul>
 <h5 id="_8">实例<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
@@ -1371,13 +1390,16 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>输出结果是：</p>
 <div class="codehilite"><pre><span></span><span class="mi">0</span> <span class="mi">0</span> <span class="kc">false</span> <span class="s">&quot;&quot;</span>
 </pre></div>
 
+
 <h4 id="_9">第二种，根据值自行判定变量类型。<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">v_name</span> <span class="p">=</span> <span class="nx">value</span>
 </pre></div>
+
 
 <h5 id="_10">实例<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -1388,13 +1410,16 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>输出结果是：</p>
 <div class="codehilite"><pre><span></span><span class="kc">true</span>
 </pre></div>
 
+
 <h4 id="var-4242">第三种，省略 var, 注意 *<em>:=*</em> 左侧如果没有声明新的变量，就产生编译错误，格式：<a class="headerlink" href="#var-4242" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><span class="nx">v_name</span> <span class="o">:=</span> <span class="nx">value</span>
 </pre></div>
+
 
 <p>例如：</p>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">intVal</span> <span class="kt">int</span> 
@@ -1403,6 +1428,7 @@
 
 <span class="nx">intVal</span><span class="p">,</span><span class="nx">intVal1</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span> <span class="c1">// 此时不会产生编译错误，因为有声明新的变量，因为 := 是一个声明语句</span>
 </pre></div>
+
 
 <p>可以将<code>var f string = "Runoob" 简写为 f := "Runoob"：</code></p>
 <h5 id="_11">实例<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h5>
@@ -1415,9 +1441,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>输出结果是：</p>
 <div class="codehilite"><pre><span></span><span class="nx">Runoob</span>
 </pre></div>
+
 
 <h3 id="_12">多变量声明<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="c1">//类型相同多个变量, 非全局变量</span>
@@ -1435,6 +1463,7 @@
     <span class="nx">vname2</span> <span class="nx">v_type2</span>
 <span class="p">)</span>
 </pre></div>
+
 
 <h4 id="_13">实例<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -1457,9 +1486,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="kc">false</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">123</span> <span class="nx">hello</span> <span class="mi">123</span> <span class="nx">hello</span>
 </pre></div>
+
 
 <hr />
 <h2 id="_14">值类型和引用类型<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
@@ -1496,15 +1527,18 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>尝试编译这段代码将得到错误 <strong>a declared and not used</strong>。</p>
 <p>此外，单纯地给 a 赋值也是不够的，这个值必须被使用，所以使用</p>
 <div class="codehilite"><pre><span></span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;hello, world&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 </pre></div>
 
+
 <p>会移除错误。</p>
 <p>但是全局变量是允许声明但不使用。 同一类型的多个变量可以声明在同一行，如：</p>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="kt">int</span>
 </pre></div>
+
 
 <p>多变量可以在同一行进行赋值，如：</p>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span>
@@ -1512,9 +1546,11 @@
 <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="p">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">&quot;abc&quot;</span>
 </pre></div>
 
+
 <p>上面这行假设了变量 a，b 和 c 都已经被声明，否则的话应该这样使用：</p>
 <div class="codehilite"><pre><span></span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="o">:=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">&quot;abc&quot;</span>
 </pre></div>
+
 
 <p>右边的这些值以相同的顺序赋值给左边的变量，所以 a 的值是 5， b 的值是 7，c 的值是 "abc"。</p>
 <p>这被称为 并行 或 同时 赋值。</p>
@@ -1552,11 +1588,13 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>输出结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">tmp</span> <span class="p">=</span>  <span class="mi">10</span>
 <span class="nx">c</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">d</span> <span class="p">=</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">e</span> <span class="p">=</span> <span class="mi">3</span>
 <span class="nx">d</span> <span class="p">=</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">e</span> <span class="p">=</span> <span class="mi">3</span>
 </pre></div>
+
 
 <p><strong>空白标识符在函数返回值时的使用：</strong> </p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -1575,9 +1613,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p><strong>输出结果：</strong></p>
 <div class="codehilite"><pre><span></span><span class="mi">2</span> <span class="nx">str</span>
 </pre></div>
+
 
 <p>注意</p>
 <p><img alt="image.png" src="../005 go变量定义.image/14555448-202bc78e65943d55.png" /></p>
@@ -1637,11 +1677,11 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -1670,6 +1710,10 @@
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

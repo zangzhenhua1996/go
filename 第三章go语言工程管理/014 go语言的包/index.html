@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -810,6 +810,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -952,6 +964,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>test.go示例代码如下：</p>
 <div class="codehilite"><pre><span></span><span class="c1">//test.go</span>
 <span class="kn">package</span> <span class="nx">test</span>
@@ -967,11 +980,12 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>运行结果：</p>
 <p>​         <img alt="2018-01-01_204638" src="../014 go语言的包.image/clip_image002-1574601932924.jpg" />  </p>
 <p><img alt="image-20191126180609415" src="../014 go语言的包.image/image-20191126180609415.png" /></p>
 <h2 id="_3">导入包<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>导入包需要使用关键字import，它会告诉编译器你想引用该位置的包内的代码。包的路径可以是相对路径，也可以是绝对路径。
+<p>导入包需要使用关键字import，它会告诉编译器你想引用该位置的包内的代码。包的路径可以是相对路径，也可以是绝对路径。</p>
 <div class="codehilite"><pre><span></span><span class="c1">//方法1</span>
 <span class="kn">import</span> <span class="s">&quot;calc&quot;</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>  <span class="c1">//导入包，必须使用，否则编译不过</span>
@@ -981,7 +995,9 @@
     <span class="s">&quot;calc&quot;</span>
     <span class="s">&quot;fmt&quot;</span>
 <span class="p">)</span>
-</pre></div></p>
+</pre></div>
+
+
 <p>标准库中的包会在安装 Go 的位置找到。 Go 开发者创建的包会在 GOPATH 环境变量指定的目录里查找。GOPATH 指定的这些目录就是开发者的个人工作空间。</p>
 <p>如果编译器查遍 GOPATH 也没有找到要导入的包，那么在试图对程序执行 run 或者 build
 的时候就会出错。</p>
@@ -997,6 +1013,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h3 id="_5">别名操作<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>在导⼊时，可指定包成员访问⽅式，⽐如对包重命名，以避免同名冲突：</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="p">(</span>
@@ -1007,6 +1024,7 @@
     <span class="nx">io</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;hello go&quot;</span><span class="p">)</span> <span class="c1">//通过io别名调用</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <h3 id="_">_ 操作<a class="headerlink" href="#_" title="Permanent link">&para;</a></h3>
 <p>有时，用户可能需要导入一个包，但是不需要引用这个包的标识符。在这种情况，可以使用空白标识符_来重命名这个导入：</p>
@@ -1072,11 +1090,11 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -1105,6 +1123,10 @@
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

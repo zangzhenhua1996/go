@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -824,6 +824,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -943,6 +955,7 @@
 <div class="codehilite"><pre><span></span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
 </pre></div>
 
+
 <p>6 个标记是(每行一个)：</p>
 <div class="codehilite"><pre><span></span><span class="mf">1.</span> <span class="nx">fmt</span>
 <span class="mf">2.</span> <span class="p">.</span>
@@ -952,6 +965,7 @@
 <span class="mf">6.</span> <span class="p">)</span>
 </pre></div>
 
+
 <hr />
 <h2 id="_1">行分隔符<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>在 Go 程序中，一行代表一个语句结束。每个语句不需要像 C 家族中的其它语言一样以分号 ; 结尾，因为这些工作都将由 Go 编译器自动完成。</p>
@@ -960,6 +974,7 @@
 <div class="codehilite"><pre><span></span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;菜鸟教程：runoob.com&quot;</span><span class="p">)</span>
 </pre></div>
+
 
 <hr />
 <h2 id="_2">注释<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -972,6 +987,7 @@
 <span class="cm"> */</span>
 </pre></div>
 
+
 <hr />
 <h2 id="_3">标识符<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>标识符用来命名变量、类型等程序实体。一个标识符实际上就是一个或是多个字母(A<sub>Z和a</sub>z)数字(0~9)、下划线_组成的序列，但是第一个字符必须是字母或下划线而不能是数字。</p>
@@ -979,6 +995,7 @@
 <div class="codehilite"><pre><span></span><span class="nx">mahesh</span>   <span class="nx">kumar</span>   <span class="nx">abc</span>   <span class="nx">move_name</span>   <span class="nx">a_123</span>
 <span class="nx">myname50</span>   <span class="nx">_temp</span>   <span class="nx">j</span>   <span class="nx">a23b9</span>   <span class="nx">retVal</span>
 </pre></div>
+
 
 <p>以下是无效的标识符：</p>
 <ul>
@@ -997,9 +1014,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例输出结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">GoogleRunoob</span>
 </pre></div>
+
 
 <hr />
 <h2 id="_6">关键字<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
@@ -1105,14 +1124,17 @@
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">age</span> <span class="kt">int</span><span class="p">;</span>
 </pre></div>
 
+
 <p>语句中适当使用空格能让程序更易阅读。</p>
 <p>无空格：</p>
 <div class="codehilite"><pre><span></span><span class="nx">fruit</span><span class="p">=</span><span class="nx">apples</span><span class="o">+</span><span class="nx">oranges</span><span class="p">;</span>
 </pre></div>
 
+
 <p>在变量与运算符间加入空格，程序看起来更加美观，如：</p>
 <div class="codehilite"><pre><span></span><span class="nx">fruit</span> <span class="p">=</span> <span class="nx">apples</span> <span class="o">+</span> <span class="nx">oranges</span><span class="p">;</span> 
 </pre></div>
+
 
 <h2 id="_7">笔记<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><strong>Go 程序的一般结构: basic_structure.go</strong> </p>
@@ -1143,6 +1165,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>Go 程序是通过 <strong>package</strong> 来组织的。</p>
 <p>只有 package 名称为 main 的包可以包含 main 函数。</p>
 <p>一个可执行程序有且仅有一个 <strong>main</strong> 包。</p>
@@ -1152,12 +1175,14 @@
 <span class="kn">import</span> <span class="s">&quot;io&quot;</span>
 </pre></div>
 
+
 <p>也可以同时导入多个: </p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
     <span class="s">&quot;math&quot;</span>
 <span class="p">)</span>
 </pre></div>
+
 
 <p>例如： </p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -1170,16 +1195,19 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>使用 <PackageName>.<FunctionName> 调用: </p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">别名</span><span class="err">：</span>
 <span class="c1">// 为fmt起别名为fmt2</span>
 <span class="kn">import</span> <span class="nx">fmt2</span> <span class="s">&quot;fmt&quot;</span>
 </pre></div>
 
+
 <p>省略调用(不建议使用): </p>
 <div class="codehilite"><pre><span></span><span class="c1">// 调用的时候只需要Println()，而不需要fmt.Println()</span>
 <span class="kn">import</span> <span class="p">.</span> <span class="s">&quot;fmt&quot;</span>
 </pre></div>
+
 
 <p>前面加个点表示省略调用，那么调用该模块里面的函数，可以不用写模块名称了: </p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="p">.</span> <span class="s">&quot;fmt&quot;</span>
@@ -1187,6 +1215,7 @@
     <span class="nx">Println</span><span class="p">(</span><span class="s">&quot;hello,world&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p>通过 <strong>const</strong> 关键字来进行常量的定义。</p>
 <p>通过在函数体外部使用 <strong>var</strong> 关键字来进行全局变量的声明和赋值。</p>
@@ -1198,17 +1227,21 @@
 <div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">getId</span><span class="p">()</span> <span class="p">{}</span>
 </pre></div>
 
+
 <p>函数名首字母大写即为 <strong>public</strong> : </p>
 <div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">Printf</span><span class="p">()</span> <span class="p">{}</span>
 </pre></div>
+
 
 <p>Go 语言的包引入一般为: <strong>项目名/包名</strong> (引用自己定义的包)</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="s">&quot;test/controllers&quot;</span>
 </pre></div>
 
+
 <p>方法的调用为: <strong>包名.方法名()</strong> </p>
 <div class="codehilite"><pre><span></span><span class="nx">controllers</span><span class="p">.</span><span class="nx">Test</span><span class="p">()</span>
 </pre></div>
+
 
 <blockquote>
 <p>本包内方法名可为小写，包外调用方法名首字母必须为大写。 </p>
@@ -1269,11 +1302,11 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -1302,6 +1335,10 @@
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

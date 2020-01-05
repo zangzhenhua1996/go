@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -953,6 +953,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1240,6 +1252,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>If 在布尔表达式为 true 时，其后紧跟的语句块执行，如果为 false 则不执行。</p>
 <p>流程图如下：</p>
 <p><img alt="image.png" src="../009 go语言条件语句.image/14555448-85209a206711f5d5.png" /></p>
@@ -1262,10 +1275,12 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上代码执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">小于</span> <span class="mi">20</span>
 <span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">10</span>
 </pre></div>
+
 
 <h3 id="_3">笔记<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ol>
@@ -1289,6 +1304,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <ol>
 <li>Go 的 if 还有一个强大的地方就是条件判断语句里面允许声明一个变量，这个变量的作用域只能在该条件逻辑块内，其他地方就不起作用了，如下所示: </li>
 </ol>
@@ -1306,9 +1322,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="mi">9</span> <span class="nx">has</span> <span class="mi">1</span> <span class="nx">digit</span>   <span class="c1">//出了这个条件逻辑块num就失去了作用</span>
 </pre></div>
+
 
 <ol>
 <li>
@@ -1330,6 +1348,7 @@
   <span class="cm">/* 在布尔表达式为 false 时执行 */</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p>If 在布尔表达式为 true 时，其后紧跟的语句块执行，如果为 false 则执行 else 语句块。</p>
 <p>流程图如下：</p>
@@ -1357,10 +1376,12 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上代码执行结果为： </p>
 <div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">不小于</span> <span class="mi">20</span>
 <span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">100</span>
 </pre></div>
+
 
 <h3 id="_6">笔记<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>寻找到 100 以内的所有的素数: </p>
@@ -1393,6 +1414,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="mi">2</span> <span class="nx">素数</span>
 <span class="mi">3</span> <span class="nx">素数</span>
@@ -1421,6 +1443,7 @@
 <span class="mi">97</span> <span class="nx">素数</span>
 </pre></div>
 
+
 <p><strong>if ... else if ... else...</strong> 实例： </p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
@@ -1438,6 +1461,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h2 id="go-if_1">Go 语言 if 语句嵌套<a class="headerlink" href="#go-if_1" title="Permanent link">&para;</a></h2>
 <p>你可以在 if 或 else if 语句中嵌入一个或多个 if 或 else if 语句。</p>
 <h3 id="_7">语法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
@@ -1449,6 +1473,7 @@
    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p>你可以以同样的方式在 if 语句中嵌套 <strong>else if...else</strong> 语句</p>
 <h3 id="_8">实例<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
@@ -1475,11 +1500,13 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上代码执行结果为： </p>
 <div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">的值为</span> <span class="mi">100</span> <span class="err">，</span> <span class="nx">b</span> <span class="nx">的值为</span> <span class="mi">200</span>
 <span class="nx">a</span> <span class="nx">值为</span> <span class="p">:</span> <span class="mi">100</span>
 <span class="nx">b</span> <span class="nx">值为</span> <span class="p">:</span> <span class="mi">200</span>
 </pre></div>
+
 
 <h3 id="_9">笔记<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>判断用户密码输入： </p>
@@ -1506,6 +1533,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h2 id="go-switch">Go 语言 switch 语句<a class="headerlink" href="#go-switch" title="Permanent link">&para;</a></h2>
 <p>switch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一的，从上至下逐一测试，直到匹配为止。</p>
 <p>switch 语句执行的过程从上至下，直到找到匹配项，<code>匹配项后面也不需要再加 break</code>。</p>
@@ -1521,6 +1549,7 @@
         <span class="o">...</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p>变量 var1 可以是任何类型，而 val1 和 val2 则可以是同类型的任意值。类型不被局限于常量或整数，但<code>必须是相同的类型</code>；或者最终结果为相同类型的表达式。</p>
 <p>您可以同时测试多个可能符合条件的值，使用<code>逗号</code>分割它们，例如：<code>case val1, val2, val3</code>。</p>
@@ -1559,10 +1588,12 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上代码执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">优秀</span><span class="p">!</span>
 <span class="nx">你的等级是</span> <span class="nx">A</span>
 </pre></div>
+
 
 <h3 id="type-switch">Type Switch<a class="headerlink" href="#type-switch" title="Permanent link">&para;</a></h3>
 <p>switch 语句还可以被用于 type-switch 来判断某个 interface 变量中实际存储的变量类型。</p>
@@ -1577,6 +1608,7 @@
        <span class="nx">statement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <h3 id="_12">实例<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -1603,9 +1635,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上代码执行结果为： </p>
 <div class="codehilite"><pre><span></span><span class="nx">x</span> <span class="nx">的类型</span> <span class="p">:&lt;</span><span class="kc">nil</span><span class="p">&gt;</span>
 </pre></div>
+
 
 <h3 id="fallthrough">fallthrough<a class="headerlink" href="#fallthrough" title="Permanent link">&para;</a></h3>
 <p>使用 fallthrough 会强制执行后面的 case 语句，fallthrough 不会判断下一条 case 的表达式结果是否为 true。</p>
@@ -1637,11 +1671,13 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上代码执行结果为： </p>
 <div class="codehilite"><pre><span></span><span class="mi">2</span><span class="err">、</span><span class="k">case</span> <span class="nx">条件语句为</span> <span class="kc">true</span>
 <span class="mi">3</span><span class="err">、</span><span class="k">case</span> <span class="nx">条件语句为</span> <span class="kc">false</span>
 <span class="mi">4</span><span class="err">、</span><span class="k">case</span> <span class="nx">条件语句为</span> <span class="kc">true</span> <span class="c1">//到这一句没有fallthrough也就不会再执行下面的case语句</span>
 </pre></div>
+
 
 <p>从以上代码输出的结果可以看出：switch 从第一个判断表达式为 <code>true</code>的 case 开始执行，如果 case 带有 fallthrough，程序会继续执行下一条 case，且它不会去判断下一个 case 的表达式是否为 true。 </p>
 <h3 id="_14">笔记<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
@@ -1653,6 +1689,7 @@
     <span class="k">default</span><span class="p">:</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <ol>
 <li>
@@ -1677,6 +1714,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h2 id="go-select">Go 语言 select 语句<a class="headerlink" href="#go-select" title="Permanent link">&para;</a></h2>
 <p>select 是 Go 中的一个控制结构，类似于用于通信的 switch 语句。每个 case 必须是一个通信操作，要么是发送要么是接收。</p>
 <p>select 随机执行一个可运行的 case。如果没有 case 可运行，它将阻塞，直到有 case 可运行。一个默认的子句应该总是可运行的。</p>
@@ -1692,6 +1730,7 @@
        <span class="nx">statement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p>以下描述了 select 语句的语法：</p>
 <ul>
@@ -1742,9 +1781,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上代码执行结果为： </p>
 <div class="codehilite"><pre><span></span><span class="nx">no</span> <span class="nx">communication</span>
 </pre></div>
+
 
 <h3 id="_17">笔记<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>select 会循环检测条件，如果有满足则执行并退出，否则一直循环检测。</p>
@@ -1844,11 +1885,11 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -1877,6 +1918,10 @@
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -856,6 +856,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1006,9 +1018,11 @@
 <div class="codehilite"><pre><span></span><span class="kd">map</span><span class="p">[</span><span class="nx">keyType</span><span class="p">]</span><span class="nx">valueType</span>
 </pre></div>
 
+
 <p>​         在一个map里所有的键都是唯一的，而且必须是支持<code>==和!=</code>操作符的类型(不可变)，<code>切片</code>、<code>函数</code>以及<code>包含切片</code>的结构类型这些类型由于具有<code>引用语义</code>，不能作为映射的键，使用这些类型会造成编译错误  </p>
 <div class="codehilite"><pre><span></span><span class="nx">dict</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">]</span><span class="kt">int</span><span class="p">{}</span> <span class="c1">//err, invalid map key type []string</span>
 </pre></div>
+
 
 <p>map值可以是任意类型，没有限制。map里所有键的数据类型必须是相同的，值数据也必须相同，但键和值的数据类型可以不相同。</p>
 <blockquote>
@@ -1022,6 +1036,7 @@
 <span class="cm">/* 使用 make 函数 */</span>
 <span class="nx">map_variable</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="nx">key_data_type</span><span class="p">]</span><span class="nx">value_data_type</span><span class="p">)</span> <span class="c1">//可以赋值,因为初始化了一个空的map</span>
 </pre></div>
+
 
 <p>如果不初始化 map，那么就会创建一个 <code>nil map</code>。<code>nil map</code>不能用来存放键值对</p>
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">m1</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span>  <span class="c1">//只是声明一个map，没有初始化, 此为空(nil)map</span>
@@ -1037,6 +1052,7 @@
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">m4</span><span class="p">)</span>                <span class="c1">//map[]</span>
 </pre></div>
 
+
 <h2 id="map_3">map初始化<a class="headerlink" href="#map_3" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="c1">//1、定义同时初始化,同时赋值</span>
 <span class="kd">var</span> <span class="nx">m1</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span> <span class="p">=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">}</span>
@@ -1046,6 +1062,7 @@
 <span class="nx">m2</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">}</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">m2</span><span class="p">)</span>
 </pre></div>
+
 
 <h3 id="map_4">实例(map的基本使用)<a class="headerlink" href="#map_4" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
@@ -1084,6 +1101,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="p">=</span>  <span class="kd">map</span><span class="p">[]</span>
 <span class="kc">false</span>
@@ -1094,6 +1112,7 @@
 <span class="nx">len</span> <span class="p">=</span>  <span class="mi">3</span>
 <span class="nx">m4</span> <span class="p">=</span>  <span class="kd">map</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="nx">mike</span> <span class="mi">2</span><span class="p">:</span><span class="k">go</span> <span class="mi">3</span><span class="p">:</span><span class="nx">c</span><span class="o">++</span><span class="p">]</span>
 </pre></div>
+
 
 <h2 id="_1">赋值操作<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">}</span>
@@ -1107,6 +1126,7 @@
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">m2</span><span class="p">)</span>           <span class="c1">//map[0:aaa 1:bbb]</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">m2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">m2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">//aaa bbb</span>
 </pre></div>
+
 
 <h3 id="_2">实例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
@@ -1124,10 +1144,12 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="p">=</span>  <span class="kd">map</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="nx">mike</span> <span class="mi">2</span><span class="p">:</span><span class="nx">yoyo</span><span class="p">]</span>
 <span class="nx">m1</span> <span class="p">=</span>  <span class="kd">map</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="nx">c</span><span class="o">++</span> <span class="mi">2</span><span class="p">:</span><span class="nx">yoyo</span> <span class="mi">3</span><span class="p">:</span><span class="k">go</span><span class="p">]</span>
 </pre></div>
+
 
 <h2 id="map_5">map 遍历<a class="headerlink" href="#map_5" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">}</span>
@@ -1154,6 +1176,7 @@
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;value2 = &quot;</span><span class="p">,</span> <span class="nx">value2</span><span class="p">,</span> <span class="s">&quot;, ok2 = &quot;</span><span class="p">,</span> <span class="nx">ok2</span><span class="p">)</span> <span class="c1">//value2 =   , ok2 =  false</span>
 </pre></div>
 
+
 <h3 id="_3">实例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
@@ -1179,12 +1202,14 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="mi">1</span> <span class="o">======</span><span class="p">=&gt;</span> <span class="nx">mike</span>
 <span class="mi">2</span> <span class="o">======</span><span class="p">=&gt;</span> <span class="nx">yoyo</span>
 <span class="mi">3</span> <span class="o">======</span><span class="p">=&gt;</span> <span class="k">go</span>
 <span class="nx">key不存在</span>
 </pre></div>
+
 
 <h2 id="mapdelete">map删除(delete)<a class="headerlink" href="#mapdelete" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s">&quot;lily&quot;</span><span class="p">}</span>
@@ -1205,6 +1230,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h3 id="_4">实例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
@@ -1219,6 +1245,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
@@ -1232,6 +1259,7 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;m = &quot;</span><span class="p">,</span> <span class="nx">m</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <h2 id="map_6">map做函数参数<a class="headerlink" href="#map_6" title="Permanent link">&para;</a></h2>
 <p>在函数间传递映射并不会制造出该映射的一个副本，不是值传递，而是引用传递：</p>
@@ -1261,6 +1289,7 @@
 <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nx">m</span><span class="p">)=</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="o">----</span><span class="p">&gt;</span> <span class="nx">mike</span>
@@ -1324,11 +1353,11 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -1357,6 +1386,10 @@
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -959,6 +959,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1268,6 +1280,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h2 id="go-for">Go 语言 for 循环<a class="headerlink" href="#go-for" title="Permanent link">&para;</a></h2>
 <p>for循环是一个循环控制结构，可以执行指定次数的循环。</p>
 <h3 id="_3">语法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -1276,13 +1289,16 @@
 <div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">init</span><span class="p">;</span> <span class="nx">condition</span><span class="p">;</span> <span class="nx">post</span> <span class="p">{</span> <span class="p">}</span>
 </pre></div>
 
+
 <p>和 C 的 while 一样：</p>
 <div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">condition</span> <span class="p">{</span> <span class="p">}</span>
 </pre></div>
 
+
 <p>和 C 的 for(;;) 一样：</p>
 <div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">{</span> <span class="p">}</span>
 </pre></div>
+
 
 <ul>
 <li>init： 一般为赋值表达式，给控制变量赋初值；</li>
@@ -1299,6 +1315,7 @@
     <span class="nx">newMap</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="p">=</span> <span class="nx">value</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p>for语句语法流程如下图所示：</p>
 <p><img alt="img" src="../010 go语言循环语句.image/go_for_loop.jpg" /></p>
@@ -1329,6 +1346,7 @@
    <span class="p">}</span>   
 <span class="p">}</span>
 </pre></div>
+
 
 <p>以上实例运行输出结果为:</p>
 <div class="codehilite"><pre><span></span>a 的值为: 0
@@ -1364,6 +1382,7 @@ a 的值为: 15
 第 5 位 x 的值 = 0
 </pre></div>
 
+
 <h2 id="go_1">Go 语言循环嵌套<a class="headerlink" href="#go_1" title="Permanent link">&para;</a></h2>
 <p>Go 语言允许用户在循环内使用循环。接下来我们将为大家介绍嵌套循环的使用。</p>
 <h3 id="_5">语法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
@@ -1377,6 +1396,7 @@ a 的值为: 15
    <span class="nx">statement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <h3 id="_6">实例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>以下实例使用循环嵌套来输出 2 到 100 间的素数：</p>
@@ -1400,6 +1420,7 @@ a 的值为: 15
    <span class="p">}</span>  
 <span class="p">}</span>
 </pre></div>
+
 
 <p>以上实例运行输出结果为:</p>
 <div class="codehilite"><pre><span></span>2  是素数
@@ -1429,6 +1450,7 @@ a 的值为: 15
 97  是素数
 </pre></div>
 
+
 <h3 id="_7">笔记<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>九九乘法表： </p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> 
@@ -1446,6 +1468,7 @@ a 的值为: 15
 <span class="p">}</span>
 </pre></div>
 
+
 <h2 id="go-break">Go 语言 break 语句<a class="headerlink" href="#go-break" title="Permanent link">&para;</a></h2>
 <p>Go 语言中 break 语句用于以下两方面：</p>
 <ol>
@@ -1456,6 +1479,7 @@ a 的值为: 15
 <p>break 语法格式如下：</p>
 <div class="codehilite"><pre><span></span><span class="k">break</span><span class="p">;</span>
 </pre></div>
+
 
 <p><img alt="image.png" src="../010 go语言循环语句.image/14555448-6a1516a785471f18.png" /></p>
 <h3 id="_9">实例<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
@@ -1480,6 +1504,7 @@ a 的值为: 15
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例执行结果为： </p>
 <div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">10</span>
 <span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">11</span>
@@ -1489,6 +1514,7 @@ a 的值为: 15
 <span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">15</span>
 </pre></div>
 
+
 <h2 id="go-continue">Go 语言 continue 语句<a class="headerlink" href="#go-continue" title="Permanent link">&para;</a></h2>
 <p>Go 语言的 continue 语句 有点像 break 语句。但是 continue 不是跳出循环，而是跳过当前循环执行下一次循环语句。</p>
 <p>for 循环中，执行 continue 语句会触发for增量语句的执行。</p>
@@ -1496,6 +1522,7 @@ a 的值为: 15
 <p>continue 语法格式如下：</p>
 <div class="codehilite"><pre><span></span><span class="k">continue</span><span class="p">;</span>
 </pre></div>
+
 
 <p>continue 语句流程图如下：</p>
 <p><img alt="image.png" src="../010 go语言循环语句.image/14555448-c75f961426080e88.png" /></p>
@@ -1522,6 +1549,7 @@ a 的值为: 15
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例执行结果为： </p>
 <div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">10</span>
 <span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">11</span>
@@ -1533,6 +1561,7 @@ a 的值为: 15
 <span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">18</span>
 <span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">19</span>
 </pre></div>
+
 
 <h3 id="_12">注意<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -1553,6 +1582,7 @@ a 的值为: 15
 <span class="p">.</span>
 <span class="nx">label</span><span class="p">:</span> <span class="nx">statement</span><span class="p">;</span>
 </pre></div>
+
 
 <p>goto 语句流程图如下：</p>
 <p><img alt="image.png" src="../010 go语言循环语句.image/14555448-098f16016cca02e9.png" /></p>
@@ -1579,6 +1609,7 @@ a 的值为: 15
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例执行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">10</span>
 <span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">11</span>
@@ -1590,6 +1621,7 @@ a 的值为: 15
 <span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">18</span>
 <span class="nx">a的值为</span> <span class="p">:</span> <span class="mi">19</span>
 </pre></div>
+
 
 <h3 id="_16">实例<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有一个main包</span>
@@ -1614,10 +1646,12 @@ a 的值为: 15
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="mi">11111111111111</span>
 <span class="mi">3333333333333</span>
 </pre></div>
+
 
 <h3 id="_17">笔记<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>打印九九乘法表: </p>
@@ -1656,6 +1690,7 @@ a 的值为: 15
 <span class="p">}</span>
 </pre></div>
 
+
 <h2 id="range">range 语句(后面用的会很多)<a class="headerlink" href="#range" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>关键字 range 会返回两个值，第一个返回值是元素的数组下标，第二个返回值是元素的值：</p>
@@ -1689,6 +1724,7 @@ a 的值为: 15
 
 <span class="p">}</span>
 </pre></div>
+
 
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]=</span><span class="nx">a</span>
@@ -1763,11 +1799,11 @@ a 的值为: 15
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -1796,6 +1832,10 @@ a 的值为: 15
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

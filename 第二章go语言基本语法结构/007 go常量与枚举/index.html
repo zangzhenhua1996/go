@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -829,6 +829,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -974,12 +986,14 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p><img alt="image.png" src="../007 go常量与枚举.image/14555448-f22521fe668dc263.png" />
 常量是一个简单值的标识符，在程序运行时，不会被修改的量。</p>
 <p>常量中的数据类型只可以是布尔型、数字型（整数型、浮点型和复数）和字符串型。</p>
 <p>常量的定义格式：</p>
 <div class="codehilite"><pre><span></span><span class="kd">const</span> <span class="nx">identifier</span> <span class="p">[</span><span class="kd">type</span><span class="p">]</span> <span class="p">=</span> <span class="nx">value</span>
 </pre></div>
+
 
 <p>你可以省略类型说明符 [type]，因为编译器可以根据变量的值来推断其类型。</p>
 <ul>
@@ -989,6 +1003,7 @@
 <p>多个相同类型的声明可以简写为：</p>
 <div class="codehilite"><pre><span></span><span class="kd">const</span> <span class="nx">c_name1</span><span class="p">,</span> <span class="nx">c_name2</span> <span class="p">=</span> <span class="nx">value1</span><span class="p">,</span> <span class="nx">value2</span>
 </pre></div>
+
 
 <p>以下实例演示了常量的应用：</p>
 <h3 id="_2">实例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -1009,10 +1024,12 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例运行结果为：</p>
 <div class="codehilite"><pre><span></span>面积为 : 50
 1 false str
 </pre></div>
+
 
 <p>常量还可以用作枚举：</p>
 <div class="codehilite"><pre><span></span><span class="kd">const</span> <span class="p">(</span>
@@ -1021,6 +1038,7 @@
     <span class="nx">Male</span> <span class="p">=</span> <span class="mi">2</span>
 <span class="p">)</span>
 </pre></div>
+
 
 <p>数字 0、1 和 2 分别代表未知性别、女性和男性。</p>
 <p>常量可以用<code>len(), cap(), unsafe.Sizeof()</code>函数计算表达式的值。常量表达式中，函数必须是内置函数，否则编译不过：</p>
@@ -1039,9 +1057,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例运行结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">abc</span> <span class="mi">3</span> <span class="mi">16</span>
 </pre></div>
+
 
 <hr />
 <h2 id="iota">iota<a class="headerlink" href="#iota" title="Permanent link">&para;</a></h2>
@@ -1055,6 +1075,7 @@
 <span class="p">)</span>
 </pre></div>
 
+
 <p>第一个 iota 等于 0，每当 iota 在新的一行被使用时，它的值都会自动加 1；所以 a=0, b=1, c=2 可以简写为如下形式：</p>
 <div class="codehilite"><pre><span></span><span class="kd">const</span> <span class="p">(</span>
     <span class="nx">a</span> <span class="p">=</span> <span class="kc">iota</span>
@@ -1062,6 +1083,7 @@
     <span class="nx">c</span>
 <span class="p">)</span>
 </pre></div>
+
 
 <h3 id="iota_1">iota 用法<a class="headerlink" href="#iota_1" title="Permanent link">&para;</a></h3>
 <h4 id="_4">实例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
@@ -1085,9 +1107,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例运行结果为：</p>
 <div class="codehilite"><pre><span></span>0 1 2 ha ha 100 100 7 8
 </pre></div>
+
 
 <p>再看个有趣的的 iota 实例：</p>
 <h4 id="_5">实例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
@@ -1109,12 +1133,14 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例运行结果为：</p>
 <div class="codehilite"><pre><span></span>i= 1
 j= 6
 k= 12
 l= 24
 </pre></div>
+
 
 <p>iota 表示从 0 开始自动加 1，所以 <strong>i=1&lt;&lt;0</strong>, <strong>j=3&lt;&lt;1</strong>（<strong>&lt;&lt;</strong> 表示左移的意思），即：<code>i=1, j=6，</code>这没问题，关键在 k 和 l，从输出结果看 <strong>k=3&lt;&lt;2</strong>，<strong>l=3&lt;&lt;3</strong>。</p>
 <p>简单表述:</p>
@@ -1152,6 +1178,7 @@ l= 24
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span>   <span class="c1">// 输出1</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <p><strong>iota 只是在同一个 const 常量组内递增，每当有新的 const 关键字时，iota 计数会重新开始 .</strong></p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -1225,11 +1252,11 @@ l= 24
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -1258,6 +1285,10 @@ l= 24
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

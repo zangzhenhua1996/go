@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -885,6 +885,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1193,7 +1205,7 @@
 </tbody>
 </table>
 <h3 id="_4">布尔类型<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>实例<br />
+<p>实例  </p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有一个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
@@ -1214,12 +1226,16 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;c = &quot;</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-输出
+
+
+<p>输出</p>
 <div class="codehilite"><pre><span></span><span class="nx">a0</span> <span class="p">=</span>  <span class="kc">false</span>
 <span class="nx">a</span> <span class="p">=</span>  <span class="kc">true</span>
 <span class="nx">b</span> <span class="p">=</span>  <span class="kc">false</span>
 <span class="nx">c</span> <span class="p">=</span>  <span class="kc">false</span>
-</pre></div></p>
+</pre></div>
+
+
 <h3 id="_5">整型<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>实例</p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -1234,6 +1250,7 @@
 
 <span class="p">}</span>
 </pre></div>
+
 
 <h3 id="_6">浮点型<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有一个main包</span>
@@ -1255,6 +1272,7 @@
 
 <span class="p">}</span>
 </pre></div>
+
 
 <h3 id="_7">字符类型<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>​         在Go语言中支持两个字符类型，一个是byte（实际上是uint8的别名），代表utf-8字符串的单个字节的值；另一个是rune，代表单个unicode字符  </p>
@@ -1286,6 +1304,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>输出</p>
 <div class="codehilite"><pre><span></span><span class="nx">a</span><span class="p">,</span> <span class="mi">97</span>
 <span class="nx">a</span><span class="p">,</span> <span class="mi">97</span>
@@ -1295,6 +1314,7 @@
 <span class="nx">hello</span> <span class="k">go</span>
 <span class="nx">hello</span> <span class="nx">itcast</span>
 </pre></div>
+
 
 <h3 id="_8">字符串类型<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有一个main包</span>
@@ -1315,11 +1335,13 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">strl</span> <span class="p">=</span>  <span class="nx">abc</span>
 <span class="nx">str2</span> <span class="nx">类型是</span> <span class="kt">string</span>
 <span class="nb">len</span><span class="p">(</span><span class="nx">str2</span><span class="p">)</span> <span class="p">=</span>  <span class="mi">4</span>
 </pre></div>
+
 
 <h3 id="_9">字符和字符串的区别<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>实例</p>
@@ -1351,11 +1373,13 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">ch</span> <span class="p">=</span> <span class="mi">97</span>
 <span class="nx">str</span> <span class="p">=</span>  <span class="nx">a</span>
 <span class="nx">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="nx">h</span><span class="p">,</span> <span class="nx">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="nx">e</span>
 </pre></div>
+
 
 <h3 id="_10">复数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有一个main包</span>
@@ -1377,11 +1401,13 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">t</span> <span class="p">=</span>  <span class="p">(</span><span class="mf">2.1</span><span class="o">+</span><span class="m">3.14i</span><span class="p">)</span>
 <span class="nx">t2</span> <span class="kd">type</span> <span class="nx">is</span> <span class="kt">complex128</span>
 <span class="nb">real</span><span class="p">(</span><span class="nx">t2</span><span class="p">)</span> <span class="p">=</span>  <span class="mf">3.3</span> <span class="p">,</span> <span class="nb">imag</span><span class="p">(</span><span class="nx">t2</span><span class="p">)</span> <span class="p">=</span>  <span class="mf">4.4</span>
 </pre></div>
+
 
 <h3 id="_11">复数及欧拉公式<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p><img alt="image.png" src="../006 go内建变量类型.image/14555448-1c0d55c109d30cd4-1574597010198.png" /></p>
@@ -1415,6 +1441,7 @@
     <span class="nx">euler1</span><span class="p">()</span>
 <span class="p">}</span>
 </pre></div>
+
 
 <blockquote>
 <p>这里使用了Printf 函数进行字符输出格式化,fmt中每个函数有不同的功能
@@ -1531,11 +1558,13 @@ fmt.Printf("%.3f",v)</p>
 <span class="p">}</span>
 </pre></div>
 
+
 <p>结果</p>
 <div class="codehilite"><pre><span></span><span class="kt">int</span><span class="p">,</span> <span class="kt">string</span><span class="p">,</span> <span class="kt">int32</span><span class="p">,</span> <span class="kt">float64</span>
 <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="nx">abc</span><span class="p">,</span> <span class="nx">c</span> <span class="p">=</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">d</span> <span class="p">=</span> <span class="mf">3.140000</span>
 <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="nx">abc</span><span class="p">,</span> <span class="nx">c</span> <span class="p">=</span> <span class="mi">97</span><span class="p">,</span> <span class="nx">d</span> <span class="p">=</span> <span class="mf">3.14</span>
 </pre></div>
+
 
 <p><img alt="image.png" src="../006 go内建变量类型.image/14555448-69de3c2ce7c95b53.png" /></p>
 <h2 id="go_1">go语言的输入<a class="headerlink" href="#go_1" title="Permanent link">&para;</a></h2>
@@ -1555,11 +1584,13 @@ fmt.Printf("%.3f",v)</p>
 <span class="p">}</span>
 </pre></div>
 
+
 <p>结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">请输入变量a</span><span class="p">:</span> <span class="mi">100</span>
 <span class="kt">int</span>
 <span class="nx">a</span> <span class="p">=</span>  <span class="mi">100</span>
 </pre></div>
+
 
 <h2 id="_14">强制类型转换<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
 <blockquote>
@@ -1593,10 +1624,12 @@ fmt.Printf("%.3f",v)</p>
 <span class="p">}</span>
 </pre></div>
 
+
 <p>结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">flag</span> <span class="p">=</span> <span class="kc">true</span>
 <span class="nx">t</span> <span class="p">=</span>  <span class="mi">97</span>
 </pre></div>
+
 
 <h2 id="type">类型别名(type)<a class="headerlink" href="#type" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有一个main包</span>
@@ -1676,11 +1709,11 @@ fmt.Printf("%.3f",v)</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -1709,6 +1742,10 @@ fmt.Printf("%.3f",v)</p>
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

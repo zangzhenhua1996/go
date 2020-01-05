@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -769,6 +769,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -856,6 +868,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例运行输出结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">sum</span><span class="p">:</span> <span class="mi">9</span>
 <span class="nx">index</span><span class="p">:</span> <span class="mi">1</span>
@@ -865,61 +878,56 @@
 <span class="mi">1</span> <span class="mi">111</span>
 </pre></div>
 
+
 <h2 id="_2">笔记<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Go Range 简单循环：</li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
-
-<span class="kd">func</span> <span class="nx">main</span><span class="p">(){</span>
-    <span class="nx">nums</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">};</span>
-    <span class="nx">length</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">for</span> <span class="k">range</span> <span class="nx">nums</span> <span class="p">{</span>                                                  
-        <span class="nx">length</span><span class="o">++</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span> <span class="nx">length</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-
+<p>```go
+   package main</p>
+<p>import "fmt"</p>
+<p>func main(){
+       nums := []int{1,2,3,4};
+       length := 0;
+       for range nums {                                                <br />
+           length++;
+       }
+       fmt.Println( length);
+   }
+   ```</p>
 <ol>
 <li><strong>循环键值对</strong></li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
-<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
-<span class="kd">func</span> <span class="nx">main</span><span class="p">(){</span>
-   <span class="nx">nums</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}</span>
-   <span class="k">for</span> <span class="nx">i</span><span class="p">,</span><span class="nx">num</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">nums</span> <span class="p">{</span>
-      <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;索引是%d,长度是%d\n&quot;</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span> <span class="nx">num</span><span class="p">)</span>
-   <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+<p><code>go
+   package main
+   import "fmt"
+   func main(){
+      nums := []int{1,2,3,4}
+      for i,num := range nums {
+         fmt.Printf("索引是%d,长度是%d\n",i, num)
+      }
+   }</code></p>
 <p>输出结果为：</p>
-<div class="codehilite"><pre><span></span>索引是0,长度是1
-索引是1,长度是2
-索引是2,长度是3
-索引是3,长度是4
-</pre></div>
-
+<p><code>索引是0,长度是1
+   索引是1,长度是2
+   索引是2,长度是3
+   索引是3,长度是4</code></p>
 <ol>
 <li>通过 range 获取参数列表:</li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="p">(</span>
-    <span class="s">&quot;fmt&quot;</span>
-    <span class="s">&quot;os&quot;</span>
-<span class="p">)</span>
-
-<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">))</span>
-    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">arg</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Args</span> <span class="p">{</span>
-        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+<p>```go
+   package main</p>
+<p>import (
+       "fmt"
+       "os"
+   )</p>
+<p>func main() {
+       fmt.Println(len(os.Args))
+       for _, arg := range os.Args {
+           fmt.Println(arg)
+       }
+   }
+   ```</p>
                 
                   
                 
@@ -976,11 +984,11 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -1009,6 +1017,10 @@
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -870,6 +870,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1063,9 +1075,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例执行输出结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">结果</span><span class="err">：</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">20</span> <span class="nx">and</span> <span class="nx">c</span> <span class="p">=</span> <span class="mi">30</span>
 </pre></div>
+
 
 <hr />
 <h2 id="_3">全局变量<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
@@ -1093,9 +1107,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例执行输出结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">结果</span><span class="err">：</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">20</span> <span class="nx">and</span> <span class="nx">g</span> <span class="p">=</span> <span class="mi">30</span>
 </pre></div>
+
 
 <p>Go 语言程序中全局变量与局部变量名称可以相同，但是函数内的局部变量会被优先考虑。</p>
 <ol>
@@ -1119,9 +1135,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例执行输出结果为：</p>
 <div class="codehilite"><pre><span></span><span class="nx">结果</span><span class="err">：</span> <span class="nx">g</span> <span class="p">=</span> <span class="mi">10</span>
 </pre></div>
+
 
 <hr />
 <h2 id="_6">形式参数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
@@ -1154,12 +1172,14 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>以上实例执行输出结果为：</p>
 <div class="codehilite"><pre><span></span>main()函数中 a = 10
 sum() 函数中 a = 10
 sum() 函数中 b = 20
 main()函数中 c = 30
 </pre></div>
+
 
 <hr />
 <h2 id="_8">初始化局部和全局变量<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
@@ -1217,6 +1237,7 @@ main()函数中 c = 30
 <span class="p">}</span>
 </pre></div>
 
+
 <p>输出为： </p>
 <div class="codehilite"><pre><span></span><span class="nx">main</span><span class="p">()</span><span class="nx">函数中</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span>  <span class="c1">//算是局部变量</span>
 <span class="nx">sum</span><span class="p">()</span> <span class="nx">函数中</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">11</span>
@@ -1224,6 +1245,7 @@ main()函数中 c = 30
 <span class="nx">main</span><span class="p">()</span><span class="nx">函数中</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span>
 <span class="nx">main</span><span class="p">()</span><span class="nx">函数中</span> <span class="nx">c</span> <span class="p">=</span> <span class="mi">31</span>
 </pre></div>
+
 
 <h3 id="2-forpython">实例2 (for循环使用变量是赋值还是初始化定义是不一样的,跟python注意区别)<a class="headerlink" href="#2-forpython" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -1242,6 +1264,7 @@ main()函数中 c = 30
 <span class="p">}</span>
 </pre></div>
 
+
 <p>输出为： </p>
 <div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">start</span>
 <span class="mi">0</span>
@@ -1257,6 +1280,7 @@ main()函数中 c = 30
 <span class="k">for</span> <span class="nx">end</span>
 <span class="mi">0</span>
 </pre></div>
+
 
 <p>在 for 循环的 initialize（a:=0） 中，此时 initialize 中的 a 与外层的 a 不是同一个变量，initialize 中的 a 为 for 循环中的局部变量，因此在执行完 for 循环后，输出 a 的值仍然为 0。 </p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -1275,6 +1299,7 @@ main()函数中 c = 30
 <span class="p">}</span>
 </pre></div>
 
+
 <p>输出为： </p>
 <div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">start</span>
 <span class="mi">0</span>
@@ -1290,6 +1315,7 @@ main()函数中 c = 30
 <span class="k">for</span> <span class="nx">end</span>
 <span class="mi">10</span>
 </pre></div>
+
 
 <p>此时 initialize 中的 a 便于外层的 a 为同一个变量，因此在执行完 for 循环后，输出 a 的值为 10。</p>
 <p>所以大伙们在使用 for 循环的时候千万要注意呀。。。</p>
@@ -1308,6 +1334,7 @@ main()函数中 c = 30
 <span class="p">}</span>
 </pre></div>
 
+
 <p><strong>hello.go：</strong> </p>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
@@ -1322,6 +1349,7 @@ main()函数中 c = 30
 <span class="p">}</span>
 </pre></div>
 
+
 <h3 id="4">实例4<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
 <p>可通过花括号来控制变量的作用域，花括号中的变量是单独的作用域，同名变量会覆盖外层。 </p>
 <ol>
@@ -1335,10 +1363,12 @@ main()函数中 c = 30
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;out a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 </pre></div>
 
+
 <p>输出: </p>
 <div class="codehilite"><pre><span></span><span class="nx">in</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">3</span>
 <span class="nx">out</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">5</span>
 </pre></div>
+
 
 <ol>
 <li></li>
@@ -1350,10 +1380,12 @@ main()函数中 c = 30
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;out a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 </pre></div>
 
+
 <p>输出: </p>
 <div class="codehilite"><pre><span></span><span class="nx">in</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">5</span>
 <span class="nx">out</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">5</span>
 </pre></div>
+
 
 <ol>
 <li></li>
@@ -1364,6 +1396,7 @@ main()函数中 c = 30
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 <span class="p">}</span> 
 </pre></div>
+
 
 <p>输出: </p>
 <div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">declared</span> <span class="nx">and</span> <span class="nx">not</span> <span class="nx">used</span>   <span class="c1">//这是因为外层的a:5 定义以后没有使用</span>
@@ -1424,11 +1457,11 @@ main()函数中 c = 30
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -1457,6 +1490,10 @@ main()函数中 c = 30
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>

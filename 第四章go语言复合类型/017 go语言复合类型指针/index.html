@@ -53,7 +53,7 @@
       
         
         
-        <meta name="theme-color" content="">
+        <meta name="theme-color" content="#757575">
       
     
     
@@ -77,7 +77,7 @@
   
     
     
-    <body dir="ltr" data-md-color-primary="darkviolet-" data-md-color-accent="aqua-">
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="pink">
   
     <svg class="md-svg">
       <defs>
@@ -816,6 +816,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-nav__link">
+      接口
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -951,6 +963,7 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <h3 id="_3">实例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
@@ -975,12 +988,14 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span>
 <span class="o">&amp;</span><span class="nx">a</span> <span class="p">=</span> <span class="mh">0x1100a0b0</span>
 <span class="nx">p</span> <span class="p">=</span> <span class="mh">0x1100a0b0</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">a</span> <span class="p">=</span> <span class="mh">0x1100a0b0</span>
 <span class="o">*</span><span class="nx">p</span> <span class="p">=</span> <span class="mi">666</span><span class="p">,</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">666</span>
 </pre></div>
+
 
 <p><img alt="image-20191127224909478" src="../017 go语言复合类型指针.image/image-20191127224909478.png" /></p>
 <p><img alt="image-20191127225229463" src="../017 go语言复合类型指针.image/image-20191127225229463.png" /></p>
@@ -1004,10 +1019,12 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>执行结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">p</span> <span class="p">=</span>  <span class="p">&lt;</span><span class="kc">nil</span><span class="p">&gt;</span>
 <span class="nx">a</span> <span class="p">=</span>  <span class="mi">666</span>
 </pre></div>
+
 
 <h2 id="new">new函数<a class="headerlink" href="#new" title="Permanent link">&para;</a></h2>
 <p>表达式new(T)将创建一个T类型的匿名变量，所做的是为T类型的新值分配并清零一块内存空间，然后将这块内存空间的地址作为结果返回，而这个结果就是指向这个新的T类型值的指针值，返回的指针类型为*T。</p>
@@ -1036,11 +1053,13 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">p</span> <span class="p">=</span>  <span class="mh">0x11052070</span>
 <span class="o">*</span><span class="nx">p</span> <span class="p">=</span>  <span class="mi">666</span>
 <span class="o">*</span><span class="nx">q</span> <span class="p">=</span>  <span class="mi">777</span>
 </pre></div>
+
 
 <p>我们只需使用new()函数，无需担心其内存的生命周期或怎样将其删除，因为Go语言的内存管理系统会帮我们打理一切。(跟C语言的区别)</p>
 <p><img alt="image-20191128230842300" src="../017 go语言复合类型指针.image/image-20191128230842300.png" /></p>
@@ -1064,10 +1083,12 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">swap</span><span class="p">:</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">10</span>
 <span class="nx">main</span><span class="p">:</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">20</span>
 </pre></div>
+
 
 <p><img alt="image-20191128230905917" src="../017 go语言复合类型指针.image/image-20191128230905917.png" /></p>
 <h3 id="_7">指针做函数参数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
@@ -1088,9 +1109,11 @@
 <span class="p">}</span>
 </pre></div>
 
+
 <p>结果</p>
 <div class="codehilite"><pre><span></span><span class="nx">main</span><span class="p">:</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">20</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">10</span>
 </pre></div>
+
 
 <p><img alt="image-20191128231409096" src="../017 go语言复合类型指针.image/image-20191128231409096.png" /></p>
                 
@@ -1149,11 +1172,11 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <!-- powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
         <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+          Material for MkDocs</a> -->
       </div>
       
     </div>
@@ -1182,6 +1205,10 @@
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>
