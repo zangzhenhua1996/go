@@ -1215,7 +1215,70 @@
 <p>第二种，根据值自行判定变量类型。</p>
 <p>第三种，省略 var, 注意 <code>:=</code>左侧如果没有声明新的变量，就产生编译错误，格式</p>
 <h2 id="_2">代码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>  <span class="c1">//包名</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>  <span class="c1">//包名</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>  <span class="c1">//导入打印的包</span>
 
@@ -1280,7 +1343,7 @@
 <span class="cm">    */</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_3">总结<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><img alt="image.png" src="../005 go变量定义.image/14555448-62da6d91d59e8eec.png" />
@@ -1292,17 +1355,25 @@
 <p>变量可以通过变量名访问。</p>
 <p>Go 语言变量名由字母、数字、下划线组成，其中首个字符不能为数字。</p>
 <p>声明变量的一般形式是使用 var 关键字：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">identifier</span> <span class="kd">type</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">identifier</span> <span class="kd">type</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>可以一次声明多个变量：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">identifier1</span><span class="p">,</span> <span class="nx">identifier2</span> <span class="kd">type</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">identifier1</span><span class="p">,</span> <span class="nx">identifier2</span> <span class="kd">type</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_4">实例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">a</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&quot;Runoob&quot;</span>
@@ -1312,24 +1383,41 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例输出结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">Runoob</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">Runoob</span>
 <span class="mi">1</span> <span class="mi">2</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_5">变量声明<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h4 id="_6">第一种，指定变量类型，如果没有初始化，则变量默认为零值。<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">v_name</span> <span class="nx">v_type</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">v_name</span> <span class="nx">v_type</span>
 <span class="nx">v_name</span> <span class="p">=</span> <span class="nx">value</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>零值就是变量没有做初始化时系统默认设置的值。</p>
 <h5 id="_7">实例<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
@@ -1346,14 +1434,16 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例执行结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">RUNOOB</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">RUNOOB</span>
 <span class="mi">0</span>
 <span class="kc">false</span>
 </pre></div>
-
+</td></tr></table>
 
 <ul>
 <li>
@@ -1377,7 +1467,17 @@ var a error // error 是接口</code></p>
 </li>
 </ul>
 <h5 id="_8">实例<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1389,50 +1489,65 @@ var a error // error 是接口</code></p>
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%v %v %v %q\n&quot;</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">s</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出结果是：</p>
-<div class="codehilite"><pre><span></span><span class="mi">0</span> <span class="mi">0</span> <span class="kc">false</span> <span class="s">&quot;&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">0</span> <span class="mi">0</span> <span class="kc">false</span> <span class="s">&quot;&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 <h4 id="_9">第二种，根据值自行判定变量类型。<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">v_name</span> <span class="p">=</span> <span class="nx">value</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">v_name</span> <span class="p">=</span> <span class="nx">value</span>
 </pre></div>
-
+</td></tr></table>
 
 <h5 id="_10">实例<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">d</span> <span class="p">=</span> <span class="kc">true</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出结果是：</p>
-<div class="codehilite"><pre><span></span><span class="kc">true</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kc">true</span>
 </pre></div>
-
+</td></tr></table>
 
 <h4 id="var-4242">第三种，省略 var, 注意 *<em>:=*</em> 左侧如果没有声明新的变量，就产生编译错误，格式：<a class="headerlink" href="#var-4242" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="nx">v_name</span> <span class="o">:=</span> <span class="nx">value</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">v_name</span> <span class="o">:=</span> <span class="nx">value</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>例如：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">intVal</span> <span class="kt">int</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">intVal</span> <span class="kt">int</span> 
 
 <span class="nx">intVal</span> <span class="o">:=</span><span class="mi">1</span> <span class="c1">// 这时候会产生编译错误</span>
 
 <span class="nx">intVal</span><span class="p">,</span><span class="nx">intVal1</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span> <span class="c1">// 此时不会产生编译错误，因为有声明新的变量，因为 := 是一个声明语句</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>可以将<code>var f string = "Runoob" 简写为 f := "Runoob"：</code></p>
 <h5 id="_11">实例<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">f</span> <span class="o">:=</span> <span class="s">&quot;Runoob&quot;</span> <span class="c1">// var f string = &quot;Runoob&quot;</span>
@@ -1440,15 +1555,28 @@ var a error // error 是接口</code></p>
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出结果是：</p>
-<div class="codehilite"><pre><span></span><span class="nx">Runoob</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">Runoob</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_12">多变量声明<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="c1">//类型相同多个变量, 非全局变量</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">//类型相同多个变量, 非全局变量</span>
 <span class="kd">var</span> <span class="nx">vname1</span><span class="p">,</span> <span class="nx">vname2</span><span class="p">,</span> <span class="nx">vname3</span> <span class="kd">type</span>
 <span class="nx">vname1</span><span class="p">,</span> <span class="nx">vname2</span><span class="p">,</span> <span class="nx">vname3</span> <span class="p">=</span> <span class="nx">v1</span><span class="p">,</span> <span class="nx">v2</span><span class="p">,</span> <span class="nx">v3</span>
 
@@ -1463,10 +1591,27 @@ var a error // error 是接口</code></p>
     <span class="nx">vname2</span> <span class="nx">v_type2</span>
 <span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <h4 id="_13">实例<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kd">var</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">int</span>
 <span class="kd">var</span> <span class="p">(</span>  <span class="c1">// 这种因式分解关键字的写法一般用于声明全局变量</span>
@@ -1485,12 +1630,12 @@ var a error // error 是接口</code></p>
     <span class="nb">println</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">,</span> <span class="nx">e</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">g</span><span class="p">,</span> <span class="nx">h</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例执行结果为：</p>
-<div class="codehilite"><pre><span></span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="kc">false</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">123</span> <span class="nx">hello</span> <span class="mi">123</span> <span class="nx">hello</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="kc">false</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">123</span> <span class="nx">hello</span> <span class="mi">123</span> <span class="nx">hello</span>
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="_14">值类型和引用类型<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
@@ -1517,7 +1662,14 @@ var a error // error 是接口</code></p>
 <p>如果你在定义变量 <code>a</code> 之前使用它，则会得到编译错误<code>undefined: a</code>。</p>
 <p>如果你声明了一个局部变量却没有在相同的代码块中使用它，同样会得到编译错误，例如下面这个例子当中的变量 a：</p>
 <h3 id="_17">实例<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1526,31 +1678,33 @@ var a error // error 是接口</code></p>
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;hello, world&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>尝试编译这段代码将得到错误 <strong>a declared and not used</strong>。</p>
 <p>此外，单纯地给 a 赋值也是不够的，这个值必须被使用，所以使用</p>
-<div class="codehilite"><pre><span></span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;hello, world&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;hello, world&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>会移除错误。</p>
 <p>但是全局变量是允许声明但不使用。 同一类型的多个变量可以声明在同一行，如：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="kt">int</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="kt">int</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>多变量可以在同一行进行赋值，如：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span>
 <span class="kd">var</span> <span class="nx">c</span> <span class="kt">string</span>
 <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="p">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">&quot;abc&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>上面这行假设了变量 a，b 和 c 都已经被声明，否则的话应该这样使用：</p>
-<div class="codehilite"><pre><span></span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="o">:=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">&quot;abc&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="o">:=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s">&quot;abc&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>右边的这些值以相同的顺序赋值给左边的变量，所以 a 的值是 5， b 的值是 7，c 的值是 "abc"。</p>
 <p>这被称为 并行 或 同时 赋值。</p>
@@ -1563,7 +1717,29 @@ var a error // error 是接口</code></p>
 <p><img alt="image.png" src="../005 go变量定义.image/14555448-62f76454e858df1a.png" /></p>
 <h3 id="_19">匿名变量<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
 <p><code>_</code>（下划线）是个特殊的变量名，任何赋予它的值都会被丢弃：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有一个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有一个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="c1">//go函数可以返回多个值</span>
@@ -1587,17 +1763,32 @@ var a error // error 是接口</code></p>
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">tmp</span> <span class="p">=</span>  <span class="mi">10</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">tmp</span> <span class="p">=</span>  <span class="mi">10</span>
 <span class="nx">c</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">d</span> <span class="p">=</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">e</span> <span class="p">=</span> <span class="mi">3</span>
 <span class="nx">d</span> <span class="p">=</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">e</span> <span class="p">=</span> <span class="mi">3</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>空白标识符在函数返回值时的使用：</strong> </p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1612,12 +1803,12 @@ var a error // error 是接口</code></p>
   <span class="k">return</span> <span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">,</span><span class="nx">c</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>输出结果：</strong></p>
-<div class="codehilite"><pre><span></span><span class="mi">2</span> <span class="nx">str</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">2</span> <span class="nx">str</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>注意</p>
 <p><img alt="image.png" src="../005 go变量定义.image/14555448-202bc78e65943d55.png" /></p>

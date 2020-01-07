@@ -884,7 +884,16 @@ export GOPATH=~/Go</p>
 <li>然后执行命令<code>sudo gedit /usr/share/applications/liteide.desktop</code></li>
 <li>然后将下面的内容写到新建的<code>liteide.desktop</code>文件中：</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="o">[</span>Desktop Entry<span class="o">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">[</span>Desktop Entry<span class="o">]</span>
 <span class="nv">Name</span><span class="o">=</span>liteIDE 
 <span class="nv">Comment</span><span class="o">=</span>Integrated Development Environment 
 <span class="nv">Exec</span><span class="o">=</span>/opt/liteide/bin/liteide
@@ -895,7 +904,7 @@ export GOPATH=~/Go</p>
 <span class="nv">Encoding</span><span class="o">=</span>UTF-8
 <span class="nv">StartupNotify</span><span class="o">=</span><span class="nb">true</span>
 </pre></div>
-
+</td></tr></table>
 
 <ul>
 <li>然后我们就可以搜索到LiteIDE了，将其固定到桌面，打开之后在选项中修改LiteEnv的linux64以及linux64-local这两个文件，将其中的GOROOT修改为/usr/local/go</li>

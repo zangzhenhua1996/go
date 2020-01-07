@@ -1058,7 +1058,21 @@
 </ol>
 <p>以下实例中 main() 函数使用了局部变量 a, b, c：</p>
 <h3 id="_2">实例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1074,19 +1088,37 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span> <span class="p">(</span><span class="s">&quot;结果： a = %d, b = %d and c = %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例执行输出结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">结果</span><span class="err">：</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">20</span> <span class="nx">and</span> <span class="nx">c</span> <span class="p">=</span> <span class="mi">30</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">结果</span><span class="err">：</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">20</span> <span class="nx">and</span> <span class="nx">c</span> <span class="p">=</span> <span class="mi">30</span>
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="_3">全局变量<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>在函数体外声明的变量称之为全局变量，全局变量可以在整个包甚至外部包（被导出后）使用。</p>
 <p>全局变量可以在任何函数中使用，以下实例演示了如何使用全局变量：</p>
 <h3 id="_4">实例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1106,12 +1138,12 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;结果： a = %d, b = %d and g = %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">g</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例执行输出结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">结果</span><span class="err">：</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">20</span> <span class="nx">and</span> <span class="nx">g</span> <span class="p">=</span> <span class="mi">30</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">结果</span><span class="err">：</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">20</span> <span class="nx">and</span> <span class="nx">g</span> <span class="p">=</span> <span class="mi">30</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Go 语言程序中全局变量与局部变量名称可以相同，但是函数内的局部变量会被优先考虑。</p>
 <ol>
@@ -1120,7 +1152,19 @@
 </ol>
 <p>实例如下：</p>
 <h3 id="_5">实例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1134,18 +1178,42 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span> <span class="p">(</span><span class="s">&quot;结果： g = %d\n&quot;</span><span class="p">,</span>  <span class="nx">g</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例执行输出结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">结果</span><span class="err">：</span> <span class="nx">g</span> <span class="p">=</span> <span class="mi">10</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">结果</span><span class="err">：</span> <span class="nx">g</span> <span class="p">=</span> <span class="mi">10</span>
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="_6">形式参数<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>形式参数会作为函数的局部变量来使用。实例如下：</p>
 <h3 id="_7">实例<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1171,15 +1239,18 @@
    <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例执行输出结果为：</p>
-<div class="codehilite"><pre><span></span>main()函数中 a = 10
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>main()函数中 a = 10
 sum() 函数中 a = 10
 sum() 函数中 b = 20
 main()函数中 c = 30
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="_8">初始化局部和全局变量<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
@@ -1209,7 +1280,32 @@ main()函数中 c = 30
 <h2 id="_9">笔记<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <h3 id="1">实例1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>形参使用，比较 sum 函数中的 a 和 main 函数中的 a，sum 函数中虽然加了 1，但是 main 中还是原值 10: </p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1236,19 +1332,36 @@ main()函数中 c = 30
     <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出为： </p>
-<div class="codehilite"><pre><span></span><span class="nx">main</span><span class="p">()</span><span class="nx">函数中</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span>  <span class="c1">//算是局部变量</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">main</span><span class="p">()</span><span class="nx">函数中</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span>  <span class="c1">//算是局部变量</span>
 <span class="nx">sum</span><span class="p">()</span> <span class="nx">函数中</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">11</span>
 <span class="nx">sum</span><span class="p">()</span> <span class="nx">函数中</span> <span class="nx">b</span> <span class="p">=</span> <span class="mi">20</span>
 <span class="nx">main</span><span class="p">()</span><span class="nx">函数中</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">10</span>
 <span class="nx">main</span><span class="p">()</span><span class="nx">函数中</span> <span class="nx">c</span> <span class="p">=</span> <span class="mi">31</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="2-forpython">实例2 (for循环使用变量是赋值还是初始化定义是不一样的,跟python注意区别)<a class="headerlink" href="#2-forpython" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1263,10 +1376,22 @@ main()函数中 c = 30
   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出为： </p>
-<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">start</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">start</span>
 <span class="mi">0</span>
 <span class="mi">1</span>
 <span class="mi">2</span>
@@ -1280,10 +1405,23 @@ main()函数中 c = 30
 <span class="k">for</span> <span class="nx">end</span>
 <span class="mi">0</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>在 for 循环的 initialize（a:=0） 中，此时 initialize 中的 a 与外层的 a 不是同一个变量，initialize 中的 a 为 for 循环中的局部变量，因此在执行完 for 循环后，输出 a 的值仍然为 0。 </p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1298,10 +1436,22 @@ main()函数中 c = 30
   <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出为： </p>
-<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">start</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="nx">start</span>
 <span class="mi">0</span>
 <span class="mi">1</span>
 <span class="mi">2</span>
@@ -1315,7 +1465,7 @@ main()函数中 c = 30
 <span class="k">for</span> <span class="nx">end</span>
 <span class="mi">10</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>此时 initialize 中的 a 便于外层的 a 为同一个变量，因此在执行完 for 循环后，输出 a 的值为 10。</p>
 <p>所以大伙们在使用 for 循环的时候千万要注意呀。。。</p>
@@ -1323,7 +1473,15 @@ main()函数中 c = 30
 <p>全局变量可以在整个包甚至外部包（被导出后）使用。</p>
 <p>下述代码在 test.go 中定义了全局变量 Total_sum，然后在 hello.go 中引用。</p>
 <p><strong>test.go:</strong> </p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kd">var</span> <span class="nx">Total_sum</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">0</span>
 <span class="kd">func</span> <span class="nx">Sum_test</span><span class="p">(</span><span class="nx">a</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
@@ -1333,10 +1491,20 @@ main()函数中 c = 30
     <span class="k">return</span> <span class="nx">a</span><span class="o">+</span><span class="nx">b</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>hello.go：</strong> </p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
@@ -1348,59 +1516,75 @@ main()函数中 c = 30
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;sum: %d; Total_sum: %d\n&quot;</span><span class="p">,</span> <span class="nx">sum</span><span class="p">,</span> <span class="nx">Total_sum</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="4">实例4<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
 <p>可通过花括号来控制变量的作用域，花括号中的变量是单独的作用域，同名变量会覆盖外层。 </p>
 <ol>
 <li></li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="o">:=</span> <span class="mi">5</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="o">:=</span> <span class="mi">5</span>
 <span class="p">{</span>
     <span class="nx">a</span> <span class="o">:=</span> <span class="mi">3</span>  <span class="c1">//注意是重新定义变量</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;in a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;out a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出: </p>
-<div class="codehilite"><pre><span></span><span class="nx">in</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">3</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">in</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">3</span>
 <span class="nx">out</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">5</span>
 </pre></div>
-
+</td></tr></table>
 
 <ol>
 <li></li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="o">:=</span> <span class="mi">5</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="o">:=</span> <span class="mi">5</span>
 <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;in a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;out a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出: </p>
-<div class="codehilite"><pre><span></span><span class="nx">in</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">5</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">in</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">5</span>
 <span class="nx">out</span> <span class="nx">a</span> <span class="p">=</span> <span class="mi">5</span>
 </pre></div>
-
+</td></tr></table>
 
 <ol>
 <li></li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="o">:=</span> <span class="mi">5</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="o">:=</span> <span class="mi">5</span>
 <span class="p">{</span>
     <span class="nx">a</span> <span class="o">:=</span> <span class="mi">3</span>    
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 <span class="p">}</span> 
 </pre></div>
-
+</td></tr></table>
 
 <p>输出: </p>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">declared</span> <span class="nx">and</span> <span class="nx">not</span> <span class="nx">used</span>   <span class="c1">//这是因为外层的a:5 定义以后没有使用</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">declared</span> <span class="nx">and</span> <span class="nx">not</span> <span class="nx">used</span>   <span class="c1">//这是因为外层的a:5 定义以后没有使用</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

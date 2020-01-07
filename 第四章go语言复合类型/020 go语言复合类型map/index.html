@@ -1015,14 +1015,14 @@
 <p>Go语言中的map(映射、字典)是一种内置的数据结构，它是一个无序的<code>key—value</code>对的集合，比如以身份证号作为唯一键来标识一个人的信息。(就是python中的dict字典,java中的hashmap)</p>
 <p>​         <img alt="无标题_副本" src="../020 go语言复合类型map.image/clip_image002.png" />  </p>
 <h2 id="map_1">map格式为：<a class="headerlink" href="#map_1" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kd">map</span><span class="p">[</span><span class="nx">keyType</span><span class="p">]</span><span class="nx">valueType</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">map</span><span class="p">[</span><span class="nx">keyType</span><span class="p">]</span><span class="nx">valueType</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>​         在一个map里所有的键都是唯一的，而且必须是支持<code>==和!=</code>操作符的类型(不可变)，<code>切片</code>、<code>函数</code>以及<code>包含切片</code>的结构类型这些类型由于具有<code>引用语义</code>，不能作为映射的键，使用这些类型会造成编译错误  </p>
-<div class="codehilite"><pre><span></span><span class="nx">dict</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">]</span><span class="kt">int</span><span class="p">{}</span> <span class="c1">//err, invalid map key type []string</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">dict</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">]</span><span class="kt">int</span><span class="p">{}</span> <span class="c1">//err, invalid map key type []string</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>map值可以是任意类型，没有限制。map里所有键的数据类型必须是相同的，值数据也必须相同，但键和值的数据类型可以不相同。</p>
 <blockquote>
@@ -1030,16 +1030,30 @@
 </blockquote>
 <h2 id="map_2">定义 Map<a class="headerlink" href="#map_2" title="Permanent link">&para;</a></h2>
 <p>可以使用内建函数 make 也可以使用 map 关键字来定义 Map:</p>
-<div class="codehilite"><pre><span></span><span class="cm">/* 声明变量，默认 map 是 nil */</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/* 声明变量，默认 map 是 nil */</span>
 <span class="kd">var</span> <span class="nx">map_variable</span> <span class="kd">map</span><span class="p">[</span><span class="nx">key_data_type</span><span class="p">]</span><span class="nx">value_data_type</span>  <span class="c1">//不可以赋值,没有初始化</span>
 
 <span class="cm">/* 使用 make 函数 */</span>
 <span class="nx">map_variable</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="nx">key_data_type</span><span class="p">]</span><span class="nx">value_data_type</span><span class="p">)</span> <span class="c1">//可以赋值,因为初始化了一个空的map</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>如果不初始化 map，那么就会创建一个 <code>nil map</code>。<code>nil map</code>不能用来存放键值对</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">m1</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span>  <span class="c1">//只是声明一个map，没有初始化, 此为空(nil)map</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">m1</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span>  <span class="c1">//只是声明一个map，没有初始化, 此为空(nil)map</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">m1</span> <span class="o">==</span> <span class="kc">nil</span><span class="p">)</span> <span class="c1">//true</span>
 <span class="c1">//m1[1] = &quot;mike&quot; //err, panic: assignment to entry in nil map</span>
 
@@ -1051,10 +1065,16 @@
 <span class="nx">m4</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">//第2个参数指定容量</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">m4</span><span class="p">)</span>                <span class="c1">//map[]</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="map_3">map初始化<a class="headerlink" href="#map_3" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="c1">//1、定义同时初始化,同时赋值</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">//1、定义同时初始化,同时赋值</span>
 <span class="kd">var</span> <span class="nx">m1</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span> <span class="p">=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">}</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">m1</span><span class="p">)</span> <span class="c1">//map[1:mike 2:yoyo]</span>
 
@@ -1062,10 +1082,43 @@
 <span class="nx">m2</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">}</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">m2</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="map_4">实例(map的基本使用)<a class="headerlink" href="#map_4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1100,10 +1153,17 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="p">=</span>  <span class="kd">map</span><span class="p">[]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="p">=</span>  <span class="kd">map</span><span class="p">[]</span>
 <span class="kc">false</span>
 <span class="nx">len</span> <span class="p">=</span>  <span class="mi">1</span>
 <span class="nx">m2</span> <span class="p">=</span>  <span class="kd">map</span><span class="p">[]</span>
@@ -1112,10 +1172,19 @@
 <span class="nx">len</span> <span class="p">=</span>  <span class="mi">3</span>
 <span class="nx">m4</span> <span class="p">=</span>  <span class="kd">map</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="nx">mike</span> <span class="mi">2</span><span class="p">:</span><span class="k">go</span> <span class="mi">3</span><span class="p">:</span><span class="nx">c</span><span class="o">++</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_1">赋值操作<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">}</span>
 <span class="nx">m1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;xxx&quot;</span>   <span class="c1">//修改</span>
 <span class="nx">m1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;lily&quot;</span>  <span class="c1">//追加， go底层会自动为map分配空间</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">m1</span><span class="p">)</span> <span class="c1">//map[1:xxx 2:yoyo 3:lily]</span>
@@ -1126,10 +1195,22 @@
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">m2</span><span class="p">)</span>           <span class="c1">//map[0:aaa 1:bbb]</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">m2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">m2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">//aaa bbb</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_2">实例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1143,16 +1224,38 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="p">=</span>  <span class="kd">map</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="nx">mike</span> <span class="mi">2</span><span class="p">:</span><span class="nx">yoyo</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="p">=</span>  <span class="kd">map</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="nx">mike</span> <span class="mi">2</span><span class="p">:</span><span class="nx">yoyo</span><span class="p">]</span>
 <span class="nx">m1</span> <span class="p">=</span>  <span class="kd">map</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="nx">c</span><span class="o">++</span> <span class="mi">2</span><span class="p">:</span><span class="nx">yoyo</span> <span class="mi">3</span><span class="p">:</span><span class="k">go</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="map_5">map 遍历<a class="headerlink" href="#map_5" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">}</span>
 <span class="c1">//迭代遍历1，第一个返回值是key，第二个返回值是value</span>
 <span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">m1</span> <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%d ----&gt; %s\n&quot;</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
@@ -1175,10 +1278,31 @@
 <span class="nx">value2</span><span class="p">,</span> <span class="nx">ok2</span> <span class="o">:=</span> <span class="nx">m1</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;value2 = &quot;</span><span class="p">,</span> <span class="nx">value2</span><span class="p">,</span> <span class="s">&quot;, ok2 = &quot;</span><span class="p">,</span> <span class="nx">ok2</span><span class="p">)</span> <span class="c1">//value2 =   , ok2 =  false</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_3">实例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1201,18 +1325,36 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="mi">1</span> <span class="o">======</span><span class="p">=&gt;</span> <span class="nx">mike</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">1</span> <span class="o">======</span><span class="p">=&gt;</span> <span class="nx">mike</span>
 <span class="mi">2</span> <span class="o">======</span><span class="p">=&gt;</span> <span class="nx">yoyo</span>
 <span class="mi">3</span> <span class="o">======</span><span class="p">=&gt;</span> <span class="k">go</span>
 <span class="nx">key不存在</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="mapdelete">map删除(delete)<a class="headerlink" href="#mapdelete" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s">&quot;lily&quot;</span><span class="p">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">m1</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s">&quot;mike&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;yoyo&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s">&quot;lily&quot;</span><span class="p">}</span>
 <span class="c1">//迭代遍历1，第一个返回值是key，第二个返回值是value</span>
 <span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">m1</span> <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%d ----&gt; %s\n&quot;</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span><span class="p">)</span>
@@ -1229,10 +1371,20 @@
     <span class="c1">//3 ----&gt; lily</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_4">实例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1244,10 +1396,20 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;m = &quot;</span><span class="p">,</span> <span class="nx">m</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1259,11 +1421,35 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;m = &quot;</span><span class="p">,</span> <span class="nx">m</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="map_6">map做函数参数<a class="headerlink" href="#map_6" title="Permanent link">&para;</a></h2>
 <p>在函数间传递映射并不会制造出该映射的一个副本，不是值传递，而是引用传递：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
@@ -1289,14 +1475,18 @@
 <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nx">m</span><span class="p">)=</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="o">----</span><span class="p">&gt;</span> <span class="nx">mike</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="nx">m</span><span class="p">)=</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="o">----</span><span class="p">&gt;</span> <span class="nx">mike</span>
 <span class="nb">len</span><span class="p">(</span><span class="nx">m</span><span class="p">)=</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="o">----</span><span class="p">&gt;</span> <span class="nx">lily</span>
 <span class="nb">len</span><span class="p">(</span><span class="nx">m</span><span class="p">)=</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span> <span class="o">----</span><span class="p">&gt;</span> <span class="nx">mike</span>
 <span class="nb">len</span><span class="p">(</span><span class="nx">m</span><span class="p">)=</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="o">----</span><span class="p">&gt;</span> <span class="nx">lily</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

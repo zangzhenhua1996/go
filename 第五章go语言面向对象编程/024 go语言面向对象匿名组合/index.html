@@ -949,7 +949,18 @@
 <h2 id="_2">匿名字段<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>一般情况下，定义结构体的时候是字段名与其类型一一对应，实际上Go支持只提供类型，而不写字段名的方式，也就是匿名字段，也称为嵌入字段。</p>
 <p>当匿名字段也是一个结构体的时候，那么这个结构体所拥有的全部字段都被隐式地引入了当前定义的这个结构体。</p>
-<div class="codehilite"><pre><span></span><span class="c1">//人</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">//人</span>
 <span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span> <span class="c1">//Person是类型</span>
     <span class="nx">name</span> <span class="kt">string</span>
     <span class="nx">sex</span>  <span class="kt">byte</span>
@@ -962,10 +973,41 @@
     <span class="nx">addr</span>   <span class="kt">string</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_3">匿名字段初始化(像嵌套字典)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="c1">//人</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">//人</span>
 <span class="kd">type</span> <span class="nx">Person</span> <span class="kd">struct</span> <span class="p">{</span>
     <span class="nx">name</span> <span class="kt">string</span>
     <span class="nx">sex</span>  <span class="kt">byte</span>
@@ -998,10 +1040,46 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;s4 = %+v\n&quot;</span><span class="p">,</span> <span class="nx">s4</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_4">实例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1039,18 +1117,49 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果:</p>
-<div class="codehilite"><pre><span></span><span class="nx">s1</span> <span class="p">=</span>  <span class="p">{{</span><span class="nx">mike</span> <span class="mi">109</span> <span class="mi">18</span><span class="p">}</span> <span class="mi">1</span> <span class="nx">bj</span><span class="p">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s1</span> <span class="p">=</span>  <span class="p">{{</span><span class="nx">mike</span> <span class="mi">109</span> <span class="mi">18</span><span class="p">}</span> <span class="mi">1</span> <span class="nx">bj</span><span class="p">}</span>
 <span class="nx">s2</span> <span class="p">=</span> <span class="p">{</span><span class="nx">Person</span><span class="p">:{</span><span class="nx">name</span><span class="p">:</span><span class="nx">mike</span> <span class="nx">sex</span><span class="p">:</span><span class="mi">109</span> <span class="nx">age</span><span class="p">:</span><span class="mi">18</span><span class="p">}</span> <span class="nx">id</span><span class="p">:</span><span class="mi">1</span> <span class="nx">addr</span><span class="p">:</span><span class="nx">bj</span><span class="p">}</span>
 <span class="nx">s3</span> <span class="p">=</span> <span class="p">{</span><span class="nx">Person</span><span class="p">:{</span><span class="nx">name</span><span class="p">:</span> <span class="nx">sex</span><span class="p">:</span><span class="mi">0</span> <span class="nx">age</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span> <span class="nx">id</span><span class="p">:</span><span class="mi">1</span> <span class="nx">addr</span><span class="p">:}</span>
 <span class="nx">s4</span> <span class="p">=</span> <span class="p">{</span><span class="nx">Person</span><span class="p">:{</span><span class="nx">name</span><span class="p">:</span><span class="nx">mike</span> <span class="nx">sex</span><span class="p">:</span><span class="mi">0</span> <span class="nx">age</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span> <span class="nx">id</span><span class="p">:</span><span class="mi">1</span> <span class="nx">addr</span><span class="p">:}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_5">成员的操作<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1080,10 +1189,43 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_6">同名字段<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1118,17 +1260,44 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="p">=</span> <span class="p">{</span><span class="nx">Person</span><span class="p">:{</span><span class="nx">name</span><span class="p">:</span><span class="nx">yoyo</span> <span class="nx">sex</span><span class="p">:</span><span class="mi">109</span> <span class="nx">age</span><span class="p">:</span><span class="mi">18</span><span class="p">}</span> <span class="nx">id</span><span class="p">:</span><span class="mi">0</span> <span class="nx">addr</span><span class="p">:</span><span class="nx">bj</span> <span class="nx">name</span><span class="p">:</span><span class="nx">mike</span><span class="p">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="p">=</span> <span class="p">{</span><span class="nx">Person</span><span class="p">:{</span><span class="nx">name</span><span class="p">:</span><span class="nx">yoyo</span> <span class="nx">sex</span><span class="p">:</span><span class="mi">109</span> <span class="nx">age</span><span class="p">:</span><span class="mi">18</span><span class="p">}</span> <span class="nx">id</span><span class="p">:</span><span class="mi">0</span> <span class="nx">addr</span><span class="p">:</span><span class="nx">bj</span> <span class="nx">name</span><span class="p">:</span><span class="nx">mike</span><span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_7">其它匿名字段<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <h3 id="_8">非结构体类型<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>所有的内置类型和自定义类型都是可以作为匿名字段的：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1157,17 +1326,49 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="p">=</span> <span class="p">{</span><span class="nx">Person</span><span class="p">:{</span><span class="nx">name</span><span class="p">:</span><span class="nx">mike</span> <span class="nx">sex</span><span class="p">:</span><span class="mi">109</span> <span class="nx">age</span><span class="p">:</span><span class="mi">18</span><span class="p">}</span> <span class="kt">int</span><span class="p">:</span><span class="mi">666</span> <span class="nx">mystr</span><span class="p">:</span><span class="nx">hehehe</span><span class="p">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="p">=</span> <span class="p">{</span><span class="nx">Person</span><span class="p">:{</span><span class="nx">name</span><span class="p">:</span><span class="nx">mike</span> <span class="nx">sex</span><span class="p">:</span><span class="mi">109</span> <span class="nx">age</span><span class="p">:</span><span class="mi">18</span><span class="p">}</span> <span class="kt">int</span><span class="p">:</span><span class="mi">666</span> <span class="nx">mystr</span><span class="p">:</span><span class="nx">hehehe</span><span class="p">}</span>
 <span class="k">go</span> <span class="mi">22</span> <span class="mi">109</span> <span class="mi">666</span> <span class="nx">hehehe</span>
 <span class="p">{</span><span class="k">go</span> <span class="mi">109</span> <span class="mi">22</span><span class="p">}</span> <span class="mi">666</span> <span class="nx">hehehe</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_9">结构体指针类型<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1199,12 +1400,14 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">mike</span> <span class="mi">109</span> <span class="mi">18</span> <span class="mi">666</span> <span class="nx">bj</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">mike</span> <span class="mi">109</span> <span class="mi">18</span> <span class="mi">666</span> <span class="nx">bj</span>
 <span class="nx">yoyo</span> <span class="mi">109</span> <span class="mi">18</span> <span class="mi">222</span> <span class="nx">sz</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

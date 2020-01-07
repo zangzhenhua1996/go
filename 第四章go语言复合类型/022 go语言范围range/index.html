@@ -840,7 +840,32 @@
                 <h1 id="range">range<a class="headerlink" href="#range" title="Permanent link">&para;</a></h1>
 <p>Go 语言中 range 关键字用于 for 循环中迭代数组(array)、切片(slice)、通道(channel)或集合(map)的元素。在数组和切片中它返回元素的索引和索引对应的值，在集合中返回 key-value 对。</p>
 <h2 id="_1">实例<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">//这是我们使用range去求一个slice的和。使用数组跟这个很类似</span>
@@ -867,17 +892,22 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例运行输出结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">sum</span><span class="p">:</span> <span class="mi">9</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">sum</span><span class="p">:</span> <span class="mi">9</span>
 <span class="nx">index</span><span class="p">:</span> <span class="mi">1</span>
 <span class="nx">a</span> <span class="o">-</span><span class="p">&gt;</span> <span class="nx">apple</span>
 <span class="nx">b</span> <span class="o">-</span><span class="p">&gt;</span> <span class="nx">banana</span>
 <span class="mi">0</span> <span class="mi">103</span>
 <span class="mi">1</span> <span class="mi">111</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_2">笔记<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>

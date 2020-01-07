@@ -847,7 +847,14 @@
 接下来让我们来看下简单的代码，该代码输出了"Hello World!":</li>
 </ul>
 <p>实例</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -856,7 +863,7 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>让我们来看下以上程序的各个部分：</p>
 <p>第一行代码<code>package main</code>定义了包名。你必须在源文件中非注释的第一行指明这个文件属于哪个包，如：<code>package main</code>。<code>package main</code>表示一个可独立执行的程序，每个 Go 应用程序都包含一个名为 <code>main</code> 的包。</p>
@@ -874,26 +881,38 @@
 <p>打开命令行，并进入程序文件保存的目录中。</p>
 <p>输入命令<code>go run hello.go</code> 并按回车执行代码。</p>
 <p>如果操作正确你将在屏幕上看到 "Hello World!" 字样的输出。</p>
-<div class="codehilite"><pre><span></span>$ go run hello.go
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ go run hello.go
 Hello, World!
 </pre></div>
-
+</td></tr></table>
 
 <p>我们还可以使用 go build 命令来生成二进制文件：</p>
-<div class="codehilite"><pre><span></span>$ go build hello.go 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ go build hello.go 
 $ ls
 hello    hello.go
 $ ./hello 
 Hello, World!
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p>注意
 需要注意的是<code>{</code>不能单独放在一行，所以以下代码在运行时会产生错误：</p>
 </blockquote>
 <p>实例</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -902,6 +921,7 @@ Hello, World!
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

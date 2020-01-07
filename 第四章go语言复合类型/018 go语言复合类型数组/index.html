@@ -1207,24 +1207,41 @@
 </blockquote>
 <h2 id="_3">声明数组<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Go 语言数组声明需要指定元素类型及元素个数，语法格式如下：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">variable_name</span> <span class="p">[</span><span class="nx">SIZE</span><span class="p">]</span> <span class="nx">variable_type</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">variable_name</span> <span class="p">[</span><span class="nx">SIZE</span><span class="p">]</span> <span class="nx">variable_type</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上为一维数组的定义方式。例如以下定义了数组 balance 长度为 10 类型为 float32：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">balance</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="kt">float32</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">balance</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="kt">float32</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_4">操作数组<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>数组元素可以通过索引（位置）来读取。格式为数组名后加中括号，中括号中为索引的值。例如：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">salary</span> <span class="kt">float32</span> <span class="p">=</span> <span class="nx">balance</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">salary</span> <span class="kt">float32</span> <span class="p">=</span> <span class="nx">balance</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例读取了数组balance第10个元素的值。 </p>
 <p>数组的每个元素可以通过索引下标来访问，索引下标的范围是从0开始到数组长度减1的位置。</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1243,10 +1260,65 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">GOROOT</span><span class="p">=</span><span class="nx">D</span><span class="p">:</span><span class="err">\</span><span class="nx">Go</span> <span class="err">#</span><span class="nx">gosetup</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">GOROOT</span><span class="p">=</span><span class="nx">D</span><span class="p">:</span><span class="err">\</span><span class="nx">Go</span> <span class="err">#</span><span class="nx">gosetup</span>
 <span class="nx">GOPATH</span><span class="p">=</span><span class="nx">H</span><span class="p">:</span><span class="err">\</span><span class="mi">4</span><span class="err">、</span><span class="mi">2018</span><span class="nx">go语言快速入门</span><span class="o">-</span><span class="nx">黑马</span><span class="o">-</span><span class="mi">20</span><span class="nx">小时快速入门go语言视频</span><span class="o">-</span><span class="mi">8</span><span class="nx">天</span><span class="err">\</span><span class="nx">Day2</span><span class="err">\</span><span class="nx">第02天</span><span class="p">(</span><span class="nx">函数</span><span class="err">、</span><span class="nx">工程管理</span><span class="p">)</span><span class="err">\</span><span class="mi">4</span><span class="o">-</span><span class="nx">源代码</span><span class="err">\</span><span class="mi">25</span><span class="nx">_工程管理</span><span class="err">：</span><span class="nx">不同目录</span> <span class="err">#</span><span class="nx">gosetup</span>
 <span class="nx">D</span><span class="p">:</span><span class="err">\</span><span class="nx">Go</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="k">go</span><span class="p">.</span><span class="nx">exe</span> <span class="nx">build</span> <span class="o">-</span><span class="nx">o</span> <span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">zangz</span><span class="err">\</span><span class="nx">AppData</span><span class="err">\</span><span class="nx">Local</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="nx">___go_build_06__go</span><span class="p">.</span><span class="nx">exe</span> <span class="nx">C</span><span class="p">:</span><span class="o">/</span><span class="nx">Users</span><span class="o">/</span><span class="nx">zangz</span><span class="o">/</span><span class="nx">Desktop</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="mi">4</span><span class="err">、</span><span class="mi">2018</span><span class="nx">go语言快速入门</span><span class="o">-</span><span class="nx">黑马</span><span class="o">-</span><span class="mi">20</span><span class="nx">小时快速入门go语言视频</span><span class="o">-</span><span class="mi">8</span><span class="nx">天</span><span class="o">/</span><span class="nx">Day3</span><span class="o">/</span><span class="nx">第03天</span><span class="p">(</span><span class="nx">复合类型</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="o">-</span><span class="nx">源代码</span><span class="o">/</span><span class="mo">06</span><span class="nx">_为什么需要数组</span><span class="p">.</span><span class="k">go</span> <span class="err">#</span><span class="nx">gosetup</span>
 <span class="s">&quot;D:\IntelliJ IDEA 2018\IntelliJ IDEA 2018.3\bin\runnerw.exe&quot;</span> <span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">zangz</span><span class="err">\</span><span class="nx">AppData</span><span class="err">\</span><span class="nx">Local</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="nx">___go_build_06__go</span><span class="p">.</span><span class="nx">exe</span> <span class="err">#</span><span class="nx">gosetup</span>
@@ -1303,16 +1375,50 @@
 
 <span class="nx">Process</span> <span class="nx">finished</span> <span class="nx">with</span> <span class="nx">exit</span> <span class="nx">code</span> <span class="mi">0</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>内置函数<code>len(长度)</code>和<code>cap(容量)</code>都返回数组⻓度 (元素数量)：</p>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="kt">int</span><span class="p">{}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="kt">int</span><span class="p">{}</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nx">a</span><span class="p">),</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">a</span><span class="p">))</span><span class="c1">//10 10</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_5">数组的基本使用<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1347,10 +1453,26 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">GOROOT</span><span class="p">=</span><span class="nx">D</span><span class="p">:</span><span class="err">\</span><span class="nx">Go</span> <span class="err">#</span><span class="nx">gosetup</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">GOROOT</span><span class="p">=</span><span class="nx">D</span><span class="p">:</span><span class="err">\</span><span class="nx">Go</span> <span class="err">#</span><span class="nx">gosetup</span>
 <span class="nx">GOPATH</span><span class="p">=</span><span class="nx">H</span><span class="p">:</span><span class="err">\</span><span class="mi">4</span><span class="err">、</span><span class="mi">2018</span><span class="nx">go语言快速入门</span><span class="o">-</span><span class="nx">黑马</span><span class="o">-</span><span class="mi">20</span><span class="nx">小时快速入门go语言视频</span><span class="o">-</span><span class="mi">8</span><span class="nx">天</span><span class="err">\</span><span class="nx">Day2</span><span class="err">\</span><span class="nx">第02天</span><span class="p">(</span><span class="nx">函数</span><span class="err">、</span><span class="nx">工程管理</span><span class="p">)</span><span class="err">\</span><span class="mi">4</span><span class="o">-</span><span class="nx">源代码</span><span class="err">\</span><span class="mi">25</span><span class="nx">_工程管理</span><span class="err">：</span><span class="nx">不同目录</span> <span class="err">#</span><span class="nx">gosetup</span>
 <span class="nx">D</span><span class="p">:</span><span class="err">\</span><span class="nx">Go</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="k">go</span><span class="p">.</span><span class="nx">exe</span> <span class="nx">build</span> <span class="o">-</span><span class="nx">o</span> <span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">zangz</span><span class="err">\</span><span class="nx">AppData</span><span class="err">\</span><span class="nx">Local</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="nx">___go_build_07__go</span><span class="p">.</span><span class="nx">exe</span> <span class="nx">C</span><span class="p">:</span><span class="o">/</span><span class="nx">Users</span><span class="o">/</span><span class="nx">zangz</span><span class="o">/</span><span class="nx">Desktop</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="mi">4</span><span class="err">、</span><span class="mi">2018</span><span class="nx">go语言快速入门</span><span class="o">-</span><span class="nx">黑马</span><span class="o">-</span><span class="mi">20</span><span class="nx">小时快速入门go语言视频</span><span class="o">-</span><span class="mi">8</span><span class="nx">天</span><span class="o">/</span><span class="nx">Day3</span><span class="o">/</span><span class="nx">第03天</span><span class="p">(</span><span class="nx">复合类型</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="o">-</span><span class="nx">源代码</span><span class="o">/</span><span class="mo">07</span><span class="nx">_数组的基本使用</span><span class="p">.</span><span class="k">go</span> <span class="err">#</span><span class="nx">gosetup</span>
 <span class="s">&quot;D:\IntelliJ IDEA 2018\IntelliJ IDEA 2018.3\bin\runnerw.exe&quot;</span> <span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">zangz</span><span class="err">\</span><span class="nx">AppData</span><span class="err">\</span><span class="nx">Local</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="nx">___go_build_07__go</span><span class="p">.</span><span class="nx">exe</span> <span class="err">#</span><span class="nx">gosetup</span>
@@ -1368,29 +1490,39 @@
 
 <span class="nx">Process</span> <span class="nx">finished</span> <span class="nx">with</span> <span class="nx">exit</span> <span class="nx">code</span> <span class="mi">0</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_6">数组的初始化<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>以下演示了数组初始化： </p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">balance</span> <span class="p">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">float32</span><span class="p">{</span><span class="mf">1000.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">balance</span> <span class="p">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">float32</span><span class="p">{</span><span class="mf">1000.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>初始化数组中 {} 中的元素个数不能大于 [] 中的数字。</p>
 <p>如果忽略 [] 中的数字不设置数组大小，Go 语言会根据元素的个数来设置数组的大小：(后面的切片)</p>
-<div class="codehilite"><pre><span></span> <span class="kd">var</span> <span class="nx">balance</span> <span class="p">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">float32</span><span class="p">{</span><span class="mf">1000.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">}</span>  <span class="c1">//中括号中的内容使用...代替</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> <span class="kd">var</span> <span class="nx">balance</span> <span class="p">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">float32</span><span class="p">{</span><span class="mf">1000.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">}</span>  <span class="c1">//中括号中的内容使用...代替</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>该实例与上面的实例是一样的，虽然没有设置数组的大小。</p>
-<div class="codehilite"><pre><span></span> <span class="nx">balance</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="p">=</span> <span class="mf">50.0</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> <span class="nx">balance</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="p">=</span> <span class="mf">50.0</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例读取了第五个元素。数组元素可以通过索引（位置）来读取（或者修改），索引从0开始，第一个元素索引为 0，第二个索引为 1，以此类推。</p>
 <p><img alt="img" src="../018 go语言复合类型数组.image/array_presentation.jpg" /> </p>
 <p>总结</p>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>           <span class="c1">// 未初始化元素值为 0</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>           <span class="c1">// 未初始化元素值为 0</span>
 <span class="nx">b</span> <span class="o">:=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>      <span class="c1">// 通过初始化值确定数组长度</span>
 <span class="nx">c</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">200</span><span class="p">}</span> <span class="c1">// 通过索引号初始化元素，未初始化元素值为 0</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span>        <span class="c1">//[1 2 0] [1 2 3] [0 0 100 0 200]</span>
@@ -1402,10 +1534,33 @@
 <span class="nx">g</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">20</span><span class="p">},</span> <span class="mi">3</span><span class="p">:</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">41</span><span class="p">}}</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span> <span class="nx">e</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">g</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_7">实例<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1430,10 +1585,16 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">balance</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
 <span class="nx">b</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
 <span class="nx">c</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">]</span>
 <span class="nx">d</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">10</span> <span class="mi">0</span> <span class="mi">20</span><span class="p">]</span>
@@ -1441,10 +1602,26 @@
 
 <span class="nx">Process</span> <span class="nx">finished</span> <span class="nx">with</span> <span class="nx">exit</span> <span class="nx">code</span> <span class="mi">0</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_8">数组比较与赋值<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1462,68 +1639,94 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;d = &quot;</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span> <span class="nx">a</span> <span class="o">==</span> <span class="nx">b</span>  <span class="kc">true</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> <span class="nx">a</span> <span class="o">==</span> <span class="nx">b</span>  <span class="kc">true</span>
  <span class="nx">a</span> <span class="o">==</span> <span class="nx">c</span>  <span class="kc">false</span>
 <span class="nx">d</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_9">二维数组的使用<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <p>Go 语言支持多维数组，以下为常用的多维数组声明方式：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">variable_name</span> <span class="p">[</span><span class="nx">SIZE1</span><span class="p">][</span><span class="nx">SIZE2</span><span class="p">]</span><span class="o">...</span><span class="p">[</span><span class="nx">SIZEN</span><span class="p">]</span> <span class="nx">variable_type</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">variable_name</span> <span class="p">[</span><span class="nx">SIZE1</span><span class="p">][</span><span class="nx">SIZE2</span><span class="p">]</span><span class="o">...</span><span class="p">[</span><span class="nx">SIZEN</span><span class="p">]</span> <span class="nx">variable_type</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以下实例声明了三维的整型数组：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">threedim</span> <span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">10</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">threedim</span> <span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">10</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span>
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h3 id="_10">二维数组<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>二维数组是最简单的多维数组，二维数组本质上是由一维数组组成的。二维数组定义方式如下：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">arrayName</span> <span class="p">[</span> <span class="nx">x</span> <span class="p">][</span> <span class="nx">y</span> <span class="p">]</span> <span class="nx">variable_type</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">arrayName</span> <span class="p">[</span> <span class="nx">x</span> <span class="p">][</span> <span class="nx">y</span> <span class="p">]</span> <span class="nx">variable_type</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>variable_type 为 Go 语言的数据类型，arrayName 为数组名，二维数组可认为是一个表格，x 为行，y 为列，下图演示了一个二维数组 a 为三行四列：</p>
 <p><img alt="img" src="../018 go语言复合类型数组.image/two_dimensional_arrays.jpg" /> </p>
 <p>二维数组中的元素可通过 <code>a[ i ][ j ]</code> 来访问。 </p>
 <h3 id="_11">初始化二维数组<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>多维数组可通过大括号来初始值。以下实例为一个 3 行 4 列的二维数组：</p>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="p">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span>  
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="p">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span>  
  <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span> <span class="p">,</span>   <span class="cm">/*  第一行索引为 0 */</span>
  <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">}</span> <span class="p">,</span>   <span class="cm">/*  第二行索引为 1 */</span>
  <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">},</span>   <span class="cm">/* 第三行索引为 2 */</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p><strong>注意：**以上代码中倒数第二行的 **}</strong> 必须要有逗号，因为最后一行的 <strong>}</strong> 不能单独一行，也可以写成这样： </p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="p">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span>  
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="p">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span>  
  <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span> <span class="p">,</span>   <span class="cm">/*  第一行索引为 0 */</span>
  <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">}</span> <span class="p">,</span>   <span class="cm">/*  第二行索引为 1 */</span>
  <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">}}</span>   <span class="cm">/* 第三行索引为 2 */</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_12">访问二维数组<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>二维数组通过指定坐标来访问。如数组中的行索引与列索引，例如：</p>
-<div class="codehilite"><pre><span></span><span class="nx">val</span> <span class="o">:=</span> <span class="nx">a</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">val</span> <span class="o">:=</span> <span class="nx">a</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
 <span class="nx">或</span>
 <span class="kd">var</span> <span class="nx">value</span> <span class="kt">int</span> <span class="p">=</span> <span class="nx">a</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例访问了二维数组 val 第三行的第四个元素。</p>
 <p>二维数组可以使用循环嵌套来输出元素：</p>
 <h4 id="_13">实例<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1540,10 +1743,19 @@
    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="mi">0</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="mi">0</span>
 <span class="nx">a</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="mi">0</span>
 <span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="mi">1</span>
 <span class="nx">a</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="mi">2</span>
@@ -1554,10 +1766,34 @@
 <span class="nx">a</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="mi">4</span>
 <span class="nx">a</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="mi">8</span>
 </pre></div>
-
+</td></tr></table>
 
 <h4 id="_14">书写规范<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1583,10 +1819,30 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_15">随机数的使用<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
@@ -1608,20 +1864,58 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">rand</span> <span class="p">=</span>  <span class="mi">98</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">rand</span> <span class="p">=</span>  <span class="mi">98</span>
 <span class="nx">rand</span> <span class="p">=</span>  <span class="mi">80</span>
 <span class="nx">rand</span> <span class="p">=</span>  <span class="mi">65</span>
 <span class="nx">rand</span> <span class="p">=</span>  <span class="mi">94</span>
 <span class="nx">rand</span> <span class="p">=</span>  <span class="mi">81</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="go">go实现冒泡排序<a class="headerlink" href="#go" title="Permanent link">&para;</a></h2>
 <p><img alt="image-20191130131617538" src="../018 go语言复合类型数组.image/image-20191130131617538.png" /></p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kn">import</span> <span class="s">&quot;math/rand&quot;</span>
@@ -1657,37 +1951,62 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="go_1">Go 语言向函数传递数组<a class="headerlink" href="#go_1" title="Permanent link">&para;</a></h2>
 <p>根据内存和性能来看，在函数间传递数组是一个开销很大的操作。在函数之间传递变量时，总是以值的方式传递的。如果这个变量是一个数组，意味着整个数组，不管有多长，都会完整复制，并传递给函数。(python的数组是地址传递)</p>
 <p>如果你想向函数传递数组参数，你需要在函数定义时，声明形参为数组，我们可以通过以下两种方式来声明： </p>
 <h3 id="_16">声明形参为数组,方式一<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <p>形参设定数组大小：</p>
-<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">myFunction</span><span class="p">(</span><span class="nx">param</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="kt">int</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">myFunction</span><span class="p">(</span><span class="nx">param</span> <span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="kt">int</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="p">.</span>
 <span class="p">.</span>
 <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_17">声明形参为数组,方式二<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>形参未设定数组大小：切片</p>
-<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">myFunction</span><span class="p">(</span><span class="nx">param</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">myFunction</span><span class="p">(</span><span class="nx">param</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span>
 <span class="p">{</span>
 <span class="p">.</span>
 <span class="p">.</span>
 <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p><code>[]int和[5]int这两种表达方式在Go语言里有根本性的区别。[]int不是数组，而是数组切片(slice)，而[5]int是一个数组。在Go语言中，数组是值类型，而数组切片是引用类型。值类型变量在函数调用时的参数传递中会被完整拷贝一次变量内容，之后函数内操作的只是这个拷贝的副本。这是第32页例子中所表现出来的，函数内对数组的修改不会影响函数外的原始数组内容的原因。一般而言，参数类型会选择数组切片而非数组，以避免拷贝所导致的性能损耗。希望已经解释清楚，没有的话请继续。看来我们这本书再版的时候需要多花一些篇幅解释数组和数组切片的区别。</code></p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">array</span> <span class="p">=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>  <span class="c1">//就是切片呗</span>
     <span class="cm">/* 未定义长度的数组只能传给不限制数组长度的函数 ,这个说法不是很准确*/</span>
     <span class="nx">setArray</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span>
@@ -1704,17 +2023,44 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;params array length of setArray2 is : &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">params</span><span class="p">))</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">params</span> <span class="nx">array</span> <span class="nx">length</span> <span class="nx">of</span> <span class="nx">setArray</span> <span class="nx">is</span> <span class="p">:</span>  <span class="mi">5</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">params</span> <span class="nx">array</span> <span class="nx">length</span> <span class="nx">of</span> <span class="nx">setArray</span> <span class="nx">is</span> <span class="p">:</span>  <span class="mi">5</span>
 <span class="nx">params</span> <span class="nx">array</span> <span class="nx">length</span> <span class="nx">of</span> <span class="nx">setArray2</span> <span class="nx">is</span> <span class="p">:</span>  <span class="mi">5</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_18">实例<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <p>让我们看下以下实例，实例中函数接收整型数组参数，另一个参数指定了数组元素的个数，并返回平均值：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1742,17 +2088,26 @@
     <span class="k">return</span> <span class="nx">avg</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">平均值为</span><span class="p">:</span> <span class="mf">214.399994</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">平均值为</span><span class="p">:</span> <span class="mf">214.399994</span> 
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例中我们使用的形参并未设定数组大小。</p>
 <p>浮点数计算输出有一定的偏差，你也可以转整型来设置精度。</p>
 <h4 id="_19">实例<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
 <span class="p">)</span>
@@ -1763,10 +2118,20 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>  <span class="c1">// 输出的是2.8729999999999998</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h4 id="_20">实例<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
 <span class="p">)</span>
@@ -1778,10 +2143,27 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">float64</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000000</span><span class="p">)</span> <span class="c1">// 显示</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_21">数组作为函数参数(值拷贝)<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1800,16 +2182,33 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;main: a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">modify</span> <span class="nx">a</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">666</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">modify</span> <span class="nx">a</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">666</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
 <span class="nx">main</span><span class="p">:</span> <span class="nx">a</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_22">数组指针做函数参数<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1827,6 +2226,7 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;main: a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

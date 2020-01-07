@@ -952,50 +952,61 @@
 <hr />
 <h2 id="go_1">Go 标记<a class="headerlink" href="#go_1" title="Permanent link">&para;</a></h2>
 <p>Go 程序可以由多个标记组成，可以是关键字，标识符，常量，字符串，符号。如以下 GO 语句由 6 个标记组成：</p>
-<div class="codehilite"><pre><span></span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>6 个标记是(每行一个)：</p>
-<div class="codehilite"><pre><span></span><span class="mf">1.</span> <span class="nx">fmt</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mf">1.</span> <span class="nx">fmt</span>
 <span class="mf">2.</span> <span class="p">.</span>
 <span class="mf">3.</span> <span class="nx">Println</span>
 <span class="mf">4.</span> <span class="p">(</span>
 <span class="mf">5.</span> <span class="s">&quot;Hello, World!&quot;</span>
 <span class="mf">6.</span> <span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="_1">行分隔符<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>在 Go 程序中，一行代表一个语句结束。每个语句不需要像 C 家族中的其它语言一样以分号 ; 结尾，因为这些工作都将由 Go 编译器自动完成。</p>
 <p>如果你打算将多个语句写在同一行，它们则必须使用 <code>;</code>人为区分，但在实际开发中我们并不鼓励这种做法。</p>
 <p>以下为两个语句：</p>
-<div class="codehilite"><pre><span></span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">)</span>
 <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;菜鸟教程：runoob.com&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="_2">注释<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>注释不会被编译，每一个包应该有相关注释。</p>
 <p>单行注释是最常见的注释形式，你可以在任何地方使用以 // 开头的单行注释。多行注释也叫块注释，均已以 /* 开头，并以 */ 结尾。如：</p>
-<div class="codehilite"><pre><span></span><span class="c1">// 单行注释</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// 单行注释</span>
 <span class="cm">/*</span>
 <span class="cm"> Author by 菜鸟教程</span>
 <span class="cm"> 我是多行注释</span>
 <span class="cm"> */</span>
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="_3">标识符<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>标识符用来命名变量、类型等程序实体。一个标识符实际上就是一个或是多个字母(A<sub>Z和a</sub>z)数字(0~9)、下划线_组成的序列，但是第一个字符必须是字母或下划线而不能是数字。</p>
 <p>以下是有效的标识符：</p>
-<div class="codehilite"><pre><span></span><span class="nx">mahesh</span>   <span class="nx">kumar</span>   <span class="nx">abc</span>   <span class="nx">move_name</span>   <span class="nx">a_123</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">mahesh</span>   <span class="nx">kumar</span>   <span class="nx">abc</span>   <span class="nx">move_name</span>   <span class="nx">a_123</span>
 <span class="nx">myname50</span>   <span class="nx">_temp</span>   <span class="nx">j</span>   <span class="nx">a23b9</span>   <span class="nx">retVal</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以下是无效的标识符：</p>
 <ul>
@@ -1007,18 +1018,22 @@
 <h2 id="_4">字符串连接<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>Go 语言的字符串可以通过 <strong>+</strong> 实现：</p>
 <h3 id="_5">实例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Google&quot;</span> <span class="o">+</span> <span class="s">&quot;Runoob&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例输出结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">GoogleRunoob</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">GoogleRunoob</span>
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="_6">关键字<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
@@ -1121,24 +1136,48 @@
 <hr />
 <h2 id="go_2">Go 语言的空格<a class="headerlink" href="#go_2" title="Permanent link">&para;</a></h2>
 <p>Go 语言中变量的声明必须使用空格隔开，如：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">age</span> <span class="kt">int</span><span class="p">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">age</span> <span class="kt">int</span><span class="p">;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>语句中适当使用空格能让程序更易阅读。</p>
 <p>无空格：</p>
-<div class="codehilite"><pre><span></span><span class="nx">fruit</span><span class="p">=</span><span class="nx">apples</span><span class="o">+</span><span class="nx">oranges</span><span class="p">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">fruit</span><span class="p">=</span><span class="nx">apples</span><span class="o">+</span><span class="nx">oranges</span><span class="p">;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>在变量与运算符间加入空格，程序看起来更加美观，如：</p>
-<div class="codehilite"><pre><span></span><span class="nx">fruit</span> <span class="p">=</span> <span class="nx">apples</span> <span class="o">+</span> <span class="nx">oranges</span><span class="p">;</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">fruit</span> <span class="p">=</span> <span class="nx">apples</span> <span class="o">+</span> <span class="nx">oranges</span><span class="p">;</span> 
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_7">笔记<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p><strong>Go 程序的一般结构: basic_structure.go</strong> </p>
-<div class="codehilite"><pre><span></span><span class="c1">// 当前程序的包名</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// 当前程序的包名</span>
 <span class="kn">package</span> <span class="nx">main</span>
 
 <span class="c1">// 导入其他包</span>
@@ -1164,28 +1203,39 @@
     <span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Go 程序是通过 <strong>package</strong> 来组织的。</p>
 <p>只有 package 名称为 main 的包可以包含 main 函数。</p>
 <p>一个可执行程序有且仅有一个 <strong>main</strong> 包。</p>
 <p>通过 <strong>import</strong> 关键字来导入其他非 <strong>main</strong> 包。</p>
 <p>可以通过 <strong>import</strong> 关键字单个导入:</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kn">import</span> <span class="s">&quot;io&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>也可以同时导入多个: </p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="p">(</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
     <span class="s">&quot;math&quot;</span>
 <span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>例如： </p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
     <span class="s">&quot;math&quot;</span>
@@ -1194,28 +1244,34 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">Exp2</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>  <span class="c1">// 1024</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>使用 <PackageName>.<FunctionName> 调用: </p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">别名</span><span class="err">：</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">别名</span><span class="err">：</span>
 <span class="c1">// 为fmt起别名为fmt2</span>
 <span class="kn">import</span> <span class="nx">fmt2</span> <span class="s">&quot;fmt&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>省略调用(不建议使用): </p>
-<div class="codehilite"><pre><span></span><span class="c1">// 调用的时候只需要Println()，而不需要fmt.Println()</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// 调用的时候只需要Println()，而不需要fmt.Println()</span>
 <span class="kn">import</span> <span class="p">.</span> <span class="s">&quot;fmt&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>前面加个点表示省略调用，那么调用该模块里面的函数，可以不用写模块名称了: </p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="p">.</span> <span class="s">&quot;fmt&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="p">.</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kd">func</span> <span class="nx">main</span> <span class="p">(){</span>
     <span class="nx">Println</span><span class="p">(</span><span class="s">&quot;hello,world&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>通过 <strong>const</strong> 关键字来进行常量的定义。</p>
 <p>通过在函数体外部使用 <strong>var</strong> 关键字来进行全局变量的声明和赋值。</p>
@@ -1224,24 +1280,24 @@
 <p><strong>可见性规则</strong></p>
 <p>Go语言中，使用大小写来决定该常量、变量、类型、接口、结构或函数是否可以被外部包所调用。</p>
 <p>函数名首字母小写即为 <strong>private</strong> :</p>
-<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">getId</span><span class="p">()</span> <span class="p">{}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">getId</span><span class="p">()</span> <span class="p">{}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>函数名首字母大写即为 <strong>public</strong> : </p>
-<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">Printf</span><span class="p">()</span> <span class="p">{}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">Printf</span><span class="p">()</span> <span class="p">{}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Go 语言的包引入一般为: <strong>项目名/包名</strong> (引用自己定义的包)</p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="s">&quot;test/controllers&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="s">&quot;test/controllers&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>方法的调用为: <strong>包名.方法名()</strong> </p>
-<div class="codehilite"><pre><span></span><span class="nx">controllers</span><span class="p">.</span><span class="nx">Test</span><span class="p">()</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">controllers</span><span class="p">.</span><span class="nx">Test</span><span class="p">()</span>
 </pre></div>
-
+</td></tr></table>
 
 <blockquote>
 <p>本包内方法名可为小写，包外调用方法名首字母必须为大写。 </p>

@@ -1060,7 +1060,32 @@
 </table>
 <p>以下实例演示了各个算术运算符的用法：</p>
 <h3 id="_3">实例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1087,10 +1112,16 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第七行 - a 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span> <span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例运行结果： </p>
-<div class="codehilite"><pre><span></span><span class="nx">第一行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">31</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">第一行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">31</span>
 <span class="nx">第二行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">11</span>
 <span class="nx">第三行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">210</span>
 <span class="nx">第四行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">2</span>
@@ -1098,7 +1129,7 @@
 <span class="nx">第六行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">的值为</span> <span class="mi">22</span>
 <span class="nx">第七行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">的值为</span> <span class="mi">20</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_4">关系运算符<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>下表列出了所有Go语言的关系运算符。假定 A 值为 10，B 值为 20。</p>
@@ -1145,7 +1176,40 @@
 </table>
 <p>以下实例演示了关系运算符的用法：</p>
 <h3 id="_5">实例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1180,16 +1244,20 @@
    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">第一行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">不等于</span> <span class="nx">b</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">第一行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">不等于</span> <span class="nx">b</span>
 <span class="nx">第二行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">不小于</span> <span class="nx">b</span>
 <span class="nx">第三行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">大于</span> <span class="nx">b</span>
 <span class="nx">第四行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">小于等于</span> <span class="nx">b</span>
 <span class="nx">第五行</span> <span class="o">-</span> <span class="nx">b</span> <span class="nx">大于等于</span> <span class="nx">a</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_6">逻辑运算符<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>下表列出了所有Go语言的逻辑运算符。假定 A 值为 True，B 值为 False。</p>
@@ -1221,7 +1289,31 @@
 </table>
 <p>以下实例演示了逻辑运算符的用法：</p>
 <h3 id="_7">实例<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1247,14 +1339,16 @@
    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">第二行</span> <span class="o">-</span> <span class="nx">条件为</span> <span class="kc">true</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">第二行</span> <span class="o">-</span> <span class="nx">条件为</span> <span class="kc">true</span>
 <span class="nx">第三行</span> <span class="o">-</span> <span class="nx">条件为</span> <span class="kc">false</span>
 <span class="nx">第四行</span> <span class="o">-</span> <span class="nx">条件为</span> <span class="kc">true</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_8">位运算符<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>位运算符对整数在内存中的二进制位进行操作。</p>
@@ -1301,7 +1395,17 @@
 </tbody>
 </table>
 <p>假定 A = 60; B = 13; 其二进制数转换为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">A</span> <span class="p">=</span> <span class="mo">0011</span> <span class="mi">1100</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">A</span> <span class="p">=</span> <span class="mo">0011</span> <span class="mi">1100</span>
 
 <span class="nx">B</span> <span class="p">=</span> <span class="mo">0000</span> <span class="mi">1101</span>
 
@@ -1313,7 +1417,7 @@
 
 <span class="nx">A</span><span class="p">^</span><span class="nx">B</span> <span class="p">=</span> <span class="mo">0011</span> <span class="mo">0001</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Go 语言支持的位运算符如下表所示。假定 A 为60，B 为13：</p>
 <table>
@@ -1353,7 +1457,31 @@
 </tbody>
 </table>
 <p>以下实例演示了位运算符的用法：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1379,16 +1507,20 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;第五行 - c 的值为 %d\n&quot;</span><span class="p">,</span> <span class="nx">c</span> <span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">第一行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">12</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">第一行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">12</span>
 <span class="nx">第二行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">61</span>
 <span class="nx">第三行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">49</span>
 <span class="nx">第四行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">240</span>
 <span class="nx">第五行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">的值为</span> <span class="mi">15</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_9">赋值运算符<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <p>下表列出了所有Go语言的赋值运算符。</p>
@@ -1459,7 +1591,47 @@
 </tbody>
 </table>
 <p>以下实例演示了赋值运算符的用法：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1501,10 +1673,19 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">第</span> <span class="mi">1</span> <span class="nx">行</span> <span class="o">-</span> <span class="p">=</span>  <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">21</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">第</span> <span class="mi">1</span> <span class="nx">行</span> <span class="o">-</span> <span class="p">=</span>  <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">21</span>
 <span class="nx">第</span> <span class="mi">2</span> <span class="nx">行</span> <span class="o">-</span> <span class="o">+=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">42</span>
 <span class="nx">第</span> <span class="mi">3</span> <span class="nx">行</span> <span class="o">-</span> <span class="o">-=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">21</span>
 <span class="nx">第</span> <span class="mi">4</span> <span class="nx">行</span> <span class="o">-</span> <span class="o">*=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">441</span>
@@ -1515,7 +1696,7 @@
 <span class="nx">第</span> <span class="mi">9</span> <span class="nx">行</span> <span class="o">-</span> <span class="p">^=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">2</span>
 <span class="nx">第</span> <span class="mi">10</span> <span class="nx">行</span> <span class="o">-</span> <span class="o">|=</span> <span class="nx">运算符实例</span><span class="err">，</span><span class="nx">c</span> <span class="nx">值为</span> <span class="p">=</span> <span class="mi">2</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_10">其他运算符<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <p>下表列出了Go语言的其他运算符。</p>
@@ -1541,7 +1722,26 @@
 </tbody>
 </table>
 <p>以下实例演示了其他运算符的用法：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1562,16 +1762,20 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;*ptr 为 %d\n&quot;</span><span class="p">,</span> <span class="o">*</span><span class="nx">ptr</span><span class="p">);</span>  <span class="c1">//*ptr指向这个地址变量值</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">第</span> <span class="mi">1</span> <span class="nx">行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">变量类型为</span> <span class="p">=</span> <span class="kt">int</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">第</span> <span class="mi">1</span> <span class="nx">行</span> <span class="o">-</span> <span class="nx">a</span> <span class="nx">变量类型为</span> <span class="p">=</span> <span class="kt">int</span>
 <span class="nx">第</span> <span class="mi">2</span> <span class="nx">行</span> <span class="o">-</span> <span class="nx">b</span> <span class="nx">变量类型为</span> <span class="p">=</span> <span class="kt">int32</span>
 <span class="nx">第</span> <span class="mi">3</span> <span class="nx">行</span> <span class="o">-</span> <span class="nx">c</span> <span class="nx">变量类型为</span> <span class="p">=</span> <span class="kt">float32</span>
 <span class="nx">a</span> <span class="nx">的值为</span>  <span class="mi">4</span>
 <span class="o">*</span><span class="nx">ptr</span> <span class="nx">为</span> <span class="mi">4</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_11">运算符优先级<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <p>有些运算符拥有较高的优先级，二元运算符的运算方向均是从左至右。下表列出了所有运算符以及它们的优先级，由上至下代表优先级由高到低：</p>
@@ -1607,7 +1811,29 @@
 </table>
 <p>当然，你可以通过使用括号来临时提升某个表达式的整体运算优先级。</p>
 <p>以上实例运行结果：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1631,19 +1857,29 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;a + (b * c) / d 的值为  : %d\n&quot;</span> <span class="p">,</span>  <span class="nx">e</span> <span class="p">);</span>  
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例运行结果： </p>
-<div class="codehilite"><pre><span></span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="o">*</span> <span class="nx">c</span> <span class="o">/</span> <span class="nx">d</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">90</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="o">*</span> <span class="nx">c</span> <span class="o">/</span> <span class="nx">d</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">90</span>
 <span class="p">((</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="o">*</span> <span class="nx">c</span><span class="p">)</span> <span class="o">/</span> <span class="nx">d</span> <span class="nx">的值为</span>  <span class="p">:</span> <span class="mi">90</span>
 <span class="p">(</span><span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nx">c</span> <span class="o">/</span> <span class="nx">d</span><span class="p">)</span> <span class="nx">的值为</span>  <span class="p">:</span> <span class="mi">90</span>
 <span class="nx">a</span> <span class="o">+</span> <span class="p">(</span><span class="nx">b</span> <span class="o">*</span> <span class="nx">c</span><span class="p">)</span> <span class="o">/</span> <span class="nx">d</span> <span class="nx">的值为</span>  <span class="p">:</span> <span class="mi">50</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_12">笔记<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
 <p>指针变量 <code>*</code> 和地址值 <code>&amp;</code> 的区别：指针变量保存的是一个地址值，会分配独立的内存来存储一个整型数字。当变量前面有 <code>*</code> 标识时，才等同于 <code>&amp;</code> 的用法，否则会直接输出一个整型数字 </p>
-<div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
    <span class="kd">var</span> <span class="nx">a</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">4</span>
    <span class="kd">var</span> <span class="nx">ptr</span> <span class="o">*</span><span class="kt">int</span>
    <span class="nx">ptr</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">a</span>
@@ -1652,13 +1888,16 @@
    <span class="nb">println</span><span class="p">(</span><span class="s">&quot;ptr为&quot;</span><span class="p">,</span> <span class="nx">ptr</span><span class="p">);</span>    <span class="c1">// 824633794744    地址值</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Go 的自增，自减只能作为表达式使用，而不能用于赋值语句。 </p>
-<div class="codehilite"><pre><span></span><span class="nx">a</span><span class="o">++</span> <span class="c1">// 这是允许的，类似 a = a + 1,结果与 a++ 相同</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span><span class="o">++</span> <span class="c1">// 这是允许的，类似 a = a + 1,结果与 a++ 相同</span>
 <span class="nx">a</span><span class="o">--</span> <span class="c1">//与 a++ 相似</span>
 <span class="nx">a</span> <span class="p">=</span> <span class="nx">a</span><span class="o">++</span> <span class="c1">// 这是不允许的，会出现变异错误 syntax error: unexpected ++ at end of statement</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

@@ -1185,78 +1185,114 @@
 <h2 id="_2">定义切片<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>slice和数组的区别：声明数组时，方括号内写明了数组的长度或使用...自动计算长度，而声明slice时，方括号内没有任何字符。</p>
 <p>你可以声明一个未指定大小的数组来定义切片：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">identifier</span> <span class="p">[]</span><span class="kd">type</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">identifier</span> <span class="p">[]</span><span class="kd">type</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>切片不需要说明长度。</p>
 <p>或使用make()函数来创建切片:</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">slice1</span> <span class="p">[]</span><span class="kd">type</span> <span class="p">=</span> <span class="nb">make</span><span class="p">([]</span><span class="kd">type</span><span class="p">,</span> <span class="nx">len</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">slice1</span> <span class="p">[]</span><span class="kd">type</span> <span class="p">=</span> <span class="nb">make</span><span class="p">([]</span><span class="kd">type</span><span class="p">,</span> <span class="nx">len</span><span class="p">)</span>
 
 <span class="nx">也可以简写为</span>
 
 <span class="nx">slice1</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kd">type</span><span class="p">,</span> <span class="nx">len</span><span class="p">)</span>  <span class="c1">//len是指定长度</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>也可以指定容量，其中capacity为可选参数。</p>
-<div class="codehilite"><pre><span></span><span class="nb">make</span><span class="p">([]</span><span class="nx">T</span><span class="p">,</span> <span class="nx">length</span><span class="p">,</span> <span class="nx">capacity</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">make</span><span class="p">([]</span><span class="nx">T</span><span class="p">,</span> <span class="nx">length</span><span class="p">,</span> <span class="nx">capacity</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>这里<code>len</code>是数组的长度并且也是切片的初始长度。</p>
 <h2 id="_3">切片初始化<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span><span class="p">[]</span> <span class="kt">int</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span> <span class="p">}</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span><span class="p">[]</span> <span class="kt">int</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span> <span class="p">}</span> 
 </pre></div>
-
+</td></tr></table>
 
 <p>直接初始化切片，[]表示是切片类型，{1,2,3}初始化值依次是1,2,3.其cap=len=3    </p>
 <hr>
 
-<div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span> <span class="nx">arr</span><span class="p">[:]</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span> <span class="nx">arr</span><span class="p">[:]</span> 
 </pre></div>
-
+</td></tr></table>
 
 <p>初始化切片s,是数组arr的引用    </p>
 <hr>
 
-<div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">startIndex</span><span class="p">:</span><span class="nx">endIndex</span><span class="p">]</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">startIndex</span><span class="p">:</span><span class="nx">endIndex</span><span class="p">]</span> 
 </pre></div>
-
+</td></tr></table>
 
 <p>将arr中从下标startIndex到endIndex-1 下的元素创建为一个新的切片 </p>
 <hr>
 
-<div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">startIndex</span><span class="p">:]</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">startIndex</span><span class="p">:]</span> 
 </pre></div>
-
+</td></tr></table>
 
 <p>默认 endIndex 时将表示一直到arr的最后一个元素   </p>
 <hr>
 
-<div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span> <span class="nx">arr</span><span class="p">[:</span><span class="nx">endIndex</span><span class="p">]</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span> <span class="nx">arr</span><span class="p">[:</span><span class="nx">endIndex</span><span class="p">]</span> 
 </pre></div>
-
+</td></tr></table>
 
 <p>默认 startIndex 时将表示从arr的第一个元素开始  </p>
 <hr>
 
-<div class="codehilite"><pre><span></span><span class="nx">s1</span> <span class="o">:=</span> <span class="nx">s</span><span class="p">[</span><span class="nx">startIndex</span><span class="p">:</span><span class="nx">endIndex</span><span class="p">]</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s1</span> <span class="o">:=</span> <span class="nx">s</span><span class="p">[</span><span class="nx">startIndex</span><span class="p">:</span><span class="nx">endIndex</span><span class="p">]</span> 
 </pre></div>
-
+</td></tr></table>
 
 <p>通过切片s初始化切片s1    </p>
 <hr>
 
-<div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span><span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span><span class="nx">len</span><span class="p">,</span><span class="nx">cap</span><span class="p">)</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s</span> <span class="o">:=</span><span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span><span class="nx">len</span><span class="p">,</span><span class="nx">cap</span><span class="p">)</span> 
 </pre></div>
-
+</td></tr></table>
 
 <p>通过内置函数make()初始化切片s,[]int 标识为其元素类型为int的切片</p>
 <p><strong>注意</strong>：make只能创建slice、map和channel，并且返回一个有初始值(零)的非空切片。</p>
 <hr />
 <h3 id="_4">实例<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1290,21 +1326,35 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">s1</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s1</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
 <span class="nx">len</span> <span class="p">=</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">cap</span> <span class="p">=</span> <span class="mi">10</span>
 <span class="nx">len</span> <span class="p">=</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">cap</span> <span class="p">=</span> <span class="mi">5</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="len-cap">len() 和 cap() 函数<a class="headerlink" href="#len-cap" title="Permanent link">&para;</a></h2>
 <p>切片是可索引的，并且可以由 len() 方法获取长度。</p>
 <p>切片提供了计算容量的方法 cap() 可以测量切片最长可以达到多少。</p>
 <p>以下为具体实例：</p>
 <h3 id="_5">实例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1318,17 +1368,33 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;len=%d cap=%d slice=%v\n&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span><span class="nb">cap</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span><span class="nx">x</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例运行输出结果为:</p>
-<div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">3</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">5</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">3</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">5</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="nil">空(nil)切片<a class="headerlink" href="#nil" title="Permanent link">&para;</a></h2>
 <p>一个切片在未初始化之前默认为 nil，长度为 0，实例如下：</p>
 <h3 id="_6">实例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1346,13 +1412,14 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;len=%d cap=%d slice=%v\n&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span><span class="nb">cap</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span><span class="nx">x</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上实例运行输出结果为:</p>
-<div class="codehilite"><pre><span></span>len=0 cap=0 slice=[]
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>len=0 cap=0 slice=[]
 切片是空的
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h2 id="_7">切片截取<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
@@ -1400,9 +1467,9 @@
 </tbody>
 </table>
 <p>示例说明：</p>
-<div class="codehilite"><pre><span></span><span class="nx">array</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">array</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <table>
 <thead>
@@ -1446,7 +1513,43 @@
 </tbody>
 </table>
 <h3 id="_8">实例<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1484,10 +1587,17 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;len=%d cap=%d slice=%v\n&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span><span class="nb">cap</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span><span class="nx">x</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行以上代码输出结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">9</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">9</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">9</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">9</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">]</span>
 <span class="nx">numbers</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">]</span>
 <span class="nx">numbers</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
 <span class="nx">numbers</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">]</span>
@@ -1496,11 +1606,26 @@
 <span class="nx">len</span><span class="p">=</span><span class="mi">2</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">9</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
 <span class="nx">len</span><span class="p">=</span><span class="mi">3</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">7</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h3 id="_9">实例:<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1517,10 +1642,37 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;cap(s) = &quot;</span><span class="p">,</span> <span class="nb">cap</span><span class="p">(</span><span class="nx">s</span><span class="p">))</span> <span class="c1">//容量  5-1</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_10">实例<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1549,10 +1701,18 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">s1</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s1</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">]</span>
 <span class="nx">len</span> <span class="p">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">cap</span> <span class="p">=</span> <span class="mi">10</span>
 <span class="nx">data</span> <span class="p">=</span>  <span class="mi">1</span>
 <span class="nx">s2</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
@@ -1562,10 +1722,28 @@
 <span class="nx">s4</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">]</span>
 <span class="nx">len</span> <span class="p">=</span> <span class="mi">7</span><span class="p">,</span> <span class="nx">cap</span> <span class="p">=</span> <span class="mi">7</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_11">切片和底层数组关系<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1585,7 +1763,7 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;a = &quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>  <span class="c1">// a =  [0 1 2 666 4 5 777 7 8 9]</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_12">实例<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>我们基于原数组或者切片创建一个新的切片后，那么新的切片的大小和容量是多少呢？</p>
@@ -1595,7 +1773,27 @@
 长度: j-i
 容量: k-i</code></p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
@@ -1617,10 +1815,16 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;len=%d cap=%d slice=%v\n&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span><span class="nb">cap</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span><span class="nx">x</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出结果：</p>
-<div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">9</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">9</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">9</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">9</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">]</span>
 <span class="nx">numbers</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">]</span>
 <span class="nx">len</span><span class="p">=</span><span class="mi">3</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">8</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
 <span class="nx">numbers</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">]</span>
@@ -1628,31 +1832,34 @@
 <span class="nx">len</span><span class="p">=</span><span class="mi">0</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">5</span> <span class="nx">slice</span><span class="p">=[]</span>
 <span class="nx">len</span><span class="p">=</span><span class="mi">2</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">9</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>我们可以看出切片，实际的是获取数组的某一部分，<strong>len切片&lt;=cap切片&lt;=len数组</strong>，切片由三部分组成：指向底层数组的指针、len、cap。 </p>
-<div class="codehilite"><pre><span></span><span class="nx">numbers</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">numbers</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">}</span>
 <span class="nx">number3</span> <span class="o">:=</span> <span class="nx">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
 <span class="nx">printSlice</span><span class="p">(</span><span class="nx">number3</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果为:</p>
-<div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">3</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">7</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">3</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">7</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>capacity 为 7 是因为 number3 的 ptr 指向第三个元素， 后面还剩 2,3,4,5,6,7,8, 所以 cap=7。</p>
 <p>如：</p>
-<div class="codehilite"><pre><span></span><span class="nx">number4</span> <span class="o">:=</span> <span class="nx">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">number4</span> <span class="o">:=</span> <span class="nx">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
 <span class="nx">printSlice</span><span class="p">(</span><span class="nx">number4</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">4</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">4</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">4</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">4</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>capacity 为 4 是因为 number4 的 ptr 指向第六个元素， 后面还剩 5,6,7,8 所以 cap=4。</p>
 <h2 id="append-copy">append() 和 copy() 函数<a class="headerlink" href="#append-copy" title="Permanent link">&para;</a></h2>
@@ -1664,7 +1871,37 @@
 <p>通过 append() 函数向数组中添加元素，首先 cap 会以二倍的速度增长，如果发现增长 2 倍以上的容量可以满足扩容后的需求，那么 cap*2，否则就会看扩容后数组的 length 是多少 cap=length+1。 </p>
 </blockquote>
 <h3 id="_13">实例<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1696,19 +1933,32 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;len=%d cap=%d slice=%v\n&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span><span class="nb">cap</span><span class="p">(</span><span class="nx">x</span><span class="p">),</span><span class="nx">x</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上代码执行输出结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">0</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">0</span> <span class="nx">slice</span><span class="p">=[]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">len</span><span class="p">=</span><span class="mi">0</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">0</span> <span class="nx">slice</span><span class="p">=[]</span>
 <span class="nx">len</span><span class="p">=</span><span class="mi">1</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">1</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span><span class="p">]</span>
 <span class="nx">len</span><span class="p">=</span><span class="mi">2</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">2</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span> <span class="mi">1</span><span class="p">]</span>
 <span class="nx">len</span><span class="p">=</span><span class="mi">5</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">6</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
 <span class="nx">len</span><span class="p">=</span><span class="mi">5</span> <span class="nx">cap</span><span class="p">=</span><span class="mi">12</span> <span class="nx">slice</span><span class="p">=[</span><span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>合并多个数组： </p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
@@ -1719,18 +1969,28 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;s1: %v\n&quot;</span><span class="p">,</span> <span class="nx">s1</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>输出结果：</p>
-<div class="codehilite"><pre><span></span><span class="nx">s1</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">s1</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="copy">copy<a class="headerlink" href="#copy" title="Permanent link">&para;</a></h3>
 <p>函数 copy 在两个 slice 间复制数据，复制⻓度以 len 小的为准，两个 slice 可指向同⼀底层数组。</p>
 <p>小的复制给长的就是长的的前几个值被替换成小的数据了,但是长的复制给短的也是可以的,其实就是截取了短的长度的长的给了短的.</p>
 <p>短到长</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1742,15 +2002,25 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;dst = &quot;</span><span class="p">,</span> <span class="nx">dstSlice</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">dst</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">6</span> <span class="mi">6</span> <span class="mi">6</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">dst</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">6</span> <span class="mi">6</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>长到短</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1762,15 +2032,54 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;dst = &quot;</span><span class="p">,</span> <span class="nx">srcSlice</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">dst</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">6</span> <span class="mi">6</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">dst</span> <span class="p">=</span>  <span class="p">[</span><span class="mi">6</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_14">切片做函数参数  (底层操作的是地址,引用传递,不像数组会传值)<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kn">import</span> <span class="s">&quot;math/rand&quot;</span>
@@ -1811,17 +2120,110 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;排序后： &quot;</span><span class="p">,</span> <span class="nx">s</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="nx">排序前</span><span class="err">：</span>  <span class="p">[</span><span class="mi">59</span> <span class="mi">71</span> <span class="mi">12</span> <span class="mi">80</span> <span class="mi">44</span> <span class="mi">55</span> <span class="mi">70</span> <span class="mi">57</span> <span class="mi">30</span> <span class="mi">48</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">排序前</span><span class="err">：</span>  <span class="p">[</span><span class="mi">59</span> <span class="mi">71</span> <span class="mi">12</span> <span class="mi">80</span> <span class="mi">44</span> <span class="mi">55</span> <span class="mi">70</span> <span class="mi">57</span> <span class="mi">30</span> <span class="mi">48</span><span class="p">]</span>
 <span class="nx">排序后</span><span class="err">：</span>  <span class="p">[</span><span class="mi">12</span> <span class="mi">30</span> <span class="mi">44</span> <span class="mi">48</span> <span class="mi">55</span> <span class="mi">57</span> <span class="mi">59</span> <span class="mi">70</span> <span class="mi">71</span> <span class="mi">80</span><span class="p">]</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="_15">实例<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
 <h3 id="_16">猜数字小游戏<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">//必须有个main包</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kn">import</span> <span class="s">&quot;math/rand&quot;</span>  <span class="c1">//注意导包的方式</span>
@@ -1915,6 +2317,7 @@
 
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

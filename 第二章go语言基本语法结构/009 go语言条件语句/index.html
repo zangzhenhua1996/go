@@ -1247,18 +1247,34 @@
 <p>if 语句由布尔表达式后紧跟一个或多个语句组成。</p>
 <h3 id="_1">语法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <p>Go 编程语言中 if 语句的语法如下：</p>
-<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="nx">布尔表达式</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="nx">布尔表达式</span> <span class="p">{</span>
    <span class="cm">/* 在布尔表达式为 true 时执行 */</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>If 在布尔表达式为 true 时，其后紧跟的语句块执行，如果为 false 则不执行。</p>
 <p>流程图如下：</p>
 <p><img alt="image.png" src="../009 go语言条件语句.image/14555448-85209a206711f5d5.png" /></p>
 <h3 id="_2">实例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>使用 if 判断一个变量的大小：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1274,19 +1290,35 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;a 的值为 : %d\n&quot;</span><span class="p">,</span> <span class="nx">a</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上代码执行结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">小于</span> <span class="mi">20</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">小于</span> <span class="mi">20</span>
 <span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">10</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_3">笔记<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ol>
 <li>用 If 语句判断偶数: </li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1303,12 +1335,23 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;s 的值是：&quot;</span><span class="p">,</span><span class="nx">s</span><span class="p">)</span> <span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <ol>
 <li>Go 的 if 还有一个强大的地方就是条件判断语句里面允许声明一个变量，这个变量的作用域只能在该条件逻辑块内，其他地方就不起作用了，如下所示: </li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
@@ -1321,12 +1364,12 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="mi">9</span> <span class="nx">has</span> <span class="mi">1</span> <span class="nx">digit</span>   <span class="c1">//出了这个条件逻辑块num就失去了作用</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">9</span> <span class="nx">has</span> <span class="mi">1</span> <span class="nx">digit</span>   <span class="c1">//出了这个条件逻辑块num就失去了作用</span>
 </pre></div>
-
+</td></tr></table>
 
 <ol>
 <li>
@@ -1342,20 +1385,42 @@
 <p>if 语句 后可以使用可选的 else 语句, else 语句中的表达式在布尔表达式为 false 时执行。</p>
 <h3 id="_4">语法<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>Go 编程语言中 if...else 语句的语法如下：</p>
-<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="nx">布尔表达式</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="nx">布尔表达式</span> <span class="p">{</span>
    <span class="cm">/* 在布尔表达式为 true 时执行 */</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
   <span class="cm">/* 在布尔表达式为 false 时执行 */</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>If 在布尔表达式为 true 时，其后紧跟的语句块执行，如果为 false 则执行 else 语句块。</p>
 <p>流程图如下：</p>
 <p><img alt="image.png" src="../009 go语言条件语句.image/14555448-c9529e8e5e784523.png" /></p>
 <h3 id="_5">实例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>使用 if else 判断一个数的大小：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1375,17 +1440,44 @@
 
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上代码执行结果为： </p>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">不小于</span> <span class="mi">20</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">不小于</span> <span class="mi">20</span>
 <span class="nx">a</span> <span class="nx">的值为</span> <span class="p">:</span> <span class="mi">100</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_6">笔记<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>寻找到 100 以内的所有的素数: </p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 <span class="kd">func</span> <span class="nx">main</span><span class="p">(){</span>
@@ -1413,10 +1505,34 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>执行结果</p>
-<div class="codehilite"><pre><span></span><span class="mi">2</span> <span class="nx">素数</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">2</span> <span class="nx">素数</span>
 <span class="mi">3</span> <span class="nx">素数</span>
 <span class="mi">5</span> <span class="nx">素数</span>
 <span class="mi">7</span> <span class="nx">素数</span>
@@ -1442,10 +1558,23 @@
 <span class="mi">89</span> <span class="nx">素数</span>
 <span class="mi">97</span> <span class="nx">素数</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>if ... else if ... else...</strong> 实例： </p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1460,25 +1589,49 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="go-if_1">Go 语言 if 语句嵌套<a class="headerlink" href="#go-if_1" title="Permanent link">&para;</a></h2>
 <p>你可以在 if 或 else if 语句中嵌入一个或多个 if 或 else if 语句。</p>
 <h3 id="_7">语法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>Go 编程语言中 if...else 语句的语法如下：</p>
-<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="nx">布尔表达式</span> <span class="mi">1</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="nx">布尔表达式</span> <span class="mi">1</span> <span class="p">{</span>
    <span class="cm">/* 在布尔表达式 1 为 true 时执行 */</span>
    <span class="k">if</span> <span class="nx">布尔表达式</span> <span class="mi">2</span> <span class="p">{</span>
       <span class="cm">/* 在布尔表达式 2 为 true 时执行 */</span>
    <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>你可以以同样的方式在 if 语句中嵌套 <strong>else if...else</strong> 语句</p>
 <h3 id="_8">实例<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>嵌套使用 if 语句：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1499,18 +1652,40 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;b 值为 : %d\n&quot;</span><span class="p">,</span> <span class="nx">b</span> <span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上代码执行结果为： </p>
-<div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">的值为</span> <span class="mi">100</span> <span class="err">，</span> <span class="nx">b</span> <span class="nx">的值为</span> <span class="mi">200</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">a</span> <span class="nx">的值为</span> <span class="mi">100</span> <span class="err">，</span> <span class="nx">b</span> <span class="nx">的值为</span> <span class="mi">200</span>
 <span class="nx">a</span> <span class="nx">值为</span> <span class="p">:</span> <span class="mi">100</span>
 <span class="nx">b</span> <span class="nx">值为</span> <span class="p">:</span> <span class="mi">200</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_9">笔记<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>判断用户密码输入： </p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span> 
 
 <span class="kn">import</span><span class="s">&quot;fmt&quot;</span>
 
@@ -1532,7 +1707,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="go-switch">Go 语言 switch 语句<a class="headerlink" href="#go-switch" title="Permanent link">&para;</a></h2>
 <p>switch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一的，从上至下逐一测试，直到匹配为止。</p>
@@ -1540,7 +1715,14 @@
 <p>switch 默认情况下 <code>case 最后自带 break</code>语句，匹配成功后就不会执行其他 case，如果我们需要执行后面的 case，可以使用<code>fallthrough</code> 。</p>
 <h3 id="_10">语法<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p>Go 编程语言中 switch 语句的语法如下：</p>
-<div class="codehilite"><pre><span></span><span class="k">switch</span> <span class="nx">var1</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">switch</span> <span class="nx">var1</span> <span class="p">{</span>
     <span class="k">case</span> <span class="nx">val1</span><span class="p">:</span>
         <span class="o">...</span>
     <span class="k">case</span> <span class="nx">val2</span><span class="p">:</span>
@@ -1549,14 +1731,43 @@
         <span class="o">...</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>变量 var1 可以是任何类型，而 val1 和 val2 则可以是同类型的任意值。类型不被局限于常量或整数，但<code>必须是相同的类型</code>；或者最终结果为相同类型的表达式。</p>
 <p>您可以同时测试多个可能符合条件的值，使用<code>逗号</code>分割它们，例如：<code>case val1, val2, val3</code>。</p>
 <p>流程图：</p>
 <p><img alt="image.png" src="../009 go语言条件语句.image/14555448-ef4605ccc71bd7d3.png" /></p>
 <h3 id="_11">实例<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1587,18 +1798,27 @@
    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;你的等级是 %s\n&quot;</span><span class="p">,</span> <span class="nx">grade</span> <span class="p">);</span>      
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上代码执行结果为：</p>
-<div class="codehilite"><pre><span></span><span class="nx">优秀</span><span class="p">!</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">优秀</span><span class="p">!</span>
 <span class="nx">你的等级是</span> <span class="nx">A</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="type-switch">Type Switch<a class="headerlink" href="#type-switch" title="Permanent link">&para;</a></h3>
 <p>switch 语句还可以被用于 type-switch 来判断某个 interface 变量中实际存储的变量类型。</p>
 <p>Type Switch 语法格式如下：</p>
-<div class="codehilite"><pre><span></span><span class="k">switch</span> <span class="nx">x</span><span class="p">.(</span><span class="kd">type</span><span class="p">){</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">switch</span> <span class="nx">x</span><span class="p">.(</span><span class="kd">type</span><span class="p">){</span>
     <span class="k">case</span> <span class="kd">type</span><span class="p">:</span>
        <span class="nx">statement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>      
     <span class="k">case</span> <span class="kd">type</span><span class="p">:</span>
@@ -1608,10 +1828,31 @@
        <span class="nx">statement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_12">实例<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1634,17 +1875,41 @@
    <span class="p">}</span>   
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上代码执行结果为： </p>
-<div class="codehilite"><pre><span></span><span class="nx">x</span> <span class="nx">的类型</span> <span class="p">:&lt;</span><span class="kc">nil</span><span class="p">&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">x</span> <span class="nx">的类型</span> <span class="p">:&lt;</span><span class="kc">nil</span><span class="p">&gt;</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="fallthrough">fallthrough<a class="headerlink" href="#fallthrough" title="Permanent link">&para;</a></h3>
 <p>使用 fallthrough 会强制执行后面的 case 语句，fallthrough 不会判断下一条 case 的表达式结果是否为 true。</p>
 <h3 id="_13">实例<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1670,26 +1935,31 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上代码执行结果为： </p>
-<div class="codehilite"><pre><span></span><span class="mi">2</span><span class="err">、</span><span class="k">case</span> <span class="nx">条件语句为</span> <span class="kc">true</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">2</span><span class="err">、</span><span class="k">case</span> <span class="nx">条件语句为</span> <span class="kc">true</span>
 <span class="mi">3</span><span class="err">、</span><span class="k">case</span> <span class="nx">条件语句为</span> <span class="kc">false</span>
 <span class="mi">4</span><span class="err">、</span><span class="k">case</span> <span class="nx">条件语句为</span> <span class="kc">true</span> <span class="c1">//到这一句没有fallthrough也就不会再执行下面的case语句</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>从以上代码输出的结果可以看出：switch 从第一个判断表达式为 <code>true</code>的 case 开始执行，如果 case 带有 fallthrough，程序会继续执行下一条 case，且它不会去判断下一个 case 的表达式是否为 true。 </p>
 <h3 id="_14">笔记<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <ol>
 <li>支持多条件匹配 </li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="k">switch</span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">switch</span><span class="p">{</span>
     <span class="k">case</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span>
     <span class="k">default</span><span class="p">:</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <ol>
 <li>
@@ -1699,7 +1969,19 @@
 <p>如果想要执行多个 case，需要使用 fallthrough 关键字，也可用 break 终止。</p>
 </li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="k">switch</span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">switch</span><span class="p">{</span>
     <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
     <span class="o">...</span>
     <span class="k">if</span><span class="p">(</span><span class="o">...</span><span class="p">){</span>
@@ -1713,14 +1995,22 @@
     <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="go-select">Go 语言 select 语句<a class="headerlink" href="#go-select" title="Permanent link">&para;</a></h2>
 <p>select 是 Go 中的一个控制结构，类似于用于通信的 switch 语句。每个 case 必须是一个通信操作，要么是发送要么是接收。</p>
 <p>select 随机执行一个可运行的 case。如果没有 case 可运行，它将阻塞，直到有 case 可运行。一个默认的子句应该总是可运行的。</p>
 <h3 id="_15">语法<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>Go 编程语言中 select 语句的语法如下：</p>
-<div class="codehilite"><pre><span></span><span class="k">select</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">select</span> <span class="p">{</span>
     <span class="k">case</span> <span class="nx">communication</span> <span class="nx">clause</span>  <span class="p">:</span>
        <span class="nx">statement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>      
     <span class="k">case</span> <span class="nx">communication</span> <span class="nx">clause</span>  <span class="p">:</span>
@@ -1730,7 +2020,7 @@
        <span class="nx">statement</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以下描述了 select 语句的语法：</p>
 <ul>
@@ -1757,7 +2047,28 @@
 </ul>
 <h3 id="_16">实例<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
 <p>select 语句应用演示：</p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
@@ -1780,17 +2091,54 @@
    <span class="p">}</span>    
 <span class="p">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>以上代码执行结果为： </p>
-<div class="codehilite"><pre><span></span><span class="nx">no</span> <span class="nx">communication</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">no</span> <span class="nx">communication</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_17">笔记<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>select 会循环检测条件，如果有满足则执行并退出，否则一直循环检测。</p>
 <p>示例代码：<a href="https://play.golang.org/p/abKvSe-Nn30">https://play.golang.org/p/abKvSe-Nn30</a></p>
-<div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
 
 <span class="kn">import</span> <span class="p">(</span>
     <span class="s">&quot;fmt&quot;</span>
@@ -1829,6 +2177,7 @@
 <span class="nx">end</span><span class="p">:</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 
