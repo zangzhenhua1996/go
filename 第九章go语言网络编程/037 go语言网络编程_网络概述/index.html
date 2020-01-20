@@ -13,7 +13,7 @@
         <meta name="description" content="go语言的学习笔记">
       
       
-        <link rel="canonical" href="https://zangzhenhua1996.github.io/go/第六章go语言异常处理/027 go语言异常处理_error接口/">
+        <link rel="canonical" href="https://zangzhenhua1996.github.io/go/第九章go语言网络编程/037 go语言网络编程_网络概述/">
       
       
         <meta name="author" content="臧珍华">
@@ -42,7 +42,7 @@
     
     
       
-        <title>error接口 - 臧珍华的博客</title>
+        <title>概述 - 臧珍华的博客</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#error" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -115,7 +115,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                error接口
+                概述
               
             </span>
           
@@ -263,7 +263,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../../第六章go语言异常处理/027 go语言异常处理_error接口/" class="md-tabs__link">
           异常处理
         </a>
       
@@ -302,7 +302,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../第九章go语言网络编程/037 go语言网络编程_网络概述/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           网络编程
         </a>
       
@@ -795,12 +795,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       异常处理
@@ -816,56 +814,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        error接口
-      </label>
-    
-    <a href="./" title="error接口" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../第六章go语言异常处理/027 go语言异常处理_error接口/" title="error接口" class="md-nav__link">
       error接口
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#error_1" class="md-nav__link">
-    error 接口的使用 示例代码：
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error_2" class="md-nav__link">
-    实例,error接口的应用
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -875,7 +828,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../028 go语言异常处理_panic/" title="panic" class="md-nav__link">
+    <a href="../../第六章go语言异常处理/028 go语言异常处理_panic/" title="panic" class="md-nav__link">
       panic
     </a>
   </li>
@@ -887,7 +840,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../029 go语言异常处理_recover/" title="recover" class="md-nav__link">
+    <a href="../../第六章go语言异常处理/029 go语言异常处理_recover/" title="recover" class="md-nav__link">
       recover
     </a>
   </li>
@@ -1034,10 +987,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
     
     <label class="md-nav__link" for="nav-10">
       网络编程
@@ -1053,11 +1008,97 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../第九章go语言网络编程/037 go语言网络编程_网络概述/" title="概述" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        概述
+      </label>
+    
+    <a href="./" title="概述" class="md-nav__link md-nav__link--active">
       概述
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    网络协议
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    分层模型
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    网络分层架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    层与协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    每层协议的功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    网络通信条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    通信过程如何组包和拆包
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1067,7 +1108,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../第九章go语言网络编程/038 go语言网络编程_Socket编程/" title="Socket编程" class="md-nav__link">
+    <a href="../038 go语言网络编程_Socket编程/" title="Socket编程" class="md-nav__link">
       Socket编程
     </a>
   </li>
@@ -1099,16 +1140,57 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#error_1" class="md-nav__link">
-    error 接口的使用 示例代码：
+  <a href="#_2" class="md-nav__link">
+    网络协议
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#error_2" class="md-nav__link">
-    实例,error接口的应用
+  <a href="#_3" class="md-nav__link">
+    分层模型
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    网络分层架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    层与协议
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    每层协议的功能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    网络通信条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    通信过程如何组包和拆包
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1129,206 +1211,79 @@
               
                 
                 
-                <h1 id="error">error接口(常规错误)<a class="headerlink" href="#error" title="Permanent link">&para;</a></h1>
-<p>Go语言引入了一个关于错误处理的标准模式，即error接口，它是Go语言内建的接口类型，该接口的定义如下：(没有 try catch之类的机制)</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">type</span> <span class="kt">error</span> <span class="kd">interface</span> <span class="p">{</span>
-    <span class="nx">Error</span><span class="p">()</span> <span class="kt">string</span> <span class="c1">//一个方法,返回值是一个字符串</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<p>Go语言的标准库代码包errors为用户提供如下方法：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">errors</span>
-
-<span class="kd">type</span> <span class="nx">errorString</span> <span class="kd">struct</span> <span class="p">{</span> 
-    <span class="nx">text</span> <span class="kt">string</span> 
-<span class="p">}</span>
-
-<span class="kd">func</span> <span class="nx">New</span><span class="p">(</span><span class="nx">text</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span> 
-    <span class="k">return</span> <span class="o">&amp;</span><span class="nx">errorString</span><span class="p">{</span><span class="nx">text</span><span class="p">}</span> 
-<span class="p">}</span> <span class="c1">//封装了一个函数 ,最后需要调用的函数</span>
-
-<span class="kd">func</span> <span class="p">(</span><span class="nx">e</span> <span class="o">*</span><span class="nx">errorString</span><span class="p">)</span> <span class="nx">Error</span><span class="p">()</span> <span class="kt">string</span> <span class="p">{</span> 
-    <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">text</span> <span class="c1">//实现接口的方法</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<p>另一个可以生成error类型值的方法是调用fmt包中的Errorf函数：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">fmt</span>
-<span class="kn">import</span> <span class="s">&quot;errors&quot;</span>
-
-<span class="kd">func</span> <span class="nx">Errorf</span><span class="p">(</span><span class="nx">format</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">args</span> <span class="o">...</span><span class="kd">interface</span><span class="p">{})</span> <span class="kt">error</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="nx">Sprintf</span><span class="p">(</span><span class="nx">format</span><span class="p">,</span> <span class="nx">args</span><span class="o">...</span><span class="p">))</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<h3 id="error_1">error 接口的使用 示例代码：<a class="headerlink" href="#error_1" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="p">(</span>
-    <span class="s">&quot;errors&quot;</span>
-    <span class="s">&quot;fmt&quot;</span>
-<span class="p">)</span>
-
-<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">err1</span> <span class="kt">error</span> <span class="p">=</span> <span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;a normal err1&quot;</span><span class="p">)</span>  <span class="c1">//首先声明一个error接口变量</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err1</span><span class="p">)</span> <span class="c1">//a normal err1</span>
-
-    <span class="kd">var</span> <span class="nx">err2</span> <span class="kt">error</span> <span class="p">=</span> <span class="nx">fmt</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="s">&quot;a normal err2&quot;</span><span class="p">)</span> <span class="c1">//使用fmt的函数实现</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err2</span><span class="p">)</span> <span class="c1">//a normal err2</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<p>执行结果</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">err1</span> <span class="p">=</span>  <span class="nx">this</span> <span class="nx">is</span> <span class="nx">normal</span> <span class="nx">err1</span>
-<span class="nx">err2</span> <span class="p">=</span>  <span class="nx">this</span> <span class="nx">is</span> <span class="nx">normal</span> <span class="nx">err2</span>
-</pre></div>
-</td></tr></table>
-
-<p>函数通常在最后的返回值中返回错误信息：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="p">(</span>
-    <span class="s">&quot;errors&quot;</span>
-    <span class="s">&quot;fmt&quot;</span>
-<span class="p">)</span>
-
-<span class="kd">func</span> <span class="nx">Divide</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">float64</span><span class="p">)</span> <span class="p">(</span><span class="nx">result</span> <span class="kt">float64</span><span class="p">,</span> <span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//第一个括号是传递的参数,第二个是返回的参数</span>
-    <span class="k">if</span> <span class="nx">b</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-        <span class="nx">result</span> <span class="p">=</span> <span class="mf">0.0</span>
-        <span class="nx">err</span> <span class="p">=</span> <span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;runtime error: divide by zero&quot;</span><span class="p">)</span>
-        <span class="k">return</span>
-    <span class="p">}</span>
-
-    <span class="nx">result</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">/</span> <span class="nx">b</span>
-    <span class="nx">err</span> <span class="p">=</span> <span class="kc">nil</span>
-    <span class="k">return</span>
-<span class="p">}</span>
-
-<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">r</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">Divide</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="c1">//错误处理 runtime error: divide by zero</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="c1">// 使用返回值</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<h3 id="error_2">实例,error接口的应用<a class="headerlink" href="#error_2" title="Permanent link">&para;</a></h3>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
-
-<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
-<span class="kn">import</span> <span class="s">&quot;errors&quot;</span>
-
-<span class="kd">func</span> <span class="nx">MyDiv</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="nx">result</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
-
-    <span class="nx">err</span> <span class="p">=</span> <span class="kc">nil</span>  <span class="c1">//首先定义err一开始是空,返回的参数已经声明了err是error类型,这里直接副职就可以了</span>
-    <span class="k">if</span> <span class="nx">b</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-        <span class="nx">err</span> <span class="p">=</span> <span class="nx">errors</span><span class="p">.</span><span class="nx">New</span><span class="p">(</span><span class="s">&quot;分母不能为0&quot;</span><span class="p">)</span>  <span class="c1">//新建了一种错误</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">result</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">/</span> <span class="nx">b</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span>   <span class="c1">//这里会自动的返回上面定义的返回变量,除非我们没有给err赋值</span>
-<span class="p">}</span>
-
-<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">result</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">MyDiv</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;err = &quot;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;reslut = &quot;</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span>
-    <span class="p">}</span>
-
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<p>执行结果</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">err</span> <span class="p">=</span>  <span class="nx">分母不能为0</span>
-</pre></div>
-</td></tr></table>
+                <h1 id="_1">网络概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">网络协议<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>从应用的角度出发，协议可理解为“规则”，是数据传输和数据的解释的规则。</p>
+<p>假设，A、B双方欲传输文件。规定：</p>
+<ul>
+<li>
+<p>第一次，传输文件名，接收方接收到文件名，应答OK给传输方；</p>
+</li>
+<li>
+<p>第二次，发送文件的尺寸，接收方接收到该数据再次应答一个OK；</p>
+</li>
+<li>
+<p>第三次，传输文件内容。同样，接收方接收数据完成后应答OK表示文件内容接收成功。</p>
+</li>
+</ul>
+<p>由此，无论A、B之间传递何种文件，都是通过三次数据传输来完成。A、B之间形成了一个最简单的数据传输规则。双方都按此规则发送、接收数据。A、B之间达成的这个相互遵守的规则即为协议。</p>
+<p><mark>这种仅在A、B之间被遵守的协议称之为**原始协议**。</mark></p>
+<p>当此协议被更多的人采用，不断的增加、改进、维护、完善。最终形成一个稳定的、完整的文件传输协议，被广泛应用于各种文件传输过程中。该协议就成为一个**标准协议**。<mark>最早的ftp协议就是由此衍生而来。</mark></p>
+<h2 id="_3">分层模型<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">网络分层架构<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>为了减少协议设计的复杂性，大多数网络模型均采用分层的方式来组织。每一层都有自己的功能，就像建筑物一样，每一层都靠下一层支持。每一层利用下一层提供的服务来为上一层提供服务，<mark>本层服务的实现细节对上层屏蔽。</mark></p>
+<p><img src="037 go语言网络编程_网络概述.image/clip_image002.png" alt="20150313115839793"  /></p>
+<p>越下面的层，越靠近硬件；越上面的层，越靠近用户。至于每一层叫什么名字，其实并不重要（面试的时候，面试官可能会问每一层的名字）。只需要知道，互联网分成若干层即可。</p>
+<ul>
+<li><strong>物理层</strong>：主要定义物理设备标准，如网线的接口类型、光纤的接口类型、各种传输介质的传输速率等。它的 ==主要作用是传输比特流（就是由1、0转化为电流强弱来进行传输，到达目的地后再转化为1、0，也就是我们常说的数模转换与模数转换）。==这一层的数据叫做比特。</li>
+<li><strong>数据链路层</strong>： <mark>定义了如何让格式化数据以帧为单位进行传输，以及如何<code>控制对物理介质的访问</code>。这一层通常还提供错误检测和纠正，以确保数据的可靠传输。</mark> 如：串口通信中使用到的115200、8、N、1</li>
+<li><strong>网络层</strong>：<mark>在位于不同地理位置的网络中的两个主机系统之间提供连接和路径选择。</mark> Internet的发展使得从世界各站点访问信息的用户数大大增加，而网络层正是管理这种连接的层。</li>
+<li><strong>传输层</strong>：<mark>定义了一些传输数据的协议和端口号（WWW端口80等）</mark>，如：<mark>TCP</mark> （传输控制协议，传输效率低，可靠性强，用于传输可靠性要求高，数据量大的数据），<mark>UDP</mark> （用户数据报协议，与TCP特性恰恰相反，用于传输可靠性要求不高，数据量小的数据，如QQ聊天数据就是通过这种方式传输的）。 主要是将从下层接收的数据进行分段和传输，到达目的地址后再进行重组。 <mark>常常把这一层数据叫做段。</mark></li>
+<li><strong>会话层</strong>：通过传输层(端口号：传输端口与接收端口)建立数据传输的通路。主要在你的系统之间发起会话或者接受会话请求  <mark>（设备之间需要互相认识可以是IP也可以是MAC或者是主机名）。</mark></li>
+<li><strong>表示层</strong>： <mark>可确保一个系统的应用层所发送的信息可以被另一个系统的应用层读取</mark>  例如，PC程序与另一台计算机进行通信，其中一台计算机使用扩展二一十进制交换码(EBCDIC)，而另一台则使用美国信息交换标准码（ASCII）来表示相同的字符。<mark>如有必要，表示层会通过使用一种通用格式来实现多种数据格式之间的转换。</mark></li>
+<li><strong>应用层</strong>：是最靠近用户的OSI层。这一层为用户的应用程序（例如电子邮件、文件传输和终端仿真）<mark>提供网络服务。</mark></li>
+</ul>
+<h3 id="_5">层与协议<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><mark>每一层都是为了完成一种功能，为了实现这些功能，就需要大家都遵守共同的规则。大家都遵守这规则，就叫做“协议”（protocol）。</mark></p>
+<p><code>网络的每一层，都定义了很多协议。这些协议的总称，叫“TCP/IP协议”。TCP/IP协议是一个大家族，不仅仅只有TCP和IP协议，它还包括其它的协议，如下图：</code></p>
+<p><img src="037 go语言网络编程_网络概述.image/clip_image004.png" alt="20150313140722088"  /></p>
+<h3 id="_6">每层协议的功能<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><img alt="20150313154918798" src="../037 go语言网络编程_网络概述.image/clip_image006.jpg" /></p>
+<ul>
+<li>链路层</li>
+</ul>
+<p>以太网规定，连入网络的所有设备，都必须具有 <mark>“网卡”接口</mark> 。数据包必须是从一块网卡，传送到另一块网卡。<mark>通过网卡能够使不同的计算机之间连接，从而完成数据通信等功能。</mark> <code>网卡的地址——MAC 地址</code>，就是数据包的物理发送地址和物理接收地址。</p>
+<ul>
+<li>网络层</li>
+</ul>
+<p><mark>网络层的作用是引进一套新的地址，使得我们能够区分不同的计算机是否属于同一个子网络。</mark> 这套地址就叫做“网络地址”， <mark>这是我们平时所说的IP地址。</mark> 这个IP地址好比我们的手机号码，通过手机号码可以得到用户所在的归属地。</p>
+<p><code>网络地址帮助我们确定计算机所在的子网络，MAC 地址则将数据包送到该子网络中的目标网卡。网络层协议包含的主要信息是 源IP 和 目的IP。</code></p>
+<p>于是，“网络层”出现以后，每台计算机有了两种地址，一种是 MAC 地址，另一种是网络地址。<strong>两种地址之间没有任何联系</strong>，<mark>MAC 地址是绑定在网卡上的，网络地址则是管理员分配的，它们只是随机组合在一起。</mark></p>
+<p>网络地址帮助我们确定计算机所在的子网络，MAC 地址则将数据包送到该子网络中的目标网卡。因此，从逻辑上可以推断，<mark>必定是先处理网络地址，然后再处理 MAC 地址。</mark></p>
+<p><img alt="image-20200119202658700" src="../037 go语言网络编程_网络概述.image/image-20200119202658700.png" /></p>
+<ul>
+<li>传输层</li>
+</ul>
+<p>当我们一边聊QQ，一边聊微信，当一个数据包从互联网上发来的时候，我们怎么知道，它是来自QQ的内容，还是来自微信的内容？</p>
+<p><mark>也就是说，我们还需要一个参数，表示这个数据包到底供哪个程序（进程）使用。这个参数就叫做“端口”（port），它其实是每一个使用网卡的程序的编号。</mark> 每个数据包都发到主机的特定端口，所以不同的程序就能取到自己所需要的数据。</p>
+<p>端口特点：</p>
+<ul>
+<li>
+<p>对于同一个端口，在不同系统中对应着不同的进程</p>
+</li>
+<li>
+<p>对于同一个系统，一个端口只能被一个进程拥有</p>
+</li>
+</ul>
+<p><img alt="image-20200119202716520" src="../037 go语言网络编程_网络概述.image/image-20200119202716520.png" /></p>
+<ul>
+<li>应用层</li>
+</ul>
+<p>应用程序收到“传输层”的数据，接下来就要进行解读。由于互联网是开放架构，数据来源五花八门，必须事先规定好格式，否则根本无法解读。<mark>“应用层”的作用，就是规定应用程序的数据格式。</mark></p>
+<h3 id="_7">网络通信条件<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20200119203352942" src="../037 go语言网络编程_网络概述.image/image-20200119203352942.png" /></p>
+<h3 id="_8">通信过程如何组包和拆包<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20200119203430115" src="../037 go语言网络编程_网络概述.image/image-20200119203430115.png" /></p>
                 
                   
                 
@@ -1349,7 +1304,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../第五章go语言面向对象编程/026 go语言面向对象_接口/" title="接口" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../第八章go语言并发编程/036 go语言并发编程_channel/" title="channel" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1358,19 +1313,19 @@
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                接口
+                channel
               </span>
             </div>
           </a>
         
         
-          <a href="../028 go语言异常处理_panic/" title="panic" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../038 go语言网络编程_Socket编程/" title="Socket编程" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                panic
+                Socket编程
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

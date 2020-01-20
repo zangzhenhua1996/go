@@ -2,187 +2,197 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://zangzhenhua1996.github.io/go/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第一章go语言开发环境配置/001 go语言开发环境配置/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/002 go语言第一个例子/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/003 go语言结构/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/004 go语言基础语法/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/005 go变量定义/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/006 go内建变量类型/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/007 go常量与枚举/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/008 go语言运算符/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/009 go语言条件语句/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/010 go语言循环语句/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/011 go语言函数/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第二章go语言基本语法结构/012 go语言变量作用域/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第三章go语言工程管理/013 go语言工作区/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第三章go语言工程管理/014 go语言的包/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第三章go语言工程管理/015 go语言工程配置编译/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第四章go语言复合类型/016 go语言复合类型分类/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第四章go语言复合类型/017 go语言复合类型指针/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第四章go语言复合类型/018 go语言复合类型数组/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第四章go语言复合类型/019 go语言复合类型切片(slice)/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第四章go语言复合类型/020 go语言复合类型map/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第四章go语言复合类型/021 go 语言结构体/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第四章go语言复合类型/022 go语言范围range/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第五章go语言面向对象编程/023 go语言面向对象编程概述/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第五章go语言面向对象编程/024 go语言面向对象匿名组合/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第五章go语言面向对象编程/025 go语言面向对象_方法/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第五章go语言面向对象编程/026 go语言面向对象_接口/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第六章go语言异常处理/027 go语言异常处理_error接口/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第六章go语言异常处理/028 go语言异常处理_panic/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第六章go语言异常处理/029 go语言异常处理_recover/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第七章go语言文本文件处理/030 go语言文本文件处理_字符串操作/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第七章go语言文本文件处理/031 go语言文本文件处理_正则表达式/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第七章go语言文本文件处理/032 go语言文本文件处理_JSON处理/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第七章go语言文本文件处理/033 go语言文本文件处理_文本操作/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第八章go语言并发编程/034 go语言并发编程_概述/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第八章go语言并发编程/035 go语言并发编程_goroutine/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://zangzhenhua1996.github.io/go/第八章go语言并发编程/036 go语言并发编程_channel/</loc>
-     <lastmod>2020-01-19</lastmod>
+     <lastmod>2020-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://zangzhenhua1996.github.io/go/第九章go语言网络编程/037 go语言网络编程_网络概述/</loc>
+     <lastmod>2020-01-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://zangzhenhua1996.github.io/go/第九章go语言网络编程/038 go语言网络编程_Socket编程/</loc>
+     <lastmod>2020-01-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
